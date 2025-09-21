@@ -1,0 +1,19 @@
+[project]
+name = "model-library"
+version = "0.1.0"
+description = "A collection of mathematical models with code implementations and explanations, covering tanks, reactors, circuits, and other physical systems."
+readme = "README.md"
+requires-python = "==3.13.7"
+dependencies = [
+    "matplotlib>=3.10.6",
+    "numpy>=2.3.3",
+    "scipy>=1.16.2",
+]
+
+[dependency-groups]
+dev = [
+    "ruff>=0.13.1",
+]
+
+[tool.ruff.lint]
+extend-select = ["I"]
