@@ -3,7 +3,7 @@
 <p align="center">
   <img alt="Repository License" src="https://img.shields.io/github/license/silash35/model-library">
   <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/silash35/model-library">
-  <img src="https://github.com/silash35/model-library/workflows/lint/badge.svg">
+  <img src="https://github.com/silash35/model-library/actions/workflows/lint.yml/badge.svg">
   <img alt="GitHub stars" src="https://img.shields.io/github/stars/silash35/model-library">
 </p>
 
