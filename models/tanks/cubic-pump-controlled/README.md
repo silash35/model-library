@@ -41,7 +41,7 @@ $$
 | ---------------------------------------- | ------------------- |
 | Static × Dynamic                         | **Dynamic**         |
 | Linear × Nonlinear                       | **Linear**          |
-| MISO × MIMO                              | **MISO**            |
+| SISO × SIMO × MISO × MIMO                | **MISO**            |
 | Continuous-time × Discrete-time          | **Continuous-time** |
 | Time-invariant × Time-variant            | **Time-invariant**  |
 | Lumped-parameters × Distributed-elements | **Lumped**          |
