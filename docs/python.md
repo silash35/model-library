@@ -47,6 +47,18 @@ Using UV guarantees that your code runs exactly as intended, without worrying ab
    uv run models/tanks/cubic-pump-controlled/sim_scipy.py
    ```
 
+## I ran a Python file and nothing happened. What should I do?
+
+The Python scripts in this repository generate plots and save the results in the `simulations/` folder, rather than printing output to the terminal. If nothing appeared, check that folder, the graphs were likely updated there (if you delete the contents of the folder, the plots will be regenerated when you rerun the script).
+
+## _NumPy_? _SciPy_? _CasADi_?
+
+This project relies on several popular Python libraries for numerical computing. You can check the official website of these libraries to learn more:
+
+- [NumPy](https://numpy.org/)
+- [SciPy](https://scipy.org/)
+- [CasADi](https://web.casadi.org/)
+
 ## Why aren’t the physical constraints explicitly implemented in the code?
 
 Some variables naturally have limits imposed by the physical properties of the system. For example, the liquid level in a tank cannot exceed its height.

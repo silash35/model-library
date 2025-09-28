@@ -12,7 +12,7 @@ Both are simplified representations that help us understand, analyze, and commun
 
 The same dictionary also provides a broader meaning:
 
-> _“a simple representation of a system or process, especially one that can be used in calculations or predictions of what might happen.”_
+> _“A simple representation of a system or process, especially one that can be used in calculations or predictions of what might happen.”_
 
 This second definition captures what we call mathematical models: abstractions described by equations or algorithms. These models are essential tools for studying systems in engineering, science, and many other fields, and they are the primary focus of this repository.
 
@@ -50,8 +50,6 @@ Optionally, if your publisher allows citing GitHub repositories, you can cite th
 
 For more information about citation files on GitHub, see: [About Citation Files](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-citation-files).
 
-## I ran a Python file and nothing happened. What should I do?
+## I'm having problems running the Python code. What should I do?
 
-The Python scripts in this repository generate plots and save the results in the `simulations/` folder, rather than printing output to the terminal. If nothing appeared, check that folder, the graphs were likely updated there (if you delete the contents of the folder, the plots will be regenerated when you rerun the script).
-
-It is also recommended to run the Python files following the instructions in [`python.md`](docs/python.md`), which ensures that all dependencies and the correct Python environment are used.
+First, follow the instructions in [`Python Guide`](docs/python.md). If that does not resolve the issue, please create a GitHub issue so we can investigate and help you.
