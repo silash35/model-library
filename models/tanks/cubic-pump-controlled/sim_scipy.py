@@ -26,14 +26,6 @@ def tank_model(t: float, h: float, Q_in: float, Q_out: float):
     """
     dhdt = (Q_in - Q_out) / A
 
-    # Ensure the level stays within physical limits of the cubic tank
-    if h <= 0 and dhdt < 0:
-        # Tank is empty and the level would decrease
-        dhdt = 0
-    elif h >= L and dhdt > 0:
-        # Tank is full and the level would increase
-        dhdt = 0
-
     return dhdt
 
 
