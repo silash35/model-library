@@ -64,7 +64,7 @@ Therefore, the balance reduces to a simple relation between the inlet and outlet
 Using the physical relation between mass, density, and volume (as well as between mass flow rate and volumetric flow rate), we can write:
 
 $$
-M(t) = \rho \, V(t), \quad \dot{M}_{in} = \rho Q_{in}(t), \quad \dot{M}_{out} = \rho Q_{out}(t)
+M(t) = \rho \cdot V(t), \quad \dot{M}_{in} = \rho \cdot Q_{in}(t), \quad \dot{M}_{out} = \rho \cdot Q_{out}(t)
 $$
 
 For an **incompressible fluid** with constant density $\rho$, we can take $\rho$ out of the derivative and simplify the equation:
@@ -78,13 +78,13 @@ This is the **volumetric balance**.
 To relate the liquid volume to its height, we note that the volume is given by the base area multiplied by the height $h(t)$:
 
 $$
-V(t) = A \, h(t), \quad \text{with} \quad A = L^2
+V(t) = A \cdot h(t), \quad \text{with} \quad A = L^2
 $$
 
 Substituting into the volumetric balance:
 
 $$
-\frac{d}{dt}[A \, h(t)] = Q_{in}(t) - Q_{out}(t)
+\frac{d}{dt}[A \cdot h(t)] = Q_{in}(t) - Q_{out}(t)
 $$
 
 Since $A$ is constant:
