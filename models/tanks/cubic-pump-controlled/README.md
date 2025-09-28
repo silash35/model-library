@@ -56,7 +56,7 @@ $$
 \frac{dM(t)}{dt} = \dot{M}_{in}(t) - \dot{M}_{out}(t)
 $$
 
-Where $M(t)$ is the mass of the liquid [kg], and $\dot{M}_{in}$, $\dot{M}_{out}$ are the mass flow rates [kg/s].
+Where $M(t)$ is the mass of the liquid [kg], and $`\dot{M}_{in}`$, $`\dot{M}_{out}`$ are the mass flow rates [kg/s].
 
 In this case, there are no generation or consumption terms, since the liquid does not undergo any chemical reactions and there are no internal sources or sinks of mass.
 Therefore, the balance reduces to a simple relation between the inlet and outlet flows.
