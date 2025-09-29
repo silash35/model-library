@@ -7,9 +7,7 @@ This section describes the model representing the physical system composed of a 
 The liquid level inside the tank changes according to the balance between the inflow and outflow rates.
 The physical system is illustrated in the figure below:
 
-<p align="center">
-  <img src="diagram.svg" alt="Modelted Tank Diagram"/>
-</p>
+<img src="diagram.svg" alt="Modeled Tank Diagram"/>
 
 The liquid level dynamics can be mathematically described by the following equation:
 

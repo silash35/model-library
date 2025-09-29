@@ -13,28 +13,30 @@ A: Final[float] = L**2
 """Cross-sectional area [m^2]"""
 
 
-# --- Tank dynamics ---
+# --- Tank Dynamics ---
 def tank_model(t: float, h: float, Q_in: float, Q_out: float):
     """
     Differential equation for the tank level.
 
     Parameters:
-    - h: liquid level [m]
     - t: time [s]
+    - h: liquid level [m]
     - Q_in: inlet flow [m^3/s]
     - Q_out: outlet flow [m^3/s]
     """
     dhdt = (Q_in - Q_out) / A
-
     return dhdt
 
 
 # --- Model Parameters ---
-Q_in = 0.3  # Inlet flow rate [m^3/s]
-Q_out = 0.7  # Outlet flow rate [m^3/s]
+Q_in = 0.3
+"""Inlet flow rate [m^3/s]"""
+
+Q_out = 0.5
+"""Outlet flow rate [m^3/s]"""
 
 # --- Simulation ---
-h0 = 2  # Initial liquid level [m]
+h0 = 2  # Initial level [m]
 t = np.linspace(0, 100, 1000)  # Simulation time [s]
 sol = solve_ivp(tank_model, [t[0], t[-1]], [h0], t_eval=t, args=(Q_in, Q_out))
 
