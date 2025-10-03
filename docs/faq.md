@@ -20,7 +20,9 @@ In conclusion, a model can be seen as a **simplified abstraction** that highligh
 
 ## What types of models are found in this repository?
 
-This repository contains only mathematical models described by equations. Most are derived from physical laws and can be either dynamic (typically formulated with differential equations) or static (expressed with algebraic equations). You will not find statistical or data-driven models, such as neural networks or machine learning models, as the focus here is on first-principles modeling.
+This repository contains only mathematical models described by equations. Most are derived from physical laws and can be either dynamic (typically formulated with differential equations) or static (expressed with algebraic equations). While models from other areas, such as economics, biology and social sciences, could potentially be added, the primary focus of this repository is on industrial applications.
+
+You will not find statistical or data-driven models, such as neural networks or machine learning models, as the focus here is on first-principles modeling.
 
 ## What can the models in this repository be used for?
 
