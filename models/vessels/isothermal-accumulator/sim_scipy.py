@@ -29,7 +29,7 @@ k2: Final[float] = 0.015
 # --- Vessel Dynamics ---
 def vessel_model(t: float, P: float, P1: float, P2: float):
     """
-    Differential equation for the tank level.
+    Differential equation for the vessel pressure.
 
     Parameters:
     - t: time [s]
