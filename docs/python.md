@@ -47,9 +47,19 @@ Using UV guarantees that your code runs exactly as intended, without worrying ab
    uv run models/tanks/cubic-pump-controlled/sim_scipy.py
    ```
 
+4. **Run all simulations at once**
+
+   If you want to execute **all simulation scripts** in the repository with a single command, you can use the provided `run_all.py` script.
+
+   From the repository root, simply run:
+
+   ```bash
+   uv run run_all.py
+   ```
+
 ## I ran a Python file and nothing happened. What should I do?
 
-The Python scripts in this repository generate plots and save the results in the `simulations/` folder, rather than printing output to the terminal. If nothing appeared, check that folder, the graphs were likely updated there (if you delete the contents of the folder, the plots will be regenerated when you rerun the script).
+Most Python scripts in this repository generate plots and save the results in the `simulations/` folder, rather than printing output to the terminal. If nothing appeared, check that folder, the graphs were likely updated there (if you delete the contents of the folder, the plots will be regenerated when you rerun the script).
 
 ## _NumPy_? _SciPy_? _CasADi_?
 
