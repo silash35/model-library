@@ -41,7 +41,7 @@ def vessel_model(t: float, P: float, P1: float, P2: float):
     return dPdt
 
 
-# --- Model Parameters ---
+# --- Model Inputs ---
 P1 = C.atm * 2
 """Inlet pressure [Pa]"""
 
@@ -53,10 +53,14 @@ P0 = C.atm * 1.5  # Initial pressure [Pa]
 t = np.linspace(0, 3, 1000)  # Simulation time [s]
 sol = solve_ivp(vessel_model, [t[0], t[-1]], [P0], t_eval=t, args=(P1, P2))
 
+# --- Model Outputs ---
+P = sol.y[0]
+"""Pressure inside the vessel [Pa]"""
+
 # --- Plot results ---
 # Convert pressure from Pa to bar for easier visualization
 plt.plot(sol.t, P1 * 1e-5 * np.ones_like(sol.t), label="$P_1(t)$")
-plt.plot(sol.t, sol.y[0] * 1e-5, label="$P(t)$")
+plt.plot(sol.t, P * 1e-5, label="$P(t)$")
 plt.plot(sol.t, P2 * 1e-5 * np.ones_like(sol.t), label="$P_2(t)$")
 
 plt.xlabel("Time / s")

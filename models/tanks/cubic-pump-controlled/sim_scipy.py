@@ -28,7 +28,7 @@ def tank_model(t: float, h: float, Q_in: float, Q_out: float):
     return dhdt
 
 
-# --- Model Parameters ---
+# --- Model Inputs ---
 Q_in = 0.3
 """Inlet flow rate [m^3/s]"""
 
@@ -40,9 +40,13 @@ h0 = 2  # Initial level [m]
 t = np.linspace(0, 100, 1000)  # Simulation time [s]
 sol = solve_ivp(tank_model, [t[0], t[-1]], [h0], t_eval=t, args=(Q_in, Q_out))
 
+# --- Model Outputs ---
+h = sol.y[0]
+"""Liquid level [m]"""
+
 # --- Plot results ---
 plt.axhline(L, color="tab:red", linestyle="--", label="Tank Limits")
-plt.plot(sol.t, sol.y[0], label="$h(t)$")
+plt.plot(sol.t, h, label="$h(t)$")
 plt.axhline(0, color="tab:red", linestyle="--")
 
 plt.xlabel("Time / s")
