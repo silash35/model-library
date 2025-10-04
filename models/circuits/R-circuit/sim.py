@@ -1,5 +1,7 @@
+from typing import Final
+
 # --- Model Constants ---
-R = 10.0
+R: Final[float] = 10.0
 """Resistance [Ω]"""
 
 # --- Model Input ---
