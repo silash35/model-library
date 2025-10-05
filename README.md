@@ -30,6 +30,6 @@ The goal of this repository is to serve as an **open library of mathematical mod
 
 ## 📑 Key documents
 
-- [❓ Frequently Asked Questions (FAQ)](docs/faq.md)
-- [🤝 How to Contribute](docs/contributing.md)
-- [▶️ How to Run the Python Code](docs/python.md)
+- [❓ Frequently Asked Questions (FAQ)](/docs/faq.md)
+- [🤝 How to Contribute](/docs/contributing.md)
+- [▶️ How to Run the Python Code](/docs/python.md)

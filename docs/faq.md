@@ -54,4 +54,4 @@ For more information about citation files on GitHub, see: [About Citation Files]
 
 ## I'm having problems running the Python code. What should I do?
 
-First, follow the instructions in [`Python Guide`](docs/python.md). If that does not resolve the issue, please create a GitHub issue so we can investigate and help you.
+First, follow the instructions in [`Python Guide`](/docs/python.md). If that does not resolve the issue, please create a GitHub issue so we can investigate and help you.
