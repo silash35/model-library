@@ -9,7 +9,7 @@ V = 5
 """Applied voltage [V]"""
 
 # --- Model Output ---
-I = V / R  # Algebraic solution  # noqa: E741
+I = V / R  # Algebraic solution
 """Current [A]"""
 
 # --- Print result ---

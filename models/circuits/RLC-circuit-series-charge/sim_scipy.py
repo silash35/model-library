@@ -27,7 +27,7 @@ def circuit_model(t: float, y: np.ndarray, epsilon: float):
     - epsilon: applied voltage [V]
     """
     q = y[0]  # Charge on the capacitor [C]
-    I = y[1]  # Current through the circuit [A]  # noqa: E741
+    I = y[1]  # Current through the circuit [A]
 
     dqdt = I
     dIdt = (epsilon - R * I - q / C) / L
@@ -51,7 +51,7 @@ sol = solve_ivp(circuit_model, [t[0], t[-1]], y0, t_eval=t, args=(epsilon,))
 q = sol.y[0]
 """Capacitor charge [C]"""
 
-I = sol.y[1]  # noqa: E741
+I = sol.y[1]
 """Circuit current [A]"""
 
 # --- Plot results ---

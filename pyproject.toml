@@ -17,3 +17,4 @@ dev = [
 
 [tool.ruff.lint]
 extend-select = ["I"]
+ignore = ["E741"]
