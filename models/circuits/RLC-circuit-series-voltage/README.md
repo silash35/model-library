@@ -23,7 +23,7 @@ Where:
 - $C$: capacitance [F]
 
 > Note: This is a **second-order ODE**, so some numerical solvers may require reducing it to a system of first-order equations.
-> For details on how to do this, see [Reducing Higher-Order ODEs](/docs/ode_reduction.md).
+> For details on how to do this, see [Reducing Higher-Order ODEs](/docs/ode-reduction.md).
 
 ## Model Classification
 
