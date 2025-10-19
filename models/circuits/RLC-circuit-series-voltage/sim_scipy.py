@@ -62,8 +62,9 @@ plt.title("Series RLC Circuit")
 plt.grid(True)
 plt.legend()
 
-# Save the plot
+# Save plot to file
 script_dir = os.path.dirname(os.path.abspath(__file__))
+os.makedirs(os.path.join(script_dir, "simulations"), exist_ok=True)
 save_path = os.path.join(script_dir, "simulations", "scipy.png")
 plt.savefig(save_path)
 print(f"Plot saved to {save_path}")
