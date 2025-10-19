@@ -26,7 +26,7 @@ def mechanical_model(t: float, y: np.ndarray, F_ext: float):
     - y: state vector
     - F_ext: external applied force [N]
     """
-    x = y[0]  # Position [m]
+    x = y[0]  # Displacement [m]
     v = y[1]  # Velocity [m/s]
 
     dxdt = v
@@ -39,7 +39,7 @@ F_ext = 10.0
 """External applied force [N]"""
 
 # --- Initial Conditions ---
-x0 = 0.0  # Initial position [m]
+x0 = 0.0  # Initial displacement [m]
 v0 = 0.0  # Initial velocity [m/s]
 y0 = [x0, v0]
 
@@ -49,7 +49,7 @@ sol = solve_ivp(mechanical_model, [t[0], t[-1]], y0, t_eval=t, args=(F_ext,))
 
 # --- Model Outputs ---
 x = sol.y[0]
-"""Mass position [m]"""
+"""Mass displacement [m]"""
 
 v = sol.y[1]
 """Mass velocity [m/s]"""

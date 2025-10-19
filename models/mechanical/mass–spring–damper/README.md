@@ -51,7 +51,7 @@ Where:
 
    $`F_{ext}(t) - F_k(t) - F_c(t) = m \frac{d^2 x(t)}{dt^2}`$
 
-   where
+   where:
 
    - $F_{ext}(t)$ is the external applied force,
    - $F_k(t)$ is the spring force, and
