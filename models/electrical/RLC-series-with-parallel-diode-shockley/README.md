@@ -1,7 +1,7 @@
 # Series RLC Circuit with Parallel Diode (Shockley diode equation)
 
 > This model follows the general assumptions of **electronic circuit models**.
-> For details, see [Electrical Circuits](/models/circuits/README.md).
+> For details, see [Electrical Circuits](/models/electrical/README.md).
 
 This section describes a series RLC circuit with a **voltage source**, **resistor**, **inductor**, and **capacitor**, where the capacitor is connected in **parallel with a diode**.
 The physical system is illustrated in the figure below:

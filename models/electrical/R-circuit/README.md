@@ -1,7 +1,7 @@
 # Resistor Circuit
 
 > This model follows the general assumptions of **electronic circuit models**.
-> For details, see [Electrical Circuits](/models/circuits/README.md).
+> For details, see [Electrical Circuits](/models/electrical/README.md).
 
 This section describes a simple **electrical circuit** composed of a **voltage source** and a **resistor** connected in series.
 The current through the resistor is determined directly by **Ohm’s Law**, making this a purely algebraic model.

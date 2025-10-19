@@ -44,7 +44,7 @@ Using UV guarantees that your code runs exactly as intended, without worrying ab
    For example, if you are in the repository root, to run the SciPy simulation of the cubic tank with a pump-controlled inlet and outlet:
 
    ```bash
-   uv run models/tanks/cubic-pump-controlled/sim_scipy.py
+   uv run models/tank/cubic-pump-controlled/sim_scipy.py
    ```
 
 4. **Run all simulations at once**

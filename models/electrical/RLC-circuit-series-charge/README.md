@@ -1,7 +1,7 @@
 # Series RLC Circuit (Charge)
 
 > This model follows the general assumptions of **electronic circuit models**.
-> For details, see [Electrical Circuits](/models/circuits/README.md).
+> For details, see [Electrical Circuits](/models/electrical/README.md).
 
 This section describes a simple electrical circuit composed of a **voltage source**, a **resistor**, an **inductor**, and a **capacitor** connected in series.
 The physical system is illustrated in the figure below:
