@@ -19,7 +19,7 @@ C: Final[float] = 5000e-6
 # --- Circuit Dynamics ---
 def circuit_model(t: float, y: np.ndarray, epsilon: float):
     """
-    Differential equation for the circuit in terms of capacitor charge.
+    Differential equation for the circuit in terms of capacitor voltage.
 
     Parameters:
     - t: time [s]

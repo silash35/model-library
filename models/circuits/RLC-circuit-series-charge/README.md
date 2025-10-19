@@ -45,7 +45,7 @@ Where:
 
    where $V_R(t)$, $V_L(t)$, and $V_C(t)$ are the voltage drops across the resistor, inductor, and capacitor, respectively.
 
-2. Applying the constitutive equations of the components:
+2. Applying the [constitutive equations](/docs/electronic-components.md) of the components:
 
    $`\varepsilon(t) - R I(t) - L \frac{dI(t)}{dt} - \frac{1}{C} q(t) = 0,`$
 
