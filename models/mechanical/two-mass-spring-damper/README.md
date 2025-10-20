@@ -14,7 +14,7 @@ The dynamics are described in terms of the positions of each mass, $x_1(t)$ and 
 
 $$
 \begin{cases}
-   \displaystyle \frac{d^2 x_1}{dt^2} = \frac{c(\dot{x}_2 - \dot{x}_1) + k(x_2 - x_1)}{m_1} \\[1em]
+   \displaystyle \frac{d^2 x_1}{dt^2} = \frac{c(\dot{x}_2 - \dot{x}_1) + k(x_2 - x_1)}{m_1}\\
    \displaystyle \frac{d^2 x_2}{dt^2} = \frac{u(t) - c(\dot{x}_2 - \dot{x}_1) - k(x_2 - x_1)}{m_2}
 \end{cases}
 $$
@@ -58,7 +58,7 @@ Where:
    Substituting the forces into Newton's Second Law gives the system of equations:
 
    $`\begin{cases}
-   F_k + F_c = m_1 \frac{d^2 x_1(t)}{dt^2} \\[1em]
+   F_k + F_c = m_1 \frac{d^2 x_1(t)}{dt^2}\\
    u - F_k - F_c = m_2 \frac{d^2 x_2(t)}{dt^2}
    \end{cases}`$
 
@@ -70,7 +70,7 @@ Where:
 2. Applying the [constitutive equations](/docs/mechanical-components.md) of the spring and damper:
 
    $`\begin{cases}
-   k(x_2 - x_1) + c(\dot{x}_2 - \dot{x}_1) = m_1 \frac{d^2 x_1(t)}{dt^2} \\[1em]
+   k(x_2 - x_1) + c(\dot{x}_2 - \dot{x}_1) = m_1 \frac{d^2 x_1(t)}{dt^2}\\
    u(t) - k(x_2 - x_1) - c(\dot{x}_2 - \dot{x}_1) = m_2 \frac{d^2 x_2(t)}{dt^2}
    \end{cases}`$
 
@@ -78,7 +78,7 @@ Where:
 
    $`\boxed{
       \begin{cases}
-         \displaystyle \frac{d^2 x_1}{dt^2} = \frac{c(\dot{x}_2 - \dot{x}_1) + k(x_2 - x_1)}{m_1} \\[1em]
+         \displaystyle \frac{d^2 x_1}{dt^2} = \frac{c(\dot{x}_2 - \dot{x}_1) + k(x_2 - x_1)}{m_1}\\
          \displaystyle \frac{d^2 x_2}{dt^2} = \frac{u(t) - c(\dot{x}_2 - \dot{x}_1) - k(x_2 - x_1)}{m_2}
       \end{cases}
    }`$

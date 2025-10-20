@@ -12,7 +12,7 @@ The physical system is illustrated in the figure below:
 The dynamics of the system are described in terms of the mass displacement $x(t)$:
 
 $$
-\frac{d^2 x(t)}{dt^2} = \frac{F_{ext}(t) - c \frac{dx(t)}{dt} - k x(t)}{m}
+\frac{d^2 x(t)}{dt^2} = \frac{1}{m} \left(F_{ext}(t) - c \frac{dx(t)}{dt} - k x(t)\right)
 $$
 
 Where:
@@ -53,9 +53,9 @@ Where:
 
    where:
 
-   - $F_{ext}(t)$ is the external applied force,
-   - $F_k(t)$ is the spring force, and
-   - $F_c(t)$ is the damping force.
+   - $F_{ext}(t)$ is the external applied force
+   - $F_k(t)$ is the spring force
+   - $F_c(t)$ is the damping force
 
 2. Applying the [constitutive equations](/docs/mechanical-components.md) of the spring and damper:
 
@@ -64,5 +64,5 @@ Where:
 3. Rearranging to isolate the acceleration term:
 
    $`\boxed{
-      \frac{d^2 x(t)}{dt^2} = \frac{F_{ext}(t) - c \frac{dx(t)}{dt} - k x(t)}{m}
+      \frac{d^2 x(t)}{dt^2} = \frac{1}{m} \left(F_{ext}(t) - c \frac{dx(t)}{dt} - k x(t)\right)
    }`$

@@ -12,8 +12,8 @@ The dynamics of the circuit are described in terms of the **voltage across the c
 
 $$
 \begin{cases}
-  \frac{dV_C(t)}{dt} = \frac{1}{C} \left( I(t) - I_D(V_C) \right) \\[1em]
-  \frac{dI(t)}{dt} = \frac{1}{L} \left( \varepsilon(t) - R I(t) - V_C(t) \right)
+  \displaystyle \frac{dV_C(t)}{dt} = \frac{1}{C} \left( I(t) - I_D(V_C) \right)\\
+  \displaystyle \frac{dI(t)}{dt} = \frac{1}{L} \left( \varepsilon(t) - R I(t) - V_C(t) \right)
 \end{cases}
 $$
 
@@ -76,7 +76,7 @@ The diode current $I_D$ is modeled using the **Shockley diode equation**. For de
 5. Joining the KVL and the KCL in a system of first-order differential equations:
 
    $`\begin{cases}
-      I(t) = C \frac{dV_C(t)}{dt} + I_D(t)\\[1em]
+      I(t) = C \frac{dV_C(t)}{dt} + I_D(t)\\
       \varepsilon(t) - R I(t) - L \frac{dI(t)}{dt} - V_C(t) = 0
    \end{cases}`$
 
@@ -84,7 +84,7 @@ The diode current $I_D$ is modeled using the **Shockley diode equation**. For de
 
    $`\boxed{
       \begin{cases}
-         \frac{dV_C(t)}{dt} = \frac{1}{C} \left( I(t) - I_D(V_C) \right) \\[1em]
+         \frac{dV_C(t)}{dt} = \frac{1}{C} \left( I(t) - I_D(V_C) \right)\\
          \frac{dI(t)}{dt} = \frac{1}{L} \left( \varepsilon(t) - R I(t) - V_C(t) \right)
       \end{cases}
    }`$

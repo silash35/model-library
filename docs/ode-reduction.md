@@ -31,7 +31,7 @@ Thus, the second-order equation is transformed into a **system of two first-orde
 
 $$
 \begin{cases}
-  \dot{y}(t) = x(t) \\
+  \dot{y}(t) = x(t)\\
   \dot{x}(t) = -y(t)
 \end{cases}
 $$
