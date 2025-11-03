@@ -2,17 +2,19 @@
 
 ## Introdução
 
-Modelos matemáticos são representações de sistemas do mundo real, sejam eles físicos, químicos, econômicos ou biológicos.
-Eles são fundamentais porque nos permitem compreender, prever e otimizar o comportamento desses sistemas, desde processos industriais até fenômenos naturais e sociais.
+Modelos matemáticos são representações abstratas de sistemas reais, sejam eles físicos, químicos, econômicos ou biológicos.
+Essas representações são descritas por equações que traduzem o comportamento de um sistema em termos quantitativos e conceituais.
 
-No entanto, encontrar modelos matemáticos completos, bem documentados e acompanhados de sua implementação nem sempre é uma tarefa fácil. Muitas vezes, eles estão dispersos em artigos, livros ou repositórios pessoais, dificultando o estudo e a reutilização.
+Eles são ferramentas essenciais para compreender, prever e otimizar o funcionamento de processos em engenharia, ciências naturais e diversas outras áreas do conhecimento.
 
-Com esse problema em mente, foi criado o Model Library: um repositório público e colaborativo no GitHub que tem como objetivo reunir modelos matemáticos prontos para uso, acompanhados de documentação e código-fonte (principalmente em Python).
-Ele é um espaço aberto para que autores compartilhem seus modelos de forma clara, padronizada e acessível a todos.
+Muitos trabalhos acadêmicos apresentam somente parte do modelo, com parâmetros ausentes, equações incompletas e sem código, tornando a reprodução e o aprendizado muito mais complicados.
+Além disso, esses modelos costumam estar dispersos em diferentes fontes, como artigos científicos, livros ou repositórios pessoais, dificultando o acesso e a comparação entre eles.
+O Model Library surge justamente para preencher essa lacuna, oferecendo um espaço único onde modelos podem ser encontrados, executados e estudados de forma prática.
+Ele é um repositório público e colaborativo no GitHub cujo objetivo é reunir modelos matemáticos prontos para uso, acompanhados de documentação e implementação em código.
 
 ## Propósito
 
-O propósito principal do Model Library é ser uma biblioteca aberta e organizada de modelos matemáticos, servindo tanto para aprendizado quanto para pesquisa e desenvolvimento.
+O propósito principal do _Model Library_ é ser uma biblioteca aberta e organizada de modelos matemáticos, servindo tanto para aprendizado que torna o GitHub especial é seu caráter colaborativo, permitindo que qualquer pessoa contribua com melhorias por meio de _Pull Requests_; seu acesso aberto e gratuito, sem barreiras de entrada; e sua estrutura organizada, que possibilita rastrear versões, autores e evoluções de cada projeto de forma transparente.o quanto para pesquisa e desenvolvimento.
 
 Mais especificamente, o projeto busca:
 
@@ -31,18 +33,9 @@ Em resumo, o Model Library é um acervo aberto e colaborativo de conhecimento t�
 ## Por que o GitHub?
 
 O GitHub é a maior plataforma de hospedagem e colaboração de código aberto do mundo.
-É onde vivem grandes projetos como o PyTorch, React, TensorFlow e milhares de outros.
+É onde vivem grandes projetos como o PyTorch, React, TensorFlow e milhares de outros. Além de software, o GitHub também abriga conteúdo educacional, com repositórios focados em tutoriais e projetos didáticos.
 
-Além de software, o GitHub também abriga conteúdo educacional — tutoriais, artigos técnicos e projetos didáticos. Isso torna o ambiente perfeito para o Model Library, já que ele é:
-
-Colaborativo: qualquer pessoa pode propor melhorias via Pull Requests;
-
-Aberto: o acesso é gratuito, sem barreiras ou licenças restritivas;
-
-Organizado: o Git e o GitHub permitem rastrear mudanças, versões e autores de cada contribuição.
-
-Essas qualidades tornam o GitHub o local ideal para desenvolver e expandir o Model Library, reforçando o caráter coletivo e educacional do projeto.
-O Model Library nasce, portanto, como uma iniciativa aberta, para autores, professores e estudantes que desejam compartilhar e aprender sobre modelagem matemática.
+O que torna o GitHub especial é seu caráter colaborativo sua, permitindo que qualquer pessoa contribua com melhorias por meio de Pull Requests; seu acesso aberto e gratuito, sem barreiras de entrada; e sua estrutura organizada, que possibilita rastrear versões, autores e evoluções de cada projeto de forma transparente.
 
 ## Background — Conhecimento necessário
 
