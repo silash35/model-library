@@ -14,7 +14,7 @@ The same dictionary also provides a broader meaning:
 
 > _“A simple representation of a system or process, especially one that can be used in calculations or predictions of what might happen.”_
 
-This second definition captures what we call mathematical models: abstractions described by equations or algorithms. These models are essential tools for studying systems in engineering, science, and many other fields, and they are the primary focus of this repository.
+This second definition captures what we call mathematical models: abstractions described by equations. These models are essential tools for studying systems in engineering, science, and many other fields, and they are the primary focus of this repository.
 
 In conclusion, a model can be seen as a **simplified abstraction** that highlights the most relevant aspects of a system while ignoring details that are not essential for the analysis.
 
