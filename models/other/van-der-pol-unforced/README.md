@@ -13,7 +13,7 @@ Where:
 - $x(t)$: state variable
 - $\mu$: nonlinearity parameter ($\mu > 0$)
 
-The state variable $x(t)$ can represent many different physical quantities depending on the context. By example, it can represent the position (in meters) of an oscillating mass, with $\frac{dx(t)}{dt}$ representing its velocity (meters per second).
+The state variable $x(t)$ can represent many different physical quantities depending on the context. For example, it can represent the position (in meters) of an oscillating mass, with $\frac{dx(t)}{dt}$ representing its velocity (meters per second).
 
 > Note: This is a **second-order ODE**, so some numerical solvers may require reducing it to a system of first-order equations.
 > For details on how to do this, see [Reducing Higher-Order ODEs](/docs/ode-reduction.md).
