@@ -27,7 +27,7 @@ def circuit_model(t: float, Vc: float, epsilon: float):
     return dVc_dt
 
 
-# --- Model Inputs ---
+# --- Model Input ---
 epsilon = 5.0
 """Applied voltage [V]"""
 
@@ -36,7 +36,7 @@ Vc0 = 0.0  # Initial capacitor voltage [V]
 t = np.linspace(0, 3, 1000)  # Simulation time [s]
 sol = solve_ivp(circuit_model, [t[0], t[-1]], [Vc0], t_eval=t, args=(epsilon,))
 
-# --- Model Outputs ---
+# --- Model Output ---
 Vc = sol.y[0]
 """Capacitor voltage [V]"""
 

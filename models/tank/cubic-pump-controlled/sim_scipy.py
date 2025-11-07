@@ -40,7 +40,7 @@ h0 = 2  # Initial level [m]
 t = np.linspace(0, 100, 1000)  # Simulation time [s]
 sol = solve_ivp(tank_model, [t[0], t[-1]], [h0], t_eval=t, args=(Q_in, Q_out))
 
-# --- Model Outputs ---
+# --- Model Output ---
 h = sol.y[0]
 """Liquid level [m]"""
 

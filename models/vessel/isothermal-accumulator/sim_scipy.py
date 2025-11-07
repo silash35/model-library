@@ -53,7 +53,7 @@ P0 = C.atm * 1.5  # Initial pressure [Pa]
 t = np.linspace(0, 3, 1000)  # Simulation time [s]
 sol = solve_ivp(vessel_model, [t[0], t[-1]], [P0], t_eval=t, args=(P1, P2))
 
-# --- Model Outputs ---
+# --- Model Output ---
 P = sol.y[0]
 """Pressure inside the vessel [Pa]"""
 

@@ -27,7 +27,7 @@ def circuit_model(t: float, q: float, epsilon: float):
     return dqdt
 
 
-# --- Model Inputs ---
+# --- Model Input ---
 epsilon = 5.0
 """Applied voltage [V]"""
 
@@ -36,7 +36,7 @@ q0 = 0.0  # Initial charge [C]
 t = np.linspace(0, 3, 1000)  # Simulation time [s]
 sol = solve_ivp(circuit_model, [t[0], t[-1]], [q0], t_eval=t, args=(epsilon,))
 
-# --- Model Outputs ---
+# --- Model Output ---
 q = sol.y[0]
 """Capacitor charge [C]"""
 

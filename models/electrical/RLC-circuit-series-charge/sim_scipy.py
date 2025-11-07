@@ -34,7 +34,7 @@ def circuit_model(t: float, y: np.ndarray, epsilon: float):
     return [dqdt, dIdt]
 
 
-# --- Model Inputs ---
+# --- Model Input ---
 epsilon = 5.0
 """Applied voltage [V]"""
 

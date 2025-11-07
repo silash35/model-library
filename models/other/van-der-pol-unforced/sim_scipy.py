@@ -39,6 +39,7 @@ sol = solve_ivp(model, [t[0], t[-1]], y0, t_eval=t)
 # --- Model Outputs ---
 x = sol.y[0]
 """Position [m]"""
+
 v = sol.y[1]
 """Velocity [m/s]"""
 

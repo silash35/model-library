@@ -46,7 +46,7 @@ def mechanical_model(t: float, y: np.ndarray, u: float):
     return [dx1dt, dv1dt, dx2dt, dv2dt]
 
 
-# --- Model Inputs ---
+# --- Model Input ---
 u = 2.0
 """External applied force [N]"""
 
