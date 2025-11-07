@@ -21,7 +21,13 @@ Where:
 Once $L$ is expressed in terms of the system’s generalized coordinates $q_i$, it becomes possible to determine how the system evolves in time. The relationship between these quantities is expressed through the **Lagrange’s Equation of Motion**, which provides one equation for each coordinate $q_i$:
 
 $$
-\frac{d}{dt}\left(\frac{\partial L}{\partial \dot{q}_i}\right) - \frac{\partial L}{\partial q_i} = 0
+\frac{d}{dt}\left(\frac{\partial L}{\partial \dot{q}_i}\right) - \frac{\partial L}{\partial q_i} = Q_i
 $$
 
-This differential equation governs the system’s dynamics without directly involving forces or torques.
+Where:
+
+- $q_i$: generalized coordinate
+- $\dot{q}_i$: generalized velocity
+- $Q_i$: generalized external force corresponding to $q_i$
+
+This differential equation governs the system’s dynamics, including the effects of external forces.
