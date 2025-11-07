@@ -35,12 +35,6 @@ Where:
 - $J$: moment of inertia of the object about the rotation axis [kg·m²]
 - $\omega$: angular velocity [rad/s]
 
-For systems combining translation and rotation, the **total kinetic energy** $(T)$ is the sum of both components:
-
-$$
-T = \frac{1}{2} J \omega^2 + \frac{1}{2} m v^2
-$$
-
 ## Gravitational Potential Energy
 
 **Gravitational potential energy** is the energy an object has due to its position in a gravitational field.
