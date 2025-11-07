@@ -22,6 +22,25 @@ Where:
 - $m$: mass of the object [kg]
 - $v$: velocity of the object [m/s]
 
+In systems that involve **rotational motion**, such as rotating wheels or pendulums, kinetic energy also depends on the object’s moment of inertia and angular velocity.
+The rotational kinetic energy is expressed as:
+
+$$
+E_{k,rot} = \frac{1}{2} J \omega^2
+$$
+
+Where:
+
+- $E_{k,rot}$: rotational kinetic energy [J]
+- $J$: moment of inertia of the object about the rotation axis [kg·m²]
+- $\omega$: angular velocity [rad/s]
+
+For systems combining translation and rotation, the **total kinetic energy** $(T)$ is the sum of both components:
+
+$$
+T = \frac{1}{2} J \omega^2 + \frac{1}{2} m v^2
+$$
+
 ## Gravitational Potential Energy
 
 **Gravitational potential energy** is the energy an object has due to its position in a gravitational field.
