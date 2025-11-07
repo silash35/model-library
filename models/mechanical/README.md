@@ -25,6 +25,6 @@ In mechanical systems, motion can be described using linear and rotational quant
 Unless explicitly stated otherwise, all models in this section consider the following assumptions:
 
 - Mechanical elements behave ideally, exactly according to their constitutive relations.
-- Unless explicitly stated otherwise, all friction is ignored. When considered, it follows ideal static or kinetic behavior.
+- Unless explicitly stated otherwise, all forms of friction and resistance, including air resistance, are ignored. When considered, friction follows ideal static or kinetic behavior.
 - Mass is ideal, i.e., uniformly distributed, and applied forces are uniformly distributed, without deformations.
 - The laws of [classical mechanics](/docs/newton-laws.md) are perfectly applied. Relativistic effects are ignored as they are negligible.
