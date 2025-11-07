@@ -59,7 +59,7 @@ Where:
 
 2. Applying the [constitutive equations](/docs/mechanical-components.md) of the spring and damper:
 
-   $`F_{ext}(t) - k x(t) - c \frac{dx(t)}{dt} = m \frac{d^2 x(t)}{dt^2},`$
+   $`F_{ext}(t) - k x(t) - c \frac{dx(t)}{dt} = m \frac{d^2 x(t)}{dt^2}.`$
 
 3. Rearranging to isolate the acceleration term:
 

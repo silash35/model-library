@@ -48,13 +48,13 @@ Where:
 We want to model the pressure $P(t)$ inside a pressurized gas vessel.
 The derivation follows from the [mass balance](/docs/mass-balance.md) principle.
 
-1. **Mass balance of the vessel**
+1. Mass balance of the vessel
 
    $`\frac{dm(t)}{dt} = F_{1}(t) - F_{2}(t)`$
 
    where $m(t)$ is the gas mass inside the vessel [kg], and $F_{1}(t)$, $F_{2}(t)$ are the inlet and outlet mass flow rates [kg/s].
 
-2. **Flow model through fixed openings**
+2. Flow model through fixed openings
 
    Each mass flow is assumed proportional to the square root of the driving pressure difference:
 
@@ -65,32 +65,24 @@ The derivation follows from the [mass balance](/docs/mass-balance.md) principle.
 
    Substituting into the mass balance:
 
-   $`
-   \frac{dm(t)}{dt} = k_1 \sqrt{P_1 - P(t)} - k_2 \sqrt{P(t) - P_2}
-   `$
+   $`\frac{dm(t)}{dt} = k_1 \sqrt{P_1 - P(t)} - k_2 \sqrt{P(t) - P_2}`$
 
-3. **Ideal Gas Law**
+3. Ideal Gas Law
 
    For an ideal gas, the pressure, volume, and temperature are related by the [ideal gas law](/docs/ideal-gas-law.md):
 
-   $`
-   P V = n R T
-   `$
+   $`P \cdot V = n \cdot R \cdot T`$
 
    The amount of substance $n$ is defined as:
 
-   $`
-   n = \frac{m}{MM}
-   `$
+   $`n = \frac{m}{MM}`$
 
    where $m$ is the gas mass [kg] and $MM$ is the molar mass [kg/mol].
    Substituting into the ideal gas law gives:
 
-   $`
-   m(t) = \frac{P(t)\,V\,MM}{R T}
-   `$
+   $`m(t) = \frac{P(t)\,V\,MM}{R T}`$
 
-4. **Differentiating the gas mass**
+4. Differentiating the gas mass
 
    Taking the derivative:
 
@@ -100,7 +92,7 @@ The derivation follows from the [mass balance](/docs/mass-balance.md) principle.
 
    since $V$, $MM$, $R$, and $T$ are constants (the system is isothermal).
 
-5. **Final dynamic equation**
+5. Final dynamic equation
 
    Equating the two expressions for $\tfrac{dm(t)}{dt}$:
 
