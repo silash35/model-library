@@ -91,27 +91,29 @@ For an introduction to this method, see [Lagrangian Mechanics](/docs/lagrangian-
 
      $`V = m \cdot g \cdot y_c = m \cdot g \cdot L \cdot (1 - \cos(\theta))`$
 
-4. Form the Lagrangian
+4. Form the Lagrangian $(\mathcal{L})$
 
    The Lagrangian of the system is defined as the difference between kinetic and potential energy:
 
-   $`L = T - V`$
+   $`\mathcal{L} = T - V`$
 
    Substituting the expressions for kinetic and potential energy, the Lagrangian of the system is:
 
-   $`L = \frac{1}{2} J \dot{\theta}^2 - m g L (1 - \cos(\theta))`$
+   $`\mathcal{L} = \frac{1}{2} J \dot{\theta}^2 - m g L (1 - \cos(\theta))`$
 
 5. Apply the Lagrange’s equation
 
-   $`\frac{d}{dt}\left(\frac{\partial L}{\partial \dot{\theta}}\right) - \frac{\partial L}{\partial \theta} = Q_\theta`$
+   $`\frac{d}{dt}\left(\frac{\partial \mathcal{L}}{\partial \dot{\theta}}\right) - \frac{\partial \mathcal{L}}{\partial \theta} = Q_\theta`$
 
    where $Q_\theta = -k \dot{\theta}$ represents the **damping torque**.
 
    Compute the derivatives:
 
-   $`\frac{\partial L}{\partial \dot{\theta}} = J \dot{\theta}`$
-   $`\frac{d}{dt}\left(\frac{\partial L}{\partial \dot{\theta}}\right) = J \ddot{\theta}`$
-   $`\frac{\partial L}{\partial \theta} = -m g L \sin(\theta)`$
+   $`\frac{\partial \mathcal{L}}{\partial \dot{\theta}} = J \dot{\theta}`$
+
+   $`\frac{d}{dt}\left(\frac{\partial \mathcal{L}}{\partial \dot{\theta}}\right) = J \ddot{\theta}`$
+
+   $`\frac{\partial \mathcal{L}}{\partial \theta} = -m g L \sin(\theta)`$
 
    Substituting into the Lagrange’s equation:
 

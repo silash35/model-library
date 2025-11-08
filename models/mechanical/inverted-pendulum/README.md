@@ -104,33 +104,33 @@ For an introduction to this method, see [Lagrangian Mechanics](/docs/lagrangian-
    - Pendulum potential energy:
      $`V = m_p g L \cos(\theta)`$
 
-4. Form the Lagrangian
+4. Form the Lagrangian $(\mathcal{L})$
 
-   $`L = T - V`$
+   $`\mathcal{L} = T - V`$
 
    Substituting the kinetic and potential energies:
 
-   $`L = \frac{1}{2} m_c \dot{x}^2 + \frac{1}{2} m_p \left[(\dot{x} + L \cos(\theta) \dot{\theta})^2 + (- L \sin(\theta) \dot{\theta})^2 \right] + \frac{1}{2} J \dot{\theta}^2 - m_p g L \cos(\theta)`$
+   $`\mathcal{L} = \frac{1}{2} m_c \dot{x}^2 + \frac{1}{2} m_p \left[(\dot{x} + L \cos(\theta) \dot{\theta})^2 + (- L \sin(\theta) \dot{\theta})^2 \right] + \frac{1}{2} J \dot{\theta}^2 - m_p g L \cos(\theta)`$
 
    Simplifying the pendulum kinetic energy:
 
-   $`L = \frac{1}{2} (m_c + m_p) \dot{x}^2 + m_p L \cos(\theta) \dot{x} \dot{\theta} + \frac{1}{2} (m_p L^2 + J) \dot{\theta}^2 - m_p g L \cos(\theta)`$
+   $`\mathcal{L} = \frac{1}{2} (m_c + m_p) \dot{x}^2 + m_p L \cos(\theta) \dot{x} \dot{\theta} + \frac{1}{2} (m_p L^2 + J) \dot{\theta}^2 - m_p g L \cos(\theta)`$
 
 5. Apply the Lagrange’s equation of motion for the pendulum angle $\theta$
 
    For the generalized coordinate $\theta$, the Euler–Lagrange equation reads:
 
-   $`\frac{d}{dt} \left( \frac{\partial L}{\partial \dot{\theta}} \right) - \frac{\partial L}{\partial \theta} = Q_\theta`$
+   $`\frac{d}{dt} \left( \frac{\partial \mathcal{L}}{\partial \dot{\theta}} \right) - \frac{\partial \mathcal{L}}{\partial \theta} = Q_\theta`$
 
    where $`Q_\theta = 0`$.
 
    Compute derivatives:
 
-   $`\frac{\partial L}{\partial \dot{\theta}} = m_p L \cos(\theta) \dot{x} + (m_p L^2 + J) \dot{\theta}`$
+   $`\frac{\partial \mathcal{L}}{\partial \dot{\theta}} = m_p L \cos(\theta) \dot{x} + (m_p L^2 + J) \dot{\theta}`$
 
-   $`\frac{d}{dt} \left( \frac{\partial L}{\partial \dot{\theta}} \right) = (m_p L^2 + J) \ddot{\theta} + m_p L \cos(\theta) \ddot{x} - m_p L \dot{\theta} \dot{x} \sin(\theta)`$
+   $`\frac{d}{dt} \left( \frac{\partial \mathcal{L}}{\partial \dot{\theta}} \right) = (m_p L^2 + J) \ddot{\theta} + m_p L \cos(\theta) \ddot{x} - m_p L \dot{\theta} \dot{x} \sin(\theta)`$
 
-   $`\frac{\partial L}{\partial \theta} = - m_p L \dot{x} \dot{\theta} \sin(\theta) + m_p g L \sin(\theta)`$
+   $`\frac{\partial \mathcal{L}}{\partial \theta} = - m_p L \dot{x} \dot{\theta} \sin(\theta) + m_p g L \sin(\theta)`$
 
    Substituting into the Euler–Lagrange equation gives:
 
@@ -140,17 +140,17 @@ For an introduction to this method, see [Lagrangian Mechanics](/docs/lagrangian-
 
    For the generalized coordinate $x$, the Euler–Lagrange equation reads:
 
-   $`\frac{d}{dt} \left( \frac{\partial L}{\partial \dot{x}} \right) - \frac{\partial L}{\partial x} = Q_x`$
+   $`\frac{d}{dt} \left( \frac{\partial \mathcal{L}}{\partial \dot{x}} \right) - \frac{\partial \mathcal{L}}{\partial x} = Q_x`$
 
    where the generalized force is $`Q_x = F - b \dot{x}`$.
 
    For the other terms of the equation:
 
-   $`\frac{\partial L}{\partial \dot{x}} = (m_c + m_p) \dot{x} + m_p L \cos(\theta) \dot{\theta}`$
+   $`\frac{\partial \mathcal{L}}{\partial \dot{x}} = (m_c + m_p) \dot{x} + m_p L \cos(\theta) \dot{\theta}`$
 
-   $`\frac{d}{dt} \left( \frac{\partial L}{\partial \dot{x}} \right) = (m_c + m_p) \ddot{x} + m_p L \cos(\theta) \ddot{\theta} - m_p L \dot{\theta}^2 \sin(\theta)`$
+   $`\frac{d}{dt} \left( \frac{\partial \mathcal{L}}{\partial \dot{x}} \right) = (m_c + m_p) \ddot{x} + m_p L \cos(\theta) \ddot{\theta} - m_p L \dot{\theta}^2 \sin(\theta)`$
 
-   $`\frac{\partial L}{\partial x} = 0`$
+   $`\frac{\partial \mathcal{L}}{\partial x} = 0`$
 
    Euler–Lagrange equation for $x$:
 

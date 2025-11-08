@@ -105,33 +105,33 @@ For an introduction to this method, see [Lagrangian Mechanics](/docs/lagrangian-
 
    > For more details about kinetic and potential energy, see [Energy](/docs/energy.md).
 
-5. Form the Lagrangian
+5. Form the Lagrangian $(\mathcal{L})$
 
    The Lagrangian of the system is defined as the difference between kinetic and potential energy:
 
-   $`L = T - V`$
+   $`\mathcal{L} = T - V`$
 
    Substituting the expressions for kinetic and potential energy, the Lagrangian of the system is:
 
-   $`L = \frac{1}{2} m L^2 \dot{\theta}^2 - m g L (1 - \cos(\theta))`$
+   $`\mathcal{L} = \frac{1}{2} m L^2 \dot{\theta}^2 - m g L (1 - \cos(\theta))`$
 
 6. Compute the necessary derivatives for Lagrange’s equation
 
    The Lagrange’s equation of motion is:
 
-   $`\frac{d}{dt}\left(\frac{\partial L}{\partial \dot{\theta}}\right) - \frac{\partial L}{\partial \theta} = Q_\theta`$
+   $`\frac{d}{dt}\left(\frac{\partial \mathcal{L}}{\partial \dot{\theta}}\right) - \frac{\partial \mathcal{L}}{\partial \theta} = Q_\theta`$
 
    $Q_\theta$ represents a generalized torque.
    For the simple pendulum, we assume no damping or external torque, so:
-   $`Q_\theta = 0$`
+   $`Q_\theta = 0`$
 
    For the other terms of the equation:
 
-   $`\frac{\partial L}{\partial \dot{\theta}} = m L^2 \dot{\theta}`$
+   $`\frac{\partial \mathcal{L}}{\partial \dot{\theta}} = m L^2 \dot{\theta}`$
 
-   $`\frac{d}{dt} \left( \frac{\partial L}{\partial \dot{\theta}} \right) = m L^2 \ddot{\theta}`$
+   $`\frac{d}{dt} \left( \frac{\partial \mathcal{L}}{\partial \dot{\theta}} \right) = m L^2 \ddot{\theta}`$
 
-   $`\frac{\partial L}{\partial \theta} = - m g L \sin(\theta)`$
+   $`\frac{\partial \mathcal{L}}{\partial \theta} = - m g L \sin(\theta)`$
 
    Substituting into Lagrange’s equation:
 
