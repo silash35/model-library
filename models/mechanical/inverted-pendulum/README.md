@@ -43,7 +43,7 @@ For details on the general assumptions, see [Mechanical Systems](/models/mechani
 In addition, for the inverted pendulum system, we assume:
 
 - The cart moves on a frictionless, horizontal surface, except for viscous damping represented by $b$.
-- The pendulum is a rigid rod with mass concentrated along its length.
+- The pendulum is a rigid rod with uniform mass distribution along its length.
 - The pivot connecting the pendulum to the cart is frictionless.
 - The pendulum moves in a vertical plane, while the cart moves horizontally.
 
@@ -66,7 +66,15 @@ For an introduction to this method, see [Lagrangian Mechanics](/docs/lagrangian-
 
 1. Define the coordinates of the pendulum mass
 
-   The rod forms a right triangle from the pivot to the pendulum center of mass having length $L$. Therefore the position of the pendulum's center of mass in the inertial frame is:
+   We choose the generalized coordinates:
+
+   - $x(t)$: horizontal displacement of the cart from an inertial reference point.
+   - $\theta(t)$: pendulum angle, with the convention that $\theta = 0$ corresponds to the **upright** (unstable) equilibrium.
+
+   The pendulum is modeled as a rigid rod of mass $m_p$, with its center of mass located at a distance $L$ from the pivot point.
+   The pivot itself moves horizontally with the cart, so its instantaneous position is: $(x,\, 0)$
+
+   From the pivot, the position of the pendulum’s center of mass in the inertial frame is given by:
 
    $`x_p = x + L \cdot \sin(\theta)`$
 
@@ -74,7 +82,7 @@ For an introduction to this method, see [Lagrangian Mechanics](/docs/lagrangian-
 
 2. Compute the velocity components
 
-   Differentiating $x_p$ and $y_p$ with respect to time gives:
+   Differentiating with respect to time gives the velocity components:
 
    $`\dot{x}_p = \dot{x} + L \cos(\theta) \cdot \dot{\theta}`$
 
