@@ -38,26 +38,32 @@ def mechanical_model(t: float, y: np.ndarray, F: float):
 
     theta = y[0]  # Pendulum angle [rad]
     omega = y[1]  # Angular velocity [rad/s]
-    x = y[2]  # Cart position [m]
+    # x = y[2]  # Cart position [m]
     v = y[3]  # Cart velocity [m/s]
 
-    dtheta_dt = omega
-    dx_dt = v
-
-    M = np.array(
+    # A Matrix (system coefficients)
+    A = np.array(
         [
-            [m_p * L**2 + J, m_p * L * np.cos(theta)],
-            [m_p * L * np.cos(theta), m_c + m_p],
+            [1, 0, 0, 0],
+            [0, m_p * L**2 + J, 0, m_p * L * np.cos(theta)],
+            [0, 0, 1, 0],
+            [0, m_p * L * np.cos(theta), 0, m_c + m_p],
         ]
     )
 
-    rhs = np.array(
-        [m_p * g * L * np.sin(theta), F - b * v + m_p * L * omega**2 * np.sin(theta)]
+    # b vector (right-hand side)
+    b_rhs = np.array(
+        [
+            omega,
+            m_p * g * L * np.sin(theta),
+            v,
+            F - b * v + m_p * L * omega**2 * np.sin(theta),
+        ]
     )
 
-    domega_dt, dv_dt = np.linalg.solve(M, rhs)
-
-    return [dtheta_dt, domega_dt, dx_dt, dv_dt]
+    # Solve the linear system A * [dtheta_dt, domega_dt, dx_dt, dv_dt]^T = b
+    dydt = np.linalg.solve(A, b_rhs)
+    return dydt
 
 
 # --- Model Input ---
@@ -99,31 +105,25 @@ fig.suptitle("Inverted Pendulum on a Cart")
 
 # Pendulum angle
 axs[0, 0].plot(sol.t, theta_deg, label="$\\theta(t)$", color="tab:blue")
-axs[0, 0].set_xlabel("Time / s")
 axs[0, 0].set_ylabel("Angle / deg")
-axs[0, 0].grid(True)
-axs[0, 0].legend()
 
 # Pendulum angular velocity
 axs[0, 1].plot(sol.t, omega_deg, label="$\\omega(t)$", color="tab:orange")
-axs[0, 1].set_xlabel("Time / s")
-axs[0, 1].set_ylabel("Angular velocity / deg/s")
-axs[0, 1].grid(True)
-axs[0, 1].legend()
+axs[0, 1].set_ylabel("Angular velocity / deg$\\cdot$s$^{-1}$")
 
 # Cart position
 axs[1, 0].plot(sol.t, x, label="$x(t)$", color="tab:green")
-axs[1, 0].set_xlabel("Time / s")
 axs[1, 0].set_ylabel("Position / m")
-axs[1, 0].grid(True)
-axs[1, 0].legend()
 
 # Cart velocity
 axs[1, 1].plot(sol.t, v, label="$v(t)$", color="tab:red")
-axs[1, 1].set_xlabel("Time / s")
 axs[1, 1].set_ylabel("Velocity / m/s")
-axs[1, 1].grid(True)
-axs[1, 1].legend()
+
+# Enable grid, legend, and set x-label for all subplots
+for ax in axs.flat:
+    ax.set_xlabel("Time / s")
+    ax.grid(True)
+    ax.legend()
 
 # Save plot to file
 script_dir = os.path.dirname(os.path.abspath(__file__))

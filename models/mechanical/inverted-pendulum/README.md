@@ -34,6 +34,10 @@ Where:
 > Most numerical solvers require the system to be expressed as first-order equations.
 > For details on how to do this, see [Reducing Higher-Order ODEs](/docs/ode-reduction.md).
 
+> Note: In this system, some or all derivatives are not easily separable as explicit functions of the state variables.
+> This can be a challenge for numerical solvers that require derivatives to be explicitly defined.
+> For a detailed discussion and recommended solution approaches, see [Solving Systems with Implicit Derivatives](/docs/implicit-derivatives.md).
+
 ## Model Classification
 
 | Property                                 | Classification      |
