@@ -1,8 +1,5 @@
 # Inverted Pendulum System
 
-> This model follows the general assumptions of **mechanical system models**.
-> For details, see [Mechanical Systems](/models/mechanical/README.md).
-
 This section describes a **nonlinear mechanical system** composed of a **cart** of mass $m_c$, a **pendulum** of mass $m_p$ and length $L$, and an **external force** $F$ applied to the cart. The pendulum is free to rotate around its pivot, forming an **inverted pendulum** configuration.
 
 The physical system is illustrated in the figure below:
@@ -37,6 +34,18 @@ Where:
 > Note: In this system, some or all derivatives are not easily separable as explicit functions of the state variables.
 > This can be a challenge for numerical solvers that require derivatives to be explicitly defined.
 > For a detailed discussion and recommended solution approaches, see [Solving Systems with Implicit Derivatives](/docs/implicit-derivatives.md).
+
+## Model Assumptions
+
+This model builds on the general assumptions of **mechanical system models**.
+For details on the general assumptions, see [Mechanical Systems](/models/mechanical/README.md).
+
+In addition, for the inverted pendulum system, we assume:
+
+- The cart moves on a frictionless, horizontal surface, except for viscous damping represented by $b$.
+- The pendulum is a rigid rod with mass concentrated along its length.
+- The pivot connecting the pendulum to the cart is frictionless.
+- The pendulum moves in a vertical plane, while the cart moves horizontally.
 
 ## Model Classification
 
