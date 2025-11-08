@@ -83,7 +83,7 @@ axs[0].grid(True)
 axs[0].legend()
 
 # Velocity
-axs[1].plot(sol.t, v, label="$v(t)$")
+axs[1].plot(sol.t, v, label="$v(t)$", color="tab:orange")
 axs[1].set_xlabel("Time / s")
 axs[1].set_ylabel("Velocity / m$\\cdot$s$^{-1}$")
 axs[1].grid(True)
