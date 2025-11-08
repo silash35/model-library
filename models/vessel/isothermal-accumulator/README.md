@@ -80,14 +80,14 @@ The derivation follows from the [mass balance](/docs/mass-balance.md) principle.
    where $m$ is the gas mass [kg] and $MM$ is the molar mass [kg/mol].
    Substituting into the ideal gas law gives:
 
-   $`m(t) = \frac{P(t)\,V\,MM}{R T}`$
+   $`m(t) = \frac{P(t) \cdot V \cdot MM}{R T}`$
 
 4. Differentiating the gas mass
 
    Taking the derivative:
 
    $`
-   \frac{dm(t)}{dt} = \frac{V \, MM}{R T} \frac{dP(t)}{dt}
+   \frac{dm(t)}{dt} = \frac{V \cdot MM}{R T} \frac{dP(t)}{dt}
    `$
 
    since $V$, $MM$, $R$, and $T$ are constants (the system is isothermal).
@@ -97,7 +97,7 @@ The derivation follows from the [mass balance](/docs/mass-balance.md) principle.
    Equating the two expressions for $\tfrac{dm(t)}{dt}$:
 
    $`
-   \frac{V \, MM}{R T} \frac{dP(t)}{dt} = k_1 \sqrt{P_1 - P(t)} - k_2 \sqrt{P(t) - P_2}
+   \frac{V \cdot MM}{R T} \frac{dP(t)}{dt} = k_1 \sqrt{P_1 - P(t)} - k_2 \sqrt{P(t) - P_2}
    `$
 
    Rearranging:

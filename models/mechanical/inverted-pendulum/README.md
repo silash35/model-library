@@ -72,7 +72,7 @@ For an introduction to this method, see [Lagrangian Mechanics](/docs/lagrangian-
    - $\theta(t)$: pendulum angle, with the convention that $\theta = 0$ corresponds to the **upright** (unstable) equilibrium.
 
    The pendulum is modeled as a rigid rod of mass $m_p$, with its center of mass located at a distance $L$ from the pivot point.
-   The pivot itself moves horizontally with the cart, so its instantaneous position is: $(x,\, 0)$
+   The pivot itself moves horizontally with the cart, so its instantaneous position is: $(x, 0)$
 
    From the pivot, the position of the pendulum’s center of mass in the inertial frame is given by:
 
