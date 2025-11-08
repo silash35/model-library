@@ -30,6 +30,10 @@ Where:
 - $J$: Moment of inertia of the pendulum rod about its center of mass [kg·m²]
 - $F(t)$: external force applied to the cart [N]
 
+> Note: This model contains one or more **second-order ODEs**.
+> Most numerical solvers require the system to be expressed as first-order equations.
+> For details on how to do this, see [Reducing Higher-Order ODEs](/docs/ode-reduction.md).
+
 ## Model Classification
 
 | Property                                 | Classification      |

@@ -22,6 +22,10 @@ Where:
 - $g$: gravitational acceleration [m/s²]
 - $k$: damping coefficient [N·m·s/rad]
 
+> Note: This model contains one or more **second-order ODEs**.
+> Most numerical solvers require the system to be expressed as first-order equations.
+> For details on how to do this, see [Reducing Higher-Order ODEs](/docs/ode-reduction.md).
+
 ## Model Assumptions
 
 This model builds on the general assumptions of **mechanical system models**.

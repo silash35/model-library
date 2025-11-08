@@ -18,6 +18,10 @@ Where:
 - $L$: pendulum length [m]
 - $g$: gravitational acceleration [m/s²]
 
+> Note: This model contains one or more **second-order ODEs**.
+> Most numerical solvers require the system to be expressed as first-order equations.
+> For details on how to do this, see [Reducing Higher-Order ODEs](/docs/ode-reduction.md).
+
 ## Model Assumptions
 
 This model builds on the assumptions of the [Simple Pendulum System](/models/mechanical/simple-pendulum/README.md).
