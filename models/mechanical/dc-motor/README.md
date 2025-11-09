@@ -90,11 +90,11 @@ In addition, for the **DC motor system**, we assume:
 
    And the friction torque is proportional to angular velocity (viscous friction):
 
-   $`\tau_f(t) = b \cdot \omega(t) = b \cdot \frac{d\theta(t)}{dt}`$
+   $`\tau_f(t) = b \cdot \omega(t)`$
 
    Substituting these into Newton’s law:
 
-   $`J \frac{d^2 \theta(t)}{dt^2} = K_1 \cdot I(t) - b \cdot \frac{d\theta(t)}{dt}`$
+   $`J \frac{d^2 \theta(t)}{dt^2} = K_1 \cdot I(t) - b \cdot \omega(t)`$
 
 4. Substituting $I(t)$ into the torque equation:
 
