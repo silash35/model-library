@@ -26,8 +26,8 @@ k2: Final[float] = 0.015
 """Outlet flow coefficient [kg/(s*Pa^0.5)]"""
 
 
-# --- Vessel Dynamics ---
-def vessel_model(t: float, P: float, P1: float, P2: float):
+# --- System Dynamics ---
+def model(t: float, P: float, P1: float, P2: float):
     """
     Differential equation for the vessel pressure.
 
@@ -51,7 +51,7 @@ P2 = C.atm
 # --- Simulation ---
 P0 = C.atm * 1.5  # Initial pressure [Pa]
 t = np.linspace(0, 3, 1000)  # Simulation time [s]
-sol = solve_ivp(vessel_model, [t[0], t[-1]], [P0], t_eval=t, args=(P1, P2))
+sol = solve_ivp(model, [t[0], t[-1]], [P0], t_eval=t, args=(P1, P2))
 
 # --- Model Output ---
 P = sol.y[0]

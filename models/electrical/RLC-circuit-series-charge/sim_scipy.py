@@ -16,8 +16,8 @@ C: Final[float] = 5000e-6
 """Capacitance [F]"""
 
 
-# --- Circuit Dynamics ---
-def circuit_model(t: float, y: np.ndarray, epsilon: float):
+# --- System Dynamics ---
+def model(t: float, y: np.ndarray, epsilon: float):
     """
     Differential equation for the circuit in terms of capacitor charge.
 
@@ -45,7 +45,7 @@ y0 = [q0, I0]
 
 # --- Simulation ---
 t = np.linspace(0, 3, 1000)  # Simulation time [s]
-sol = solve_ivp(circuit_model, [t[0], t[-1]], y0, t_eval=t, args=(epsilon,))
+sol = solve_ivp(model, [t[0], t[-1]], y0, t_eval=t, args=(epsilon,))
 
 # --- Model Outputs ---
 q = sol.y[0]

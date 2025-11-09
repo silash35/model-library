@@ -21,7 +21,7 @@ A: Final[float] = np.pi * (6 / 100) ** 2
 
 
 # --- System Dynamics ---
-def mechanical_model(t: float, y: np.ndarray, P_func: Callable[[float], float]):
+def model(t: float, y: np.ndarray, P_func: Callable[[float], float]):
     """
     Differential equation for the pneumatic control valve.
 
@@ -62,7 +62,7 @@ y0 = [x0, v0]
 
 # --- Simulation ---
 t = np.linspace(0, 2, 5000)  # Simulation time [s]
-sol = solve_ivp(mechanical_model, [t[0], t[-1]], y0, t_eval=t, args=(P_input,))
+sol = solve_ivp(model, [t[0], t[-1]], y0, t_eval=t, args=(P_input,))
 
 # --- Model Outputs ---
 x = sol.y[0]

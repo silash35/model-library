@@ -31,8 +31,8 @@ def shockley_model(Vd: float) -> float:
     return i_S * (np.exp(Vd / (n * V_T)) - 1)
 
 
-# --- Circuit Dynamics ---
-def circuit_model(t: float, y: np.ndarray, epsilon: float):
+# --- System Dynamics ---
+def model(t: float, y: np.ndarray, epsilon: float):
     """
     Differential equations for the series RLC circuit with a parallel diode.
 
@@ -63,7 +63,7 @@ y0 = [Vc0, I0]
 
 # --- Simulation ---
 t = np.linspace(0, 0.2, 2000)  # Simulation time [s]
-sol = solve_ivp(circuit_model, [t[0], t[-1]], y0, t_eval=t, args=(epsilon,))
+sol = solve_ivp(model, [t[0], t[-1]], y0, t_eval=t, args=(epsilon,))
 
 # --- Model Outputs ---
 Vc = sol.y[0]

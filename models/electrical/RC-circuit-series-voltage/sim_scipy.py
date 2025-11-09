@@ -13,8 +13,8 @@ C: Final[float] = 5000e-6
 """Capacitance [F]"""
 
 
-# --- Circuit Dynamics ---
-def circuit_model(t: float, Vc: float, epsilon: float):
+# --- System Dynamics ---
+def model(t: float, Vc: float, epsilon: float):
     """
     Differential equation for the circuit in terms of capacitor voltage.
 
@@ -34,7 +34,7 @@ epsilon = 5.0
 # --- Simulation ---
 Vc0 = 0.0  # Initial capacitor voltage [V]
 t = np.linspace(0, 3, 1000)  # Simulation time [s]
-sol = solve_ivp(circuit_model, [t[0], t[-1]], [Vc0], t_eval=t, args=(epsilon,))
+sol = solve_ivp(model, [t[0], t[-1]], [Vc0], t_eval=t, args=(epsilon,))
 
 # --- Model Output ---
 Vc = sol.y[0]

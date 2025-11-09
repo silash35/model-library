@@ -17,7 +17,7 @@ k: Final[float] = 20.0
 
 
 # --- System Dynamics ---
-def mechanical_model(t: float, y: np.ndarray, F_ext: float):
+def model(t: float, y: np.ndarray, F_ext: float):
     """
     Differential equations for the mass–spring–damper system.
 
@@ -45,7 +45,7 @@ y0 = [x0, v0]
 
 # --- Simulation ---
 t = np.linspace(0, 10, 1000)  # Simulation time [s]
-sol = solve_ivp(mechanical_model, [t[0], t[-1]], y0, t_eval=t, args=(F_ext,))
+sol = solve_ivp(model, [t[0], t[-1]], y0, t_eval=t, args=(F_ext,))
 
 # --- Model Outputs ---
 x = sol.y[0]

@@ -21,7 +21,7 @@ g: Final[float] = gravity
 
 
 # --- System Dynamics ---
-def mechanical_model(t: float, y: np.ndarray, F: float):
+def model(t: float, y: np.ndarray, F: float):
     """
     Differential equations for the inverted pendulum on a cart.
 
@@ -72,7 +72,7 @@ y0 = [theta0, omega0, x0, v0]
 
 # --- Simulation ---
 t = np.linspace(0, 1.5, 1000)  # Simulation time [s]
-sol = solve_ivp(mechanical_model, [t[0], t[-1]], y0, t_eval=t, args=(F,))
+sol = solve_ivp(model, [t[0], t[-1]], y0, t_eval=t, args=(F,))
 
 # --- Model Outputs ---
 

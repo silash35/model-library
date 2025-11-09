@@ -20,7 +20,7 @@ k: Final[float] = 8.0
 
 
 # --- System Dynamics ---
-def mechanical_model(t: float, y: np.ndarray, u: float):
+def model(t: float, y: np.ndarray, u: float):
     """
     Differential equations for the two-mass–spring–damper system.
 
@@ -59,7 +59,7 @@ y0 = [x1_0, v1_0, x2_0, v2_0]
 
 # --- Simulation ---
 t = np.linspace(0, 8, 10000)  # Simulation time [s]
-sol = solve_ivp(mechanical_model, [t[0], t[-1]], y0, t_eval=t, args=(u,))
+sol = solve_ivp(model, [t[0], t[-1]], y0, t_eval=t, args=(u,))
 
 # --- Model Outputs ---
 x1 = sol.y[0]

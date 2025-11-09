@@ -13,8 +13,8 @@ A: Final[float] = L**2
 """Cross-sectional area [m^2]"""
 
 
-# --- Tank Dynamics ---
-def tank_model(t: float, h: float, Q_in: float, Q_out: float):
+# --- System Dynamics ---
+def model(t: float, h: float, Q_in: float, Q_out: float):
     """
     Differential equation for the tank level.
 
@@ -38,7 +38,7 @@ Q_out = 0.5
 # --- Simulation ---
 h0 = 2  # Initial level [m]
 t = np.linspace(0, 100, 1000)  # Simulation time [s]
-sol = solve_ivp(tank_model, [t[0], t[-1]], [h0], t_eval=t, args=(Q_in, Q_out))
+sol = solve_ivp(model, [t[0], t[-1]], [h0], t_eval=t, args=(Q_in, Q_out))
 
 # --- Model Output ---
 h = sol.y[0]

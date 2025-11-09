@@ -15,7 +15,7 @@ L: Final[float] = 1.0
 
 
 # --- System Dynamics ---
-def mechanical_model(t: float, y: np.ndarray):
+def model(t: float, y: np.ndarray):
     """
     Linear differential equations for the simple pendulum (no damping, no external force).
 
@@ -39,7 +39,7 @@ y0 = [theta0, omega0]
 
 # --- Simulation ---
 t = np.linspace(0, 10, 1000)  # Simulation time [s]
-sol = solve_ivp(mechanical_model, [t[0], t[-1]], y0, t_eval=t)
+sol = solve_ivp(model, [t[0], t[-1]], y0, t_eval=t)
 
 # --- Model Outputs ---
 theta = sol.y[0]
