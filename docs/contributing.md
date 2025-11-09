@@ -1,6 +1,6 @@
 # 🤝 How to Contribute
 
-Thank you for your interest in contributing to the **Model Library**!  
+Thank you for your interest in contributing to the **Model Library**!
 There are many ways you can help make this repository better, from adding new models to improving documentation.
 
 ## Ways to Contribute
@@ -40,7 +40,11 @@ Finally, place your model in the appropriate folder inside the `models/` directo
 
 > For more information about citation rules and copyright considerations, please consult the [FAQ](/docs/faq.md).
 
-- Most models in this repository are widely used and considered common knowledge, so formal citation is often not required.
-  However, if the original author can be identified, providing a reference is appreciated.
-- If the original author cannot be determined, you may cite an article, book, or reliable source that used or derived the model.
-  Including such a reference is very helpful, especially for contributors or users who intend to write a paper using the model.
+### 4. Help with References
+
+> For more information about citation rules and copyright considerations, please consult the [FAQ](/docs/faq.md).
+
+- If you find or publish a paper, book, or article that uses a model from this repository, please add it to the **Books and Publications** section.
+- When adding a reference, follow **APA style** for books, articles, or other publications. Example for a book:
+  - Ogata, K. (2011). _Modern control engineering_ (5th ed.). Prentice Hall.
+- Including such references is especially helpful for contributors or users intending to write a paper using the model.
