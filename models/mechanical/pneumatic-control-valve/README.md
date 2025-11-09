@@ -43,6 +43,14 @@ Where:
 | Deterministic × Stochastic               | **Deterministic**   |
 | Forced × Homogeneous                     | **Forced**          |
 
+## Books and Publications
+
+This model can be found in the following literature:
+
+- Ogata, K. (2011). _Modern control engineering_ (5th ed.). Prentice Hall.
+
+If you find or publish a paper or book using this model, please consider adding it to this list. [Contributions](/docs/contributing.md) of other references are also welcome.
+
 ## Model Derivation
 
 1. Applying [Newton’s Second Law](/docs/newton-laws.md) to the valve mass:
