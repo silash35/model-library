@@ -39,6 +39,7 @@ In addition, we assumed small angular displacements ($|\theta| \ll 1\,\text{rad}
 | Time-invariant × Time-variant            | **Time-invariant**  |
 | Lumped-parameters × Distributed-elements | **Lumped**          |
 | Deterministic × Stochastic               | **Deterministic**   |
+| Forced × Homogeneous                     | **Homogeneous**     |
 
 ## Model Derivation
 

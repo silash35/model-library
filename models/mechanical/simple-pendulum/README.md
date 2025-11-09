@@ -46,6 +46,7 @@ In addition, for the simple pendulum system, we assume:
 | Time-invariant × Time-variant            | **Time-invariant**  |
 | Lumped-parameters × Distributed-elements | **Lumped**          |
 | Deterministic × Stochastic               | **Deterministic**   |
+| Forced × Homogeneous                     | **Homogeneous**     |
 
 ## Model Derivation
 

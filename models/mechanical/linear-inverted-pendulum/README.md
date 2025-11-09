@@ -59,6 +59,7 @@ In addition, we assumed:
 | Time-invariant × Time-variant            | **Time-invariant**  |
 | Lumped-parameters × Distributed-elements | **Lumped**          |
 | Deterministic × Stochastic               | **Deterministic**   |
+| Forced × Homogeneous                     | **Forced**          |
 
 ## Model Derivation
 

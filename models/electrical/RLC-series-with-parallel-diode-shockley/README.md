@@ -42,6 +42,7 @@ The diode current $I_D$ is modeled using the **Shockley diode equation**. For de
 | Time-invariant × Time-variant            | **Time-invariant**  |
 | Lumped-parameters × Distributed-elements | **Lumped**          |
 | Deterministic × Stochastic               | **Deterministic**   |
+| Forced × Homogeneous                     | **Forced**          |
 
 ## Model Derivation
 

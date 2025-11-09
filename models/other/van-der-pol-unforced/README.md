@@ -30,3 +30,4 @@ The state variable $x(t)$ can represent many different physical quantities depen
 | Time-invariant × Time-variant            | **Time-invariant**  |
 | Lumped-parameters × Distributed-elements | **Lumped**          |
 | Deterministic × Stochastic               | **Deterministic**   |
+| Forced × Homogeneous                     | **Homogeneous**     |
