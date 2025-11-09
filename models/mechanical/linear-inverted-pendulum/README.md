@@ -73,7 +73,7 @@ For an introduction to this method, see [Lagrangian Mechanics](/docs/lagrangian-
    - $\theta(t)$: pendulum angle, with the convention that $\theta = 0$ corresponds to the **upright** (unstable) equilibrium.
 
    The pendulum mass $m_p$ is concentrated at a distance $L$ from the pivot.
-   The pivot itself moves horizontally with the cart, so its instantaneous position is: $(x,  0)$
+   The pivot itself moves horizontally with the cart, so its instantaneous position is: $(x,  0)$.
 
    From the pivot, the position of the pendulum’s center of mass in the inertial frame is given by:
 
@@ -107,7 +107,7 @@ For an introduction to this method, see [Lagrangian Mechanics](/docs/lagrangian-
 
      $`\dot{x}_p^2+\dot{y}_p^2 = \dot{x}^2 + 2L\cos\theta \dot{x}\dot{\theta} + L^2\dot{\theta}^2.`$
 
-     Thus the kinetic energy is
+     Thus, the kinetic energy is
 
      $`T = \tfrac{1}{2}m_c\dot{x}^2 + \tfrac{1}{2}m_p\Big(\dot{x}^2 + 2L\cos\theta \dot{x}\dot{\theta} + L^2\dot{\theta}^2\Big).`$
 
@@ -128,8 +128,7 @@ For an introduction to this method, see [Lagrangian Mechanics](/docs/lagrangian-
 
    For the generalized coordinate $\theta$, the Euler–Lagrange equation reads:
 
-   $`\frac{d}{dt} \left( \frac{\partial \mathcal{L}}{\partial \dot{\theta}} \right) - \frac{\partial \mathcal{L}}{\partial \theta} = Q_\theta`$
-
+   $`\frac{d}{dt} \left( \frac{\partial \mathcal{L}}{\partial \dot{\theta}} \right) - \frac{\partial \mathcal{L}}{\partial \theta} = Q_\theta,`$
    where $`Q_\theta = 0`$.
 
    Compute derivatives:
@@ -149,7 +148,6 @@ For an introduction to this method, see [Lagrangian Mechanics](/docs/lagrangian-
    For the generalized coordinate $x$, the Euler–Lagrange equation is:
 
    $`\frac{d}{dt}\!\left(\frac{\partial\mathcal{L}}{\partial\dot{x}}\right) - \frac{\partial\mathcal{L}}{\partial x} = Q_x,`$
-
    where the generalized force acting on the cart is $`Q_x = F`$.
 
    Compute each term:

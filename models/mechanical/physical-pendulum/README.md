@@ -103,7 +103,7 @@ For an introduction to this method, see [Lagrangian Mechanics](/docs/lagrangian-
 
 5. Apply the Lagrange’s equation
 
-   $`\frac{d}{dt}\left(\frac{\partial \mathcal{L}}{\partial \dot{\theta}}\right) - \frac{\partial \mathcal{L}}{\partial \theta} = Q_\theta`$
+   $`\frac{d}{dt}\left(\frac{\partial \mathcal{L}}{\partial \dot{\theta}}\right) - \frac{\partial \mathcal{L}}{\partial \theta} = Q_\theta,`$
 
    where $Q_\theta = -k \dot{\theta}$ represents the **damping torque**.
 
@@ -141,4 +141,4 @@ For an introduction to this method, see [Lagrangian Mechanics](/docs/lagrangian-
    \ddot{\theta} = - \frac{k}{J} \dot{\theta} - \frac{3 g}{4 L} \sin(\theta)
    }`$
 
-   This is the **final simplified equation of motion** for the physical pendulum.
+   This is the simplified equation of motion for the physical pendulum.

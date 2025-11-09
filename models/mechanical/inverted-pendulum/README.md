@@ -72,7 +72,7 @@ For an introduction to this method, see [Lagrangian Mechanics](/docs/lagrangian-
    - $\theta(t)$: pendulum angle, with the convention that $\theta = 0$ corresponds to the **upright** (unstable) equilibrium.
 
    The pendulum is modeled as a rigid rod of mass $m_p$, with its center of mass located at a distance $L$ from the pivot point.
-   The pivot itself moves horizontally with the cart, so its instantaneous position is: $(x, 0)$
+   The pivot itself moves horizontally with the cart, so its instantaneous position is: $(x, 0)$.
 
    From the pivot, the position of the pendulum’s center of mass in the inertial frame is given by:
 
@@ -120,8 +120,7 @@ For an introduction to this method, see [Lagrangian Mechanics](/docs/lagrangian-
 
    For the generalized coordinate $\theta$, the Euler–Lagrange equation reads:
 
-   $`\frac{d}{dt} \left( \frac{\partial \mathcal{L}}{\partial \dot{\theta}} \right) - \frac{\partial \mathcal{L}}{\partial \theta} = Q_\theta`$
-
+   $`\frac{d}{dt} \left( \frac{\partial \mathcal{L}}{\partial \dot{\theta}} \right) - \frac{\partial \mathcal{L}}{\partial \theta} = Q_\theta,`$
    where $`Q_\theta = 0`$.
 
    Compute derivatives:
@@ -140,8 +139,7 @@ For an introduction to this method, see [Lagrangian Mechanics](/docs/lagrangian-
 
    For the generalized coordinate $x$, the Euler–Lagrange equation reads:
 
-   $`\frac{d}{dt} \left( \frac{\partial \mathcal{L}}{\partial \dot{x}} \right) - \frac{\partial \mathcal{L}}{\partial x} = Q_x`$
-
+   $`\frac{d}{dt} \left( \frac{\partial \mathcal{L}}{\partial \dot{x}} \right) - \frac{\partial \mathcal{L}}{\partial x} = Q_x,`$
    where the generalized force is $`Q_x = F - b \dot{x}`$.
 
    For the other terms of the equation:

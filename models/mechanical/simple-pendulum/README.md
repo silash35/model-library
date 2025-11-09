@@ -123,7 +123,7 @@ For an introduction to this method, see [Lagrangian Mechanics](/docs/lagrangian-
 
    $Q_\theta$ represents a generalized torque.
    For the simple pendulum, we assume no damping or external torque, so:
-   $`Q_\theta = 0`$
+   $`Q_\theta = 0`$.
 
    For the other terms of the equation:
 
