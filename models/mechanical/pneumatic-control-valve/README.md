@@ -26,6 +26,17 @@ Where:
 - $A$: effective diaphragm area where the pressure acts [m²]
 - $P(t)$: pneumatic gauge pressure applied to the actuator diaphragm [Pa]
 
+In practice, the stem displacement is **physically constrained** between two limits:
+
+$$
+x_{\min} \le x(t) \le x_{\max}
+$$
+
+where
+
+- $x_{\min}$ corresponds to the fully open valve position
+- $x_{\max}$ corresponds to the fully closed valve position.
+
 > Note: This model contains one or more **second-order ODEs**.
 > Most numerical solvers require the system to be expressed as first-order equations.
 > For details on how to do this, see [Reducing Higher-Order ODEs](/docs/ode-reduction.md).

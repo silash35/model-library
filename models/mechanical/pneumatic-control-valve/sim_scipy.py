@@ -10,7 +10,7 @@ from scipy.integrate import solve_ivp
 m: Final[float] = 0.5
 """Equivalent moving mass [kg]"""
 
-b: Final[float] = 50.0
+b: Final[float] = 200.0
 """Viscous friction coefficient [N·s/m]"""
 
 k: Final[float] = 8000.0
@@ -18,6 +18,12 @@ k: Final[float] = 8000.0
 
 A: Final[float] = np.pi * (6 / 100) ** 2
 """Effective diaphragm area where the pressure acts [m²]"""
+
+x_min: Final[float] = 2.92 / 100
+"""Fully open position [m]"""
+
+x_max: Final[float] = 14.62 / 100
+"""Fully closed position [m]"""
 
 
 # --- System Dynamics ---
@@ -49,19 +55,19 @@ def P_input(t: float) -> float:
     - 3 psi: valve fully open
     - 15 psi: valve fully closed
     """
-    if t < 1.0:
+    if t < 0.5:
         return 3 * psi
     else:
         return 15 * psi
 
 
 # --- Initial Conditions ---
-x0 = 0.0292  # Initial displacement [m]
+x0 = x_min  # Initial displacement [m]
 v0 = 0.0  # Initial velocity [m/s]
 y0 = [x0, v0]
 
 # --- Simulation ---
-t = np.linspace(0, 2, 5000)  # Simulation time [s]
+t = np.linspace(0, 1, 1000)  # Simulation time [s]
 sol = solve_ivp(model, [t[0], t[-1]], y0, t_eval=t, args=(P_input,))
 
 # --- Model Outputs ---
@@ -75,17 +81,21 @@ v = sol.y[1]
 fig, axs = plt.subplots(2, 1, figsize=(8, 6), constrained_layout=True)
 fig.suptitle("Pneumatic Control Valve")
 
-# Displacement
-axs[0].plot(sol.t, x * 100, label="$x(t)$")
+# Pressure input
+P = np.array([P_input(t) for t in sol.t]) / psi
+axs[0].plot(sol.t, P, label="$P(t)$", color="tab:orange")
 axs[0].set_xlabel("Time / s")
-axs[0].set_ylabel("Displacement / cm")
+axs[0].set_ylabel("Pressure / psi")
 axs[0].grid(True)
 axs[0].legend()
 
-# Velocity
-axs[1].plot(sol.t, v, label="$v(t)$", color="tab:orange")
+# Displacement
+axs[1].axhline(x_min * 100, color="tab:red", linestyle="--", label="Valve Limits")
+axs[1].plot(sol.t, x * 100, label="$x(t)$")
+axs[1].axhline(x_max * 100, color="tab:red", linestyle="--")
+
 axs[1].set_xlabel("Time / s")
-axs[1].set_ylabel("Velocity / m$\\cdot$s$^{-1}$")
+axs[1].set_ylabel("Displacement / cm")
 axs[1].grid(True)
 axs[1].legend()
 
