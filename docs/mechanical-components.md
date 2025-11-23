@@ -61,3 +61,18 @@ where
 - $F_k$ = kinetic friction [N]
 - $\mu_k$ = coefficient of kinetic friction [–]
 - $N$ = normal force [N]
+
+### Fluid Flow Friction (Hydrodynamic Friction)
+
+When a fluid flows inside a pipe, friction does not arise from solid–solid contact.
+Instead, it results from viscous shear stress and turbulent energy dissipation within the fluid.
+
+A common lumped model expresses this friction force as proportional to the velocity and its magnitude:
+
+$$F_{f}(t) = k_f \cdot v(t) \cdot |v(t)|$$
+
+Where:
+
+- $F_{f}(t)$ = friction force opposing the flow [N]
+- $k_f$ = hydrodynamic friction coefficient [kg/m]
+- $v(t)$ = fluid velocity in the pipe [m/s]
