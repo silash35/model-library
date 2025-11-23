@@ -49,51 +49,44 @@ $$
 ## Model Derivation
 
 We want to model the liquid level $h(t)$ in a cubic tank.
-The first step is to write the [mass balance](/docs/mass-balance.md) of the liquid in the tank:
 
-$$
-\frac{dM(t)}{dt} = \dot{M}_{in}(t) - \dot{M}_{out}(t)
-$$
+1. Mass Balance
 
-Where $M(t)$ is the mass of the liquid [kg], and $`\dot{M}_{in}`$, $`\dot{M}_{out}`$ are the mass flow rates [kg/s].
+   Write the [mass balance](/docs/mass-balance.md) of the liquid in the tank:
 
-In this case, there are no generation or consumption terms, since the liquid does not undergo any chemical reactions and there are no internal sources or sinks of mass.
-Therefore, the balance reduces to a simple relation between the inlet and outlet flows.
+   $\frac{dM(t)}{dt} = \dot{M}_{in}(t) - \dot{M}_{out}(t)$
 
-Using the physical relation between mass, density, and volume (as well as between mass flow rate and volumetric flow rate), we can write:
+   Where $M(t)$ is the mass of the liquid [kg], and $\dot{M}_{in}$, $\dot{M}_{out}$ are the mass flow rates [kg/s].
 
-$$
-M(t) = \rho \cdot V(t), \quad \dot{M}_{in} = \rho \cdot Q_{in}(t), \quad \dot{M}_{out} = \rho \cdot Q_{out}(t)
-$$
+   In this case, there are no generation or consumption terms, since the liquid does not undergo any chemical reactions and there are no internal sources or sinks of mass.
+   Therefore, the balance reduces to a simple relation between the inlet and outlet flows.
 
-For an **incompressible fluid** with constant density $\rho$, we can take $\rho$ out of the derivative and simplify the equation:
+2. Express in Terms of Volume
 
-$$
-\frac{d}{dt} (\rho V(t)) = \rho Q_{in}(t) - \rho Q_{out}(t) \quad \Rightarrow \quad \frac{dV(t)}{dt} = Q_{in}(t) - Q_{out}(t)
-$$
+   Using the physical relation between mass, density, and volume (as well as between mass flow rate and volumetric flow rate), we can write:
 
-This is the **volumetric balance**.
+   $M(t) = \rho \cdot V(t), \quad \dot{M}_{in} = \rho \cdot Q_{in}(t), \quad \dot{M}_{out} = \rho \cdot Q_{out}(t)$
 
-To relate the liquid volume to its height, we note that the volume is given by the base area multiplied by the height $h(t)$:
+   For an **incompressible fluid** with constant density $\rho$, we can take $\rho$ out of the derivative and simplify the equation:
 
-$$
-V(t) = A \cdot h(t), \quad \text{with} \quad A = L^2
-$$
+   $\frac{d}{dt} (\rho V(t)) = \rho Q_{in}(t) - \rho Q_{out}(t) \quad \Rightarrow \quad \frac{dV(t)}{dt} = Q_{in}(t) - Q_{out}(t)$
 
-Substituting into the volumetric balance:
+   This is the **volumetric balance**.
 
-$$
-\frac{d}{dt}[A \cdot h(t)] = Q_{in}(t) - Q_{out}(t)
-$$
+3. Express in Terms of Liquid Height
 
-Since $A$ is constant:
+   To relate the liquid volume to its height, we note that the volume is given by the base area multiplied by the height $h(t)$:
 
-$$
-A \frac{dh(t)}{dt} = Q_{in}(t) - Q_{out}(t)
-$$
+   $V(t) = A \cdot h(t), \quad \text{with} \quad A = L^2$
 
-Finally, the **dynamic equation for the liquid level** is:
+   Substituting into the volumetric balance:
 
-$$
-\boxed{\frac{dh(t)}{dt} = \frac{Q_{in}(t) - Q_{out}(t)}{A}}
-$$
+   $\frac{d}{dt}[A \cdot h(t)] = Q_{in}(t) - Q_{out}(t)$
+
+   Since $A$ is constant:
+
+   $A \frac{dh(t)}{dt} = Q_{in}(t) - Q_{out}(t)$
+
+   Finally, the **dynamic equation for the liquid level** is:
+
+   $\boxed{\frac{dh(t)}{dt} = \frac{Q_{in}(t) - Q_{out}(t)}{A}}$
