@@ -69,10 +69,13 @@ This project relies on several popular Python libraries for numerical computing.
 - [SciPy](https://scipy.org/)
 - [CasADi](https://web.casadi.org/)
 
-## Why aren’t the physical constraints explicitly implemented in the code?
+## Why physical constraints are usually not enforced in code?
 
 Some variables naturally have limits imposed by the physical properties of the system. For example, the liquid level in a tank cannot exceed its height.
 
-These constraints are **not explicitly enforced in the code** because there is no fully correct way to implement them without creating artificial “hacks” or workarounds. For example, see this discussion in the SciPy repository: [scipy issue #9382](https://github.com/scipy/scipy/issues/9382).
+In most cases, these constraints are **not explicitly enforced in the code** because there is no fully correct way to implement them without creating artificial “hacks” or workarounds.
+For example, see this discussion in the SciPy repository: [SciPy issue #9382](https://github.com/scipy/scipy/issues/9382).
 
-In practice, systems are not operated under conditions where the variables lose their physical meaning. The recommended approach is to design and run simulations **within the safe operational limits**, which ensures realistic and reliable results without the need to enforce hard constraints in the model.
+In practice, systems are not operated under conditions where the variables lose their physical meaning.
+The recommended approach is to design and run simulations **within the safe operational limits**, which ensures realistic and reliable results without the need to enforce hard constraints in the model.
+But, when no better alternative exists, **saturation functions** can be applied to limit variables.
