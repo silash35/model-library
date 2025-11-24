@@ -128,7 +128,7 @@ In addition, for the **Solenoid Valve**, we assume:
 
    For $F_m(t)$ and $F_f(t)$ we use the algebraic relations defined below:
 
-   $`F_m(t) = \tfrac{1}{2}\, \tfrac{dL(x)}{dx}\, i(t)^2`$
+   $`F_m(t) = \tfrac{1}{2} \cdot  \tfrac{dL(x)}{dx} \cdot  i(t)^2`$
 
    $`F_f(t) = \Delta P \cdot A \cdot \alpha(x), \quad \alpha(x)=\tfrac{x}{x_{\max}}`$
 
@@ -154,7 +154,7 @@ In addition, for the **Solenoid Valve**, we assume:
 
    Using the Product Rule and the Chain Rule for multivariable functions:
 
-   $`e_L(t) = L(x)\,\frac{d i(t)}{dt} + i(t)\,\frac{dL(x)}{dx}\,\frac{dx(t)}{dt}`$
+   $`e_L(t) = L(x) \cdot \frac{d i(t)}{dt} + i(t) \cdot \frac{dL(x)}{dx} \cdot \frac{dx(t)}{dt}`$
 
 3. Finishing
 
@@ -162,7 +162,7 @@ In addition, for the **Solenoid Valve**, we assume:
 
    $`
     \boxed{
-    u(t) = R\,i(t) + L(x)\,\frac{d i(t)}{dt} + i(t)\,\frac{dL(x)}{dx}\,\frac{dx(t)}{dt}
+    u(t) = R \cdot i(t) + L(x) \cdot \frac{d i(t)}{dt} + i(t) \cdot \frac{dL(x)}{dx} \cdot \frac{dx(t)}{dt}
     }
     `$
 

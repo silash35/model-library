@@ -66,7 +66,7 @@ We want to model the coupled dynamics of the liquid level $h(t)$ in the tank and
 
 1. Write the [mass balance](/docs/mass-balance.md) of the liquid in the tank:
 
-   $\frac{dM(t)}{dt} = \dot{M}_{in}(t) - \dot{M}_{out}(t)$
+   $`\frac{dM(t)}{dt} = \dot{M}_{in}(t) - \dot{M}_{out}(t)`$
 
    Where $M(t)$ is the mass of the liquid [kg], and $\dot{M}_{in}$, $\dot{M}_{out}$ are the mass flow rates [kg/s].
 
@@ -77,49 +77,49 @@ We want to model the coupled dynamics of the liquid level $h(t)$ in the tank and
 
    To rewrite the mass balance using measurable physical quantities, we expand each mass term using the definitions of **mass**, **density**, **volume**, and **volumetric flow rate**:
 
-   $M(t) = \rho \cdot V(t)$
+   $`M(t) = \rho \cdot V(t)`$
 
-   $\dot{M}_{in}(t) = \rho \cdot Q_{in}(t)$
+   $`\dot{M}_{in}(t) = \rho \cdot Q_{in}(t)`$
 
    For the outlet, the volumetric flow through the pipe is given by the pipe cross-sectional area multiplied by the fluid velocity:
 
-   $Q_{out}(t) = A_p \cdot v_p(t)$
+   $`Q_{out}(t) = A_p \cdot v_p(t)`$
 
    Therefore, the outlet mass flow rate becomes:
 
-   $\dot{M}_{out}(t) = \rho \cdot Q_{out}(t) = \rho \cdot A_p \cdot v_p(t)$
+   $`\dot{M}_{out}(t) = \rho \cdot Q_{out}(t) = \rho \cdot A_p \cdot v_p(t)`$
 
    Substituting these expressions into the mass balance gives:
 
-   $\frac{d(\rho V(t))}{dt} = \rho\,Q_{in}(t) - \rho\,A_p\,v_p(t)$
+   $`\frac{d(\rho V(t))}{dt} = \rho \cdot Q_{in}(t) - \rho \cdot A_p \cdot v_p(t)`$
 
 3. Simplifying the Balance
 
    For an **incompressible fluid** with constant density $\rho$, we can take $\rho$ out of the derivative:
 
-   $\rho \frac{d(V(t))}{dt} = \rho\,Q_{in}(t) - \rho\,A_p\,v_p(t)$
+   $`\rho \frac{d(V(t))}{dt} = \rho \cdot Q_{in}(t) - \rho \cdot A_p \cdot v_p(t)`$
 
    And then simplify the equation by dividing both sides by $\rho$:
 
-   $\frac{dV(t)}{dt} = Q_{in}(t) - A_p\,v_p(t)$
+   $`\frac{dV(t)}{dt} = Q_{in}(t) - A_p \cdot v_p(t)`$
 
 4. Express in Terms of Liquid Height
 
    To relate the liquid volume to the liquid height, we use the fact that the tank has a constant cross-sectional area $A$. Thus:
 
-   $V(t) = A \cdot h(t)$
+   $`V(t) = A \cdot h(t)`$
 
    Substituting this relation into the volumetric balance:
 
-   $\frac{d(A\,h(t))}{dt} = Q_{in}(t) - A_p\,v_p(t)$
+   $`\frac{d(A \cdot h(t))}{dt} = Q_{in}(t) - A_p \cdot v_p(t)`$
 
    Since the area $A$ is constant:
 
-   $A\,\frac{dh(t)}{dt} = Q_{in}(t) - A_p\,v_p(t)$
+   $`A\frac{dh(t)}{dt} = Q_{in}(t) - A_p \cdot v_p(t)`$
 
    Finally, dividing both sides by $A$ gives the **dynamic equation for the liquid level**:
 
-   $\boxed{\frac{dh(t)}{dt} = \frac{Q_{in}(t) - A_p\,v_p(t)}{A}}$
+   $`\boxed{\frac{dh(t)}{dt} = \frac{Q_{in}(t) - A_p \cdot v_p(t)}{A}}`$
 
 ### Momentum Balance in the Outlet Pipe
 
@@ -127,11 +127,11 @@ We want to model the coupled dynamics of the liquid level $h(t)$ in the tank and
 
    According to Newton’s Second Law, the sum of axial forces acting on the fluid column equals its mass times its acceleration:
 
-   $F_{net}(t) = m_p \cdot \frac{dv_p(t)}{dt}$
+   $`F_{net}(t) = m_p \cdot \frac{dv_p(t)}{dt}`$
 
    The net force $F_{net}(t)$ is given by the hydrostatic driving force at the tank outlet minus the pipe resistive (friction) force:
 
-   $F_{net}(t) = F_{pressure}(t) - F_{friction}(t)$
+   $`F_{net}(t) = F_{pressure}(t) - F_{friction}(t)`$
 
    Where:
 
@@ -142,11 +142,11 @@ We want to model the coupled dynamics of the liquid level $h(t)$ in the tank and
 
    Since the pressure at the tank outlet is $\gamma \cdot h(t)$, multiplying this pressure by the pipe cross-sectional area $A_p$ gives the total axial force pushing the fluid through the pipe:
 
-   $F_{pressure}(t) = \gamma \cdot A_p \cdot h(t)$
+   $`F_{pressure}(t) = \gamma \cdot A_p \cdot h(t)`$
 
    A simple lumped model for pipe friction (see [Hydrodynamic Friction](/docs/mechanical-components.md)) is:
 
-   $F_{friction}(t) = k_f\,v_p(t)\,|v_p(t)|$
+   $`F_{friction}(t) = k_f \cdot v_p(t) \cdot |v_p(t)|`$
 
    Since reverse flow does not occur in this system, the outlet velocity is always non-negative, allowing the simplification $v_p(t) \cdot |v_p(t)| = v_p^2(t)$.
 
@@ -154,4 +154,4 @@ We want to model the coupled dynamics of the liquid level $h(t)$ in the tank and
 
    Combining the expressions above into Newton’s Second Law gives:
 
-   $\boxed{\frac{dv_p(t)}{dt} = \frac{\gamma A_p \cdot h(t) - k_f \cdot v_p^2(t)}{m_p}}$
+   $`\boxed{\frac{dv_p(t)}{dt} = \frac{\gamma A_p \cdot h(t) - k_f \cdot v_p^2(t)}{m_p}}`$

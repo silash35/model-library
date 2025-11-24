@@ -153,9 +153,9 @@ For an introduction to this method, see [Lagrangian Mechanics](/docs/lagrangian-
 
    Compute each term:
 
-   $`\frac{\partial\mathcal{L}}{\partial\dot{x}} = (m_c + m_p)\dot{x} + m_p L \cos\theta\,\dot{\theta}`$
+   $`\frac{\partial\mathcal{L}}{\partial\dot{x}} = (m_c + m_p)\dot{x} + m_p L \cos\theta \cdot \dot{\theta}`$
 
-   $`\frac{d}{dt}\!\left(\frac{\partial\mathcal{L}}{\partial\dot{x}}\right) = (m_c + m_p)\ddot{x} + m_p L \cos\theta\,\ddot{\theta} - m_p L \dot{\theta}^2 \sin\theta.`$
+   $`\frac{d}{dt}\!\left(\frac{\partial\mathcal{L}}{\partial\dot{x}}\right) = (m_c + m_p)\ddot{x} + m_p L \cos\theta \cdot \ddot{\theta} - m_p L \dot{\theta}^2 \sin\theta.`$
 
    $`\frac{\partial\mathcal{L}}{\partial x} = 0`$
 

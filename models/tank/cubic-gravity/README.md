@@ -52,32 +52,32 @@ All other assumptions from the original model remain valid and unchanged.
 
    Following the derivation of the [Cubic Tank With Gravity-Driven Outlet (With Momentum)](/models/tank/cubic-gravity-and-momentum/README.md), we apply the additional assumption that the outlet pipe velocity remains constant, effectively neglecting the momentum dynamics in the pipe:
 
-   $\frac{dv_p(t)}{dt} = 0.$
+   $`\frac{dv_p(t)}{dt} = 0.`$
 
    Applying this to the original momentum balance,
 
-   $m_p \frac{dv_p}{dt} = \gamma A_p h(t) - k_f v_p^2(t),$
+   $`m_p \frac{dv_p}{dt} = \gamma A_p h(t) - k_f v_p^2(t),`$
 
    gives the steady-state relation:
 
-   $0 = \gamma A_p h(t) - k_f v_p^2(t),$
+   $`0 = \gamma A_p h(t) - k_f v_p^2(t),`$
 
    from which the outlet velocity follows:
 
-   $v_p(t) = \sqrt{\frac{\gamma A_p}{k_f}\, h(t)}.$
+   $`v_p(t) = \sqrt{\frac{\gamma A_p}{k_f} \cdot  h(t)}.`$
 
 2. Substituting into the Mass Balance
 
-   $\frac{dh(t)}{dt} = \frac{Q_{in}(t) - A_p \, v_p(t)}{A},$
+   $`\frac{dh(t)}{dt} = \frac{Q_{in}(t) - A_p  \cdot  v_p(t)}{A},`$
 
    yields
 
-   $\frac{dh(t)}{dt} = \frac{Q_{in}(t) - A_p \sqrt{\frac{\gamma A_p}{k_f}\, h(t)}}{A}.$
+   $`\frac{dh(t)}{dt} = \frac{Q_{in}(t) - A_p \sqrt{\frac{\gamma A_p}{k_f} \cdot  h(t)}}{A}.`$
 
    Defining the effective discharge coefficient
 
-   $\alpha = A_p \sqrt{\frac{\gamma A_p}{k_f}},$
+   $`\alpha = A_p \sqrt{\frac{\gamma A_p}{k_f}},`$
 
    the final reduced nonlinear model becomes:
 
-   $\boxed{\frac{dh(t)}{dt}=\frac{Q_{in}(t) - \alpha \sqrt{h(t)}}{A}}.$
+   $`\boxed{\frac{dh(t)}{dt}=\frac{Q_{in}(t) - \alpha \sqrt{h(t)}}{A}}.`$

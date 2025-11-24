@@ -26,7 +26,7 @@ Where:
 
 This model builds on the assumptions of the [Simple Pendulum System](/models/mechanical/simple-pendulum/README.md).
 
-In addition, we assumed small angular displacements ($|\theta| \ll 1\,\text{rad}$), allowing the approximation $\sin(\theta) \approx \theta$.
+In addition, we assumed small angular displacements ($|\theta| \ll 1 \cdot \text{rad}$), allowing the approximation $\sin(\theta) \approx \theta$.
 
 ## Model Classification
 

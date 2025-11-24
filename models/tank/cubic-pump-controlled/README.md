@@ -22,9 +22,7 @@ Where:
 
 Since the tank is cubic, the liquid level is naturally constrained by its physical height:
 
-$$
-0 \le h(t) \le L
-$$
+$$0 \le h(t) \le L$$
 
 ## Model Assumptions
 
@@ -54,7 +52,7 @@ We want to model the liquid level $h(t)$ in a cubic tank.
 
    Write the [mass balance](/docs/mass-balance.md) of the liquid in the tank:
 
-   $\frac{dM(t)}{dt} = \dot{M}_{in}(t) - \dot{M}_{out}(t)$
+   $`\frac{dM(t)}{dt} = \dot{M}_{in}(t) - \dot{M}_{out}(t)`$
 
    Where $M(t)$ is the mass of the liquid [kg], and $\dot{M}_{in}$, $\dot{M}_{out}$ are the mass flow rates [kg/s].
 
@@ -65,11 +63,11 @@ We want to model the liquid level $h(t)$ in a cubic tank.
 
    Using the physical relation between mass, density, and volume (as well as between mass flow rate and volumetric flow rate), we can write:
 
-   $M(t) = \rho \cdot V(t), \quad \dot{M}_{in} = \rho \cdot Q_{in}(t), \quad \dot{M}_{out} = \rho \cdot Q_{out}(t)$
+   $`M(t) = \rho \cdot V(t), \quad \dot{M}_{in} = \rho \cdot Q_{in}(t), \quad \dot{M}_{out} = \rho \cdot Q_{out}(t)`$
 
    For an **incompressible fluid** with constant density $\rho$, we can take $\rho$ out of the derivative and simplify the equation:
 
-   $\frac{d}{dt} (\rho V(t)) = \rho Q_{in}(t) - \rho Q_{out}(t) \quad \Rightarrow \quad \frac{dV(t)}{dt} = Q_{in}(t) - Q_{out}(t)$
+   $`\frac{d}{dt} (\rho V(t)) = \rho Q_{in}(t) - \rho Q_{out}(t) \quad \Rightarrow \quad \frac{dV(t)}{dt} = Q_{in}(t) - Q_{out}(t)`$
 
    This is the **volumetric balance**.
 
@@ -77,16 +75,16 @@ We want to model the liquid level $h(t)$ in a cubic tank.
 
    To relate the liquid volume to its height, we note that the volume is given by the base area multiplied by the height $h(t)$:
 
-   $V(t) = A \cdot h(t), \quad \text{with} \quad A = L^2$
+   $`V(t) = A \cdot h(t), \quad \text{with} \quad A = L^2`$
 
    Substituting into the volumetric balance:
 
-   $\frac{d}{dt}[A \cdot h(t)] = Q_{in}(t) - Q_{out}(t)$
+   $`\frac{d}{dt}[A \cdot h(t)] = Q_{in}(t) - Q_{out}(t)`$
 
    Since $A$ is constant:
 
-   $A \frac{dh(t)}{dt} = Q_{in}(t) - Q_{out}(t)$
+   $`A \frac{dh(t)}{dt} = Q_{in}(t) - Q_{out}(t)`$
 
    Finally, the **dynamic equation for the liquid level** is:
 
-   $\boxed{\frac{dh(t)}{dt} = \frac{Q_{in}(t) - Q_{out}(t)}{A}}$
+   $`\boxed{\frac{dh(t)}{dt} = \frac{Q_{in}(t) - Q_{out}(t)}{A}}`$
