@@ -27,7 +27,7 @@ $$0 \le h(t) \le L$$
 
 ## Model Assumptions
 
-This model follows the assumptions established in [Cubic Tank with Gravity-Driven Outlet (With Momentum)](/models/tank/cubic-gravity-and-momentum/README.md), with a single additional simplification:
+This model follows the assumptions established in [Cubic Tank with Gravity-Driven Outlet (With Momentum)](/models/tank/cubic-with-momentum/README.md), with a single additional simplification:
 
 - The outlet pipe velocity is assumed constant (the momentum dynamics in the pipe are neglected).
 
@@ -50,7 +50,7 @@ All other assumptions from the original model remain valid and unchanged.
 
 1. Approximation of the Outlet Velocity
 
-   Following the derivation of the [Cubic Tank With Gravity-Driven Outlet (With Momentum)](/models/tank/cubic-gravity-and-momentum/README.md), we apply the additional assumption that the outlet pipe velocity remains constant, effectively neglecting the momentum dynamics in the pipe:
+   Following the derivation of the [Cubic Tank With Gravity-Driven Outlet (With Momentum)](/models/tank/cubic-with-momentum/README.md), we apply the additional assumption that the outlet pipe velocity remains constant, effectively neglecting the momentum dynamics in the pipe:
 
    $`\frac{dv_p(t)}{dt} = 0.`$
 
