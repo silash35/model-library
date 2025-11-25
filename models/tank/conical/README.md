@@ -30,6 +30,7 @@ $$0 \le h(t) \le H$$
 - No chemical reactions, leaks, or evaporation are considered.
 - Gravity-driven outlet follows Torricelli-type behavior
 - The inlet flow is assumed known and measurable.
+- The momentum dynamics in the outlet are neglected.
 
 ## Model Classification
 
