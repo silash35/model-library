@@ -71,7 +71,7 @@ plt.axhline(0, color="tab:red", linestyle="--")
 
 plt.xlabel("Time / s")
 plt.ylabel("Level / m")
-plt.title("Cubic Tank with Pumped Inlet and Outlet")
+plt.title("Cubic Tank")
 plt.grid(True)
 plt.legend()
 
