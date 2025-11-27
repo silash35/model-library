@@ -33,8 +33,8 @@ $$
 
 Where:
 
-- $M(t)$: Total mass inside the control volume at time $t$
-- $\dot{M}_{in}(t)$: Mass flow rate entering the system
-- $\dot{M}_{out}(t)$: Mass flow rate leaving the system
-- $\dot{M}_{gen}(t)$: Mass generation rate inside the system
-- $\dot{M}_{cons}(t)$: Mass consumption rate inside the system
+- $M(t)$: Total mass inside the control volume at time $t$ [kg]
+- $\dot{M}_{in}(t)$: Mass flow rate entering the system [kg/s]
+- $\dot{M}_{out}(t)$: Mass flow rate leaving the system [kg/s]
+- $\dot{M}_{gen}(t)$: Mass generation rate inside the system [kg/s]
+- $\dot{M}_{cons}(t)$: Mass consumption rate inside the system [kg/s]
