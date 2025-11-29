@@ -27,6 +27,7 @@ The goal of this repository is to serve as an **open library of mathematical mod
 
 - `models/` → Mathematical models organized by system type
 - `docs/` → Additional documentation
+- `experiments/` → Explorations and activities built around the models
 
 ## 📑 Key documents
 

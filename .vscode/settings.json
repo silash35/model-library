@@ -1,5 +1,8 @@
 {
-  "files.trimTrailingWhitespace": true,
+  "material-icon-theme.folders.associations": {
+    "experiments": "Test",
+    "results": "log"
+  },
   "ltex.completionEnabled": true,
   "ltex.language": "en-US"
 }
