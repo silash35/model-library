@@ -83,7 +83,7 @@ We want to model the liquid level $h(t)$ in a conic tank.
    $`
    \frac{r(h)}{h(t)} = \frac{R}{H}
    \quad\Rightarrow\quad
-   r(h) = \frac{R}{H}\,h(t)
+   r(h) = \frac{R}{H} \cdot h(t)
    `$
 
    Substitute this into the cone volume formula $V = \frac{1}{3}\pi r^2 h$:
@@ -92,7 +92,7 @@ We want to model the liquid level $h(t)$ in a conic tank.
 
    Simplifying:
 
-   $`V(h) = \frac{\pi R^2}{3H^2} \, h^3(t)`$
+   $`V(h) = \frac{\pi R^2}{3H^2} \cdot h^3(t)`$
 
 4. Put $`V(h)`$ Back into the Volumetric Balance
 
@@ -100,17 +100,17 @@ We want to model the liquid level $h(t)$ in a conic tank.
 
    Solve the derivative with respect to time:
 
-   $`\frac{d}{dt}\left(\frac{\pi R^2}{3H^2} h^3(t)\right) = \frac{\pi R^2}{3H^2} \cdot 3 h^2(t)\,\frac{dh}{dt}`$
+   $`\frac{d}{dt}\left(\frac{\pi R^2}{3H^2} h^3(t)\right) = \frac{\pi R^2}{3H^2} \cdot 3 h^2(t) \frac{dh}{dt}`$
 
    which simplifies to
 
-   $`\frac{\pi R^2}{H^2}\, h^2(t)\,\frac{dh}{dt}`$.
+   $`\frac{\pi R^2}{H^2} \cdot h^2(t) \cdot \frac{dh}{dt}`$.
 
    Go back to the volumetric balance and solve for $`\frac{dh}{dt}`$:
 
-   $`\frac{\pi R^2}{H^2}\, h^2(t)\,\frac{dh}{dt} = q_{in}(t) - q_{out}(t)`$
+   $`\frac{\pi R^2}{H^2} \cdot h^2(t) \cdot \frac{dh}{dt} = q_{in}(t) - q_{out}(t)`$
 
-   $`\frac{dh}{dt} = \frac{H^2}{\pi R^2}\,\frac{q_{in}(t)-q_{out}(t)}{h^2(t)}`$
+   $`\frac{dh}{dt} = \frac{H^2}{\pi R^2} \cdot \frac{q_{in}(t)-q_{out}(t)}{h^2(t)}`$
 
 5. Model the Outlet Flow and Substitute into the ODE
 
@@ -122,7 +122,7 @@ We want to model the liquid level $h(t)$ in a conic tank.
 
    Substitute this expression into the differential equation obtained in step 4:
 
-   $`\frac{dh}{dt} = \frac{H^2}{\pi R^2}\,\frac{q_{in}(t) - k\sqrt{h(t)}}{h^2(t)}`$
+   $`\frac{dh}{dt} = \frac{H^2}{\pi R^2} \frac{q_{in}(t) - k\sqrt{h(t)}}{h^2(t)}`$
 
    Rewriting the powers of $h(t)$:
 

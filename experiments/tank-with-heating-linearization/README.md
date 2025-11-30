@@ -18,11 +18,24 @@ $$
 \dot{\mathbf{x}}(\mathbf{x}_0, \mathbf{u}_0) = \mathbf{f}(\mathbf{x}_0, \mathbf{u}_0) = \mathbf{0}
 $$
 
-For our heated tank system, the **state variables** (outputs) and **input variables** are:
+For our heated tank system, the state variables $\mathbf{x}$ and input variables $\mathbf{u}$ are:
 
-- States: $\mathbf{x} = \begin{bmatrix} L \\ T \end{bmatrix}$
+$$
+\mathbf{x} =
+\begin{bmatrix}
+  L \\
+  T
+\end{bmatrix}
+$$
 
-- Inputs: $\mathbf{u} = \begin{bmatrix} q_\text{in} \\ q_j \\ T_\text{in} \end{bmatrix}$
+$$
+\mathbf{u} =
+\begin{bmatrix}
+  q_\text{in} \\
+  q_j \\
+  T_\text{in}
+\end{bmatrix}
+$$
 
 The linearization point $(L_0, T_0, q_\text{in,0}, q_{j,0}, T_\text{in,0})$ is selected such that the system is at equilibrium, meaning the tank level and temperature remain constant.
 
@@ -72,7 +85,7 @@ and the first-order approximation simplifies to a linear system:
 
 $$
 \dot{\bar{\mathbf{x}}} =
-\mathbf{A} \, \bar{\mathbf{x}} + \mathbf{B} \, \bar{\mathbf{u}}
+\mathbf{A} \bar{\mathbf{x}} + \mathbf{B} \bar{\mathbf{u}}
 $$
 
 In practice, we simulate the system using deviation variables and then convert back to the original engineering variables.

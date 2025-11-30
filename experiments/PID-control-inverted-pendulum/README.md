@@ -19,7 +19,7 @@ where $\theta_{\text{SP}}$ is the desired angle (the setpoint).
 
 The manipulated variable is the horizontal force applied to the cart:
 
-$$F(t) = K_p \, e(t) + K_i \int_0^t e(\tau) \, d\tau + K_d \frac{d e(t)}{dt},$$
+$$F(t) = K_p \cdot e(t) + K_i \int_0^t e(\tau) d\tau + K_d \frac{d e(t)}{dt},$$
 
 where:
 
@@ -42,7 +42,7 @@ $$e(t) = \theta_{\rm SP} - \theta(t)$$
 - The **derivative term** uses the rate of change of the error.
   Since the setpoint is constant, we have:
 
-$$\dot{e}(t) = \frac{d}{dt}(\theta_{\rm SP} - \theta(t)) = - \dot{\theta}(t) = -\omega(t)$$
+$$\dot{e}(t) = \frac{d}{dt}(\theta_{\rm SP} - \theta(t)) = -\dot{\theta}(t) = -\omega(t)$$
 
 - The **integral term** can be computed directly by the solver by including it as a state variable:
 
