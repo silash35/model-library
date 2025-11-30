@@ -1,5 +1,6 @@
 import os
-from typing import Callable, Final, List
+from collections.abc import Callable
+from typing import Final
 
 import matplotlib.pyplot as plt
 import numpy as np
@@ -101,7 +102,7 @@ B = np.array(f.jacobian(inputs).subs(subs_state))
 
 
 # --- Differential Equations for Simulation ---
-def nonlinear_diff_eq(t: float, x: np.ndarray, u_funcs: List[Callable[[float], float]]):
+def nonlinear_diff_eq(t: float, x: np.ndarray, u_funcs: list[Callable[[float], float]]):
     L, T = x
     q_in, q_j, T_in = u_funcs
 
@@ -110,7 +111,7 @@ def nonlinear_diff_eq(t: float, x: np.ndarray, u_funcs: List[Callable[[float], f
 
 
 def linear_diff_eq(
-    t: float, x_bar: np.ndarray, u_funcs: List[Callable[[float], float]]
+    t: float, x_bar: np.ndarray, u_funcs: list[Callable[[float], float]]
 ):
     u = np.array([u_func(t) for u_func in u_funcs])
     u_bar = u - u0  # Calc input deviations

@@ -1,5 +1,6 @@
 import os
-from typing import Callable, Final
+from collections.abc import Callable
+from typing import Final
 
 import matplotlib.pyplot as plt
 import numpy as np
