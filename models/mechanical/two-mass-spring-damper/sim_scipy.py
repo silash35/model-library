@@ -75,13 +75,12 @@ v2 = sol.y[3]
 """Mass 2 velocity [m/s]"""
 
 # --- Plot results ---
-fig, axs = plt.subplots(2, 1, figsize=(8, 6), constrained_layout=True)
+fig, axs = plt.subplots(2, 1, figsize=(8, 6), sharex=True, constrained_layout=True)
 fig.suptitle("Two-Mass–Spring–Damper System")
 
 # Positions
 axs[0].plot(sol.t, x1, label="$x_1(t)$")
 axs[0].plot(sol.t, x2, label="$x_2(t)$")
-axs[0].set_xlabel("Time / s")
 axs[0].set_ylabel("Position / m")
 axs[0].grid(True)
 axs[0].legend()
@@ -89,10 +88,11 @@ axs[0].legend()
 # Velocities
 axs[1].plot(sol.t, v1, label="$v_1(t)$")
 axs[1].plot(sol.t, v2, label="$v_2(t)$")
-axs[1].set_xlabel("Time / s")
 axs[1].set_ylabel("Velocity / m$\\cdot$s$^{-1}$")
 axs[1].grid(True)
 axs[1].legend()
+
+axs[-1].set_xlabel("Time / s")
 
 # Save plot to file
 script_dir = os.path.dirname(os.path.abspath(__file__))

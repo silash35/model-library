@@ -78,23 +78,23 @@ T = sol.y[1]
 # --- Plot results ---
 t_min = sol.t / 60  # convert seconds to minutes
 
-fig, axs = plt.subplots(2, 1, figsize=(8, 5), constrained_layout=True)
+fig, axs = plt.subplots(2, 1, figsize=(8, 5), sharex=True, constrained_layout=True)
 fig.suptitle("Heated Tank")
 
 # Plot level
 axs[0].plot(t_min, L, label="$L(t)$")
 axs[0].axhline(0, color="tab:red", linestyle="--", label="Tank Limits")
-axs[0].set_xlabel("Time / min")
 axs[0].set_ylabel("Level / m")
 axs[0].grid(True)
 axs[0].legend()
 
 # Plot temperature
 axs[1].plot(t_min, T - zero_Celsius, label="$T(t)$", color="tab:orange")
-axs[1].set_xlabel("Time / min")
 axs[1].set_ylabel("Temperature / °C")
 axs[1].grid(True)
 axs[1].legend()
+
+axs[-1].set_xlabel("Time / min")
 
 # Save plot to file
 script_dir = os.path.dirname(os.path.abspath(__file__))

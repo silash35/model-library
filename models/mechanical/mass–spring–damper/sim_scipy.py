@@ -55,22 +55,22 @@ v = sol.y[1]
 """Mass velocity [m/s]"""
 
 # --- Plot results ---
-fig, axs = plt.subplots(2, 1, figsize=(8, 5), constrained_layout=True)
+fig, axs = plt.subplots(2, 1, figsize=(8, 5), sharex=True, constrained_layout=True)
 fig.suptitle("Mass–Spring–Damper System")
 
 # Plot displacement
 axs[0].plot(sol.t, x, label="$x(t)$")
-axs[0].set_xlabel("Time / s")
 axs[0].set_ylabel("Displacement / m")
 axs[0].grid(True)
 axs[0].legend()
 
 # Plot velocity
 axs[1].plot(sol.t, v, label="$v(t)$", color="tab:orange")
-axs[1].set_xlabel("Time / s")
 axs[1].set_ylabel("Velocity / m$\\cdot$s$^{-1}$")
 axs[1].grid(True)
 axs[1].legend()
+
+axs[-1].set_xlabel("Time / s")
 
 # Save plot to file
 script_dir = os.path.dirname(os.path.abspath(__file__))

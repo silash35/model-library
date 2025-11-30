@@ -80,7 +80,7 @@ Ic = I - Id
 """Capacitor current [A]"""
 
 # --- Plot results ---
-fig, axs = plt.subplots(2, 1, figsize=(8, 5), constrained_layout=True)
+fig, axs = plt.subplots(2, 1, figsize=(8, 5), sharex=True, constrained_layout=True)
 fig.suptitle("Series RLC Circuit with Parallel Diode")
 
 axs[0].plot(sol.t, Vc, label="$V_C(t)$")
@@ -94,6 +94,8 @@ axs[1].plot(sol.t, Ic, label="$I_C(t)$")
 axs[1].set_ylabel("Current [A]")
 axs[1].grid(True)
 axs[1].legend()
+
+axs[-1].set_xlabel("Time / s")
 
 # Save plot to file
 script_dir = os.path.dirname(os.path.abspath(__file__))

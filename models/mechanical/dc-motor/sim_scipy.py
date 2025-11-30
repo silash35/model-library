@@ -65,22 +65,22 @@ theta_deg = np.rad2deg(theta)
 omega_deg = np.rad2deg(omega)
 
 # --- Plot results ---
-fig, axs = plt.subplots(2, 1, figsize=(8, 5), constrained_layout=True)
+fig, axs = plt.subplots(2, 1, figsize=(8, 5), sharex=True, constrained_layout=True)
 fig.suptitle("DC Motor Simulation")
 
 # Angular position
 axs[0].plot(sol.t, theta_deg, label="$\\theta(t)$")
-axs[0].set_xlabel("Time / s")
 axs[0].set_ylabel("Angle / deg")
 axs[0].grid(True)
 axs[0].legend()
 
 # Angular velocity
 axs[1].plot(sol.t, omega_deg, label="$\\omega(t)$", color="tab:orange")
-axs[1].set_xlabel("Time / s")
 axs[1].set_ylabel("Angular velocity / deg$\\cdot$s$^{-1}$")
 axs[1].grid(True)
 axs[1].legend()
+
+axs[-1].set_xlabel("Time / s")
 
 # Save plot to file
 script_dir = os.path.dirname(os.path.abspath(__file__))

@@ -78,13 +78,12 @@ v = sol.y[1]
 """Valve stem velocity [m/s]"""
 
 # --- Plot results ---
-fig, axs = plt.subplots(2, 1, figsize=(8, 6), constrained_layout=True)
+fig, axs = plt.subplots(2, 1, figsize=(8, 6), sharex=True, constrained_layout=True)
 fig.suptitle("Pneumatic Control Valve")
 
 # Pressure input
 P = np.array([P_input(t) for t in sol.t]) / psi
 axs[0].plot(sol.t, P, label="$P(t)$", color="tab:orange")
-axs[0].set_xlabel("Time / s")
 axs[0].set_ylabel("Pressure / psi")
 axs[0].grid(True)
 axs[0].legend()
@@ -94,10 +93,11 @@ axs[1].axhline(x_min * 100, color="tab:red", linestyle="--", label="Valve Limits
 axs[1].plot(sol.t, x * 100, label="$x(t)$")
 axs[1].axhline(x_max * 100, color="tab:red", linestyle="--")
 
-axs[1].set_xlabel("Time / s")
 axs[1].set_ylabel("Displacement / cm")
 axs[1].grid(True)
 axs[1].legend()
+
+axs[-1].set_xlabel("Time / s")
 
 # Save plot to file
 script_dir = os.path.dirname(os.path.abspath(__file__))

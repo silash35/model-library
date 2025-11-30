@@ -137,7 +137,7 @@ i = sol.y[2]
 x = np.clip(x, x_min, x_max)
 
 # --- Plot results ---
-fig, axs = plt.subplots(3, 1, figsize=(8, 8), layout="tight")
+fig, axs = plt.subplots(3, 1, figsize=(8, 8), sharex=True, layout="tight")
 fig.suptitle("Solenoid Valve")
 
 # Voltage input
@@ -156,9 +156,9 @@ axs[2].plot(sol.t, i, label="$i(t)$")
 axs[2].set_ylabel("Coil Current / A")
 
 for ax in axs:
-    ax.set_xlabel("Time / s")
     ax.grid(True)
     ax.legend()
+axs[-1].set_xlabel("Time / s")
 
 # Save plot to file
 script_dir = os.path.dirname(os.path.abspath(__file__))

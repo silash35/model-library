@@ -81,24 +81,24 @@ v_p = sol.y[1]
 # --- Plot results ---
 t_min = t / 60  # Convert time to minutes
 
-fig, axs = plt.subplots(2, 1, figsize=(8, 5), constrained_layout=True)
+fig, axs = plt.subplots(2, 1, figsize=(8, 5), sharex=True, constrained_layout=True)
 fig.suptitle("Cubic Tank with Pumped Inlet and Gravity-Driven Outlet")
 
 # Plot Liquid level
 axs[0].axhline(L, color="tab:red", linestyle="--", label="Tank Limits")
 axs[0].plot(t_min, h, label="$h(t)$")
 axs[0].axhline(0, color="tab:red", linestyle="--")
-axs[0].set_xlabel("Time / min")
 axs[0].set_ylabel("Level / m")
 axs[0].grid(True)
 axs[0].legend()
 
 # Plot angular velocity
 axs[1].plot(t_min, v_p, label="$v_p(t)$", color="tab:orange")
-axs[1].set_xlabel("Time / min")
 axs[1].set_ylabel("Velocity / m$\\cdot$s$^{-1}$")
 axs[1].grid(True)
 axs[1].legend()
+
+axs[-1].set_xlabel("Time / min")
 
 # Save plot to file
 script_dir = os.path.dirname(os.path.abspath(__file__))

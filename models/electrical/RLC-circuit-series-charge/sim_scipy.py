@@ -55,23 +55,23 @@ I = sol.y[1]
 """Circuit current [A]"""
 
 # --- Plot results ---
-fig, axs = plt.subplots(2, 1, figsize=(8, 5), constrained_layout=True)
+fig, axs = plt.subplots(2, 1, figsize=(8, 5), sharex=True, constrained_layout=True)
 fig.suptitle("Series RLC Circuit")
 
 # Plot capacitor charge
 axs[0].plot(sol.t, q, label="$q(t)$")
 axs[0].plot(sol.t, np.full_like(sol.t, C * epsilon), label="$q_{max}(t)$")
-axs[0].set_xlabel("Time / s")
 axs[0].set_ylabel("Charge / C")
 axs[0].grid(True)
 axs[0].legend()
 
 # Plot circuit current
 axs[1].plot(sol.t, I, label="$I(t)$")
-axs[1].set_xlabel("Time / s")
 axs[1].set_ylabel("Current / A")
 axs[1].grid(True)
 axs[1].legend()
+
+axs[-1].set_xlabel("Time / s")
 
 # Save plot to file
 script_dir = os.path.dirname(os.path.abspath(__file__))
