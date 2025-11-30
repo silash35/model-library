@@ -6,10 +6,10 @@ import numpy as np
 from scipy.integrate import solve_ivp
 
 # --- Model Constants ---
-L: Final[float] = 4
+L: Final = 4
 """Tank side length [m]"""
 
-A: Final[float] = L**2
+A: Final = L**2
 """Cross-sectional area [m^2]"""
 
 

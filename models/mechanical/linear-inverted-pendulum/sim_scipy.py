@@ -7,16 +7,16 @@ from scipy.constants import g as gravity
 from scipy.integrate import solve_ivp
 
 # --- Model Constants ---
-m_c: Final[float] = 1.0
+m_c: Final = 1.0
 """Mass of the cart [kg]"""
 
-m_p: Final[float] = 0.2
+m_p: Final = 0.2
 """Mass of the pendulum rod [kg]"""
 
-L: Final[float] = 1.0
+L: Final = 1.0
 """Distance from pivot to rod center of mass [m]"""
 
-g: Final[float] = gravity
+g: Final = gravity
 """Gravitational acceleration [m/s²]"""
 
 
@@ -60,7 +60,7 @@ def model(t: float, y: np.ndarray, F: float):
 
 
 # --- Model Input ---
-F: Final[float] = 0.0
+F: Final = 0.0
 """External force applied to the cart [N]"""
 
 # --- Initial Conditions ---

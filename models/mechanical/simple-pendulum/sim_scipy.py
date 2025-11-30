@@ -7,10 +7,10 @@ from scipy.constants import g as gravity
 from scipy.integrate import solve_ivp
 
 # --- Model Constants ---
-g: Final[float] = gravity
+g: Final = gravity
 """Gravitational acceleration [m/s²]"""
 
-L: Final[float] = 1.0
+L: Final = 1.0
 """Pendulum length [m]"""
 
 

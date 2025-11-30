@@ -7,22 +7,22 @@ from scipy import constants as C
 from scipy.integrate import solve_ivp
 
 # --- Model Constants ---
-V: Final[float] = 1
+V: Final = 1
 """Vessel volume [m^3]"""
 
-R: Final[float] = C.R
+R: Final = C.R
 """Universal gas constant [J/(mol*K)]"""
 
-MM: Final[float] = 0.0289647
+MM: Final = 0.0289647
 """Molar mass of gas (air) [kg/mol]"""
 
-T: Final[float] = 293
+T: Final = 293
 """Gas temperature [K]"""
 
-k1: Final[float] = 0.01
+k1: Final = 0.01
 """Inlet flow coefficient [kg/(s*Pa^0.5)]"""
 
-k2: Final[float] = 0.015
+k2: Final = 0.015
 """Outlet flow coefficient [kg/(s*Pa^0.5)]"""
 
 

@@ -6,7 +6,7 @@ import numpy as np
 from scipy.integrate import solve_ivp
 
 # --- Model Constants ---
-alpha: Final[float] = 1.0
+alpha: Final = 1.0
 """Linear stiffness coefficient"""
 
 

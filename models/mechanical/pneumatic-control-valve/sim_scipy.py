@@ -8,22 +8,22 @@ from scipy.constants import psi
 from scipy.integrate import solve_ivp
 
 # --- Model Constants ---
-m: Final[float] = 0.5
+m: Final = 0.5
 """Equivalent moving mass [kg]"""
 
-b: Final[float] = 200.0
+b: Final = 200.0
 """Viscous friction coefficient [N·s/m]"""
 
-k: Final[float] = 8000.0
+k: Final = 8000.0
 """Spring stiffness [N/m]"""
 
-A: Final[float] = np.pi * (6 / 100) ** 2
+A: Final = np.pi * (6 / 100) ** 2
 """Effective diaphragm area where the pressure acts [m²]"""
 
-x_min: Final[float] = 2.92 / 100
+x_min: Final = 2.92 / 100
 """Fully open position [m]"""
 
-x_max: Final[float] = 14.62 / 100
+x_max: Final = 14.62 / 100
 """Fully closed position [m]"""
 
 
@@ -49,7 +49,7 @@ def model(t: float, y: np.ndarray, P_func: Callable[[float], float]):
 
 
 # --- Model Input ---
-def P_input(t: float) -> float:
+def P_input(t: float):
     """Example pneumatic control signal [Pa]
 
     Follows the Standard industrial signal:

@@ -7,28 +7,28 @@ from scipy.constants import g as gravity
 from scipy.integrate import solve_ivp
 
 # --- Model Constants ---
-rho: Final[float] = 1000.0
+rho: Final = 1000.0
 """Density of water [kg/m³]"""
 
-g: Final[float] = gravity
+g: Final = gravity
 """Gravitational acceleration [m/s²]"""
 
-gamma: Final[float] = rho * g
+gamma: Final = rho * g
 """Specific weight [N/m³]"""
 
-L: Final[float] = 4
+L: Final = 4
 """Tank side length [m]"""
 
-A: Final[float] = L**2
+A: Final = L**2
 """Cross-sectional area [m²]"""
 
-D_p: Final[float] = 0.20
+D_p: Final = 0.20
 """Pipe diameter [m]"""
 
-A_p: Final[float] = np.pi * (D_p / 2) ** 2
+A_p: Final = np.pi * (D_p / 2) ** 2
 """Pipe cross-sectional area [m²]"""
 
-k_f: Final[float] = 1.0
+k_f: Final = 1.0
 """Friction coefficient [kg/m]"""
 
 alpha = A_p * np.sqrt(gamma * A_p / k_f)

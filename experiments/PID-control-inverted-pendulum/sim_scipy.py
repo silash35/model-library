@@ -7,25 +7,25 @@ from scipy.constants import g as gravity
 from scipy.integrate import solve_ivp
 
 # --- Define Model and PID control ---
-m_c: Final[float] = 1.0  # Mass of the cart [kg]
+m_c: Final = 1.0  # Mass of the cart [kg]
 
-m_p: Final[float] = 0.2  # Mass of the pendulum rod [kg]
+m_p: Final = 0.2  # Mass of the pendulum rod [kg]
 
-L: Final[float] = 0.5  # Distance from pivot to rod center of mass [m]
+L: Final = 0.5  # Distance from pivot to rod center of mass [m]
 
-J: Final[float] = (
+J: Final = (
     (1 / 12) * m_p * (2 * L) ** 2
 )  # Moment of inertia of the pendulum about its center of mass [kg·m²]
 
-b: Final[float] = 10.0  # Viscous damping coefficient of the cart [N·s/m]
+b: Final = 10.0  # Viscous damping coefficient of the cart [N·s/m]
 
-g: Final[float] = gravity  # Gravitational acceleration [m/s²]
+g: Final = gravity  # Gravitational acceleration [m/s²]
 
-Kp: Final[float] = -500.0  # Proportional gain
+Kp: Final = -500.0  # Proportional gain
 
-Ki: Final[float] = -300.0  # Integral gain
+Ki: Final = -300.0  # Integral gain
 
-Kd: Final[float] = -20.0  # Derivative gain
+Kd: Final = -20.0  # Derivative gain
 
 
 def PID_control(e: float | np.ndarray, de: float | np.ndarray, Ie: float | np.ndarray):

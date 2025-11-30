@@ -6,13 +6,13 @@ import numpy as np
 from scipy.integrate import solve_ivp
 
 # --- Model Constants ---
-m: Final[float] = 1.0
+m: Final = 1.0
 """Mass [kg]"""
 
-c: Final[float] = 2.0
+c: Final = 2.0
 """Damping coefficient [N·s/m]"""
 
-k: Final[float] = 20.0
+k: Final = 20.0
 """Spring stiffness [N/m]"""
 
 

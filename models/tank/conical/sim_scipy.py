@@ -6,13 +6,13 @@ import numpy as np
 from scipy.integrate import solve_ivp
 
 # --- Model Constants ---
-H: Final[float] = 4.0
+H: Final = 4.0
 """Tank maximum height [m]"""
 
-R: Final[float] = 1.5
+R: Final = 1.5
 """Tank top radius [m]"""
 
-k: Final[float] = 0.8
+k: Final = 0.8
 """Outlet discharge parameter [m^2.5/s]"""
 
 

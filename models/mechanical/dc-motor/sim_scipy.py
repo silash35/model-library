@@ -6,19 +6,19 @@ import numpy as np
 from scipy.integrate import solve_ivp
 
 # --- Model Constants ---
-J: Final[float] = 0.03
+J: Final = 0.03
 """Total moment of inertia [kg·m²]"""
 
-b: Final[float] = 0.02
+b: Final = 0.02
 """Viscous friction coefficient [N·m·s/rad]"""
 
-K1: Final[float] = 0.01
+K1: Final = 0.01
 """Torque constant [N·m/A]"""
 
-K2: Final[float] = 0.01
+K2: Final = 0.01
 """Back-emf constant [V·s/rad]"""
 
-R: Final[float] = 10.0
+R: Final = 10.0
 """Armature resistance [Ω]"""
 
 

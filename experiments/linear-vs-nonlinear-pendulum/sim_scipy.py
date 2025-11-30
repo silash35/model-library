@@ -7,9 +7,9 @@ from scipy.constants import g as gravity
 from scipy.integrate import solve_ivp
 
 # --- Define Models ---
-g: Final[float] = gravity  # Gravitational acceleration [m/s²]
+g: Final = gravity  # Gravitational acceleration [m/s²]
 
-L: Final[float] = 1.0  # Pendulum length [m]
+L: Final = 1.0  # Pendulum length [m]
 
 
 def diff_equations(t: float, y: np.ndarray):

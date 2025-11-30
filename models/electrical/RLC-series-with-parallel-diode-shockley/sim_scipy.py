@@ -6,22 +6,22 @@ import numpy as np
 from scipy.integrate import solve_ivp
 
 # --- Model Constants ---
-R: Final[float] = 100.0
+R: Final = 100.0
 """Resistance [Ω]"""
 
-L: Final[float] = 100 * 1e-3
+L: Final = 100 * 1e-3
 """Inductance [H]"""
 
-C: Final[float] = 5000e-6
+C: Final = 5000e-6
 """Capacitance [F]"""
 
-i_S: Final[float] = 1e-12
+i_S: Final = 1e-12
 """Diode reverse saturation current [A]"""
 
-n: Final[float] = 1.5
+n: Final = 1.5
 """Diode ideality factor"""
 
-V_T: Final[float] = 26e-3
+V_T: Final = 26e-3
 """Thermal voltage [V]"""
 
 

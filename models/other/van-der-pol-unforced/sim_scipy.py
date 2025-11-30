@@ -6,7 +6,7 @@ import numpy as np
 from scipy.integrate import solve_ivp
 
 # --- Model Constants ---
-mu: Final[float] = 1.0
+mu: Final = 1.0
 """Nonlinearity parameter"""
 
 

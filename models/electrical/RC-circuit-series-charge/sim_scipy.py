@@ -6,10 +6,10 @@ import numpy as np
 from scipy.integrate import solve_ivp
 
 # --- Model Constants ---
-R: Final[float] = 50.0
+R: Final = 50.0
 """Resistance [Ω]"""
 
-C: Final[float] = 5000e-6
+C: Final = 5000e-6
 """Capacitance [F]"""
 
 

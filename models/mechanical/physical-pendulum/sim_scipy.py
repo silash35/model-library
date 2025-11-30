@@ -7,19 +7,19 @@ from scipy.constants import g as gravity
 from scipy.integrate import solve_ivp
 
 # --- Model Constants ---
-m: Final[float] = 1.0
+m: Final = 1.0
 """Mass of the rod [kg]"""
 
-L: Final[float] = 0.5
+L: Final = 0.5
 """Distance from pivot to center of mass [m] (rod length = 2*L)"""
 
-J: Final[float] = (1 / 3) * m * (L * 2) ** 2
+J: Final = (1 / 3) * m * (L * 2) ** 2
 """Moment of inertia of the rod about the pivot [kg·m²]"""
 
-k: Final[float] = 0.3
+k: Final = 0.3
 """Viscous damping coefficient [N·m·s/rad]"""
 
-g: Final[float] = gravity
+g: Final = gravity
 """Gravitational acceleration [m/s²]"""
 
 

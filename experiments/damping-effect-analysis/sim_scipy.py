@@ -6,9 +6,9 @@ import numpy as np
 from scipy.integrate import solve_ivp
 
 # --- Define Model ---
-m: Final[float] = 1.0  # Mass [kg]
+m: Final = 1.0  # Mass [kg]
 
-k: Final[float] = 20.0  # Spring stiffness [N/m]
+k: Final = 20.0  # Spring stiffness [N/m]
 
 
 def diff_equations(t: float, y: np.ndarray, F_ext: float, c: float):

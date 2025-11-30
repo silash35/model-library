@@ -7,22 +7,22 @@ from scipy.constants import zero_Celsius
 from scipy.integrate import solve_ivp
 
 # --- Model Constants ---
-rho: Final[float] = 1000.0
+rho: Final = 1000.0
 """Liquid density (water) [kg/m^3]"""
 
-cp: Final[float] = 4180.0
+cp: Final = 4180.0
 """Specific heat capacity (water) [J/(kg·K)]"""
 
-rho_j: Final[float] = 958.0
+rho_j: Final = 958.0
 """Condensate density (liquid water at 100°C) [kg/m^3]"""
 
-lambda_j: Final[float] = 2.256e6
+lambda_j: Final = 2.256e6
 """Latent heat of condensation of water [J/kg]"""
 
-A: Final[float] = np.pi * (1.5**2)
+A: Final = np.pi * (1.5**2)
 """Tank cross-sectional area [m^2]"""
 
-k: Final[float] = 0.12
+k: Final = 0.12
 """Outlet discharge parameter [m^2.5/s]"""
 
 
@@ -54,10 +54,10 @@ def model(t: float, y: np.ndarray, q_in: float, q_j: float, T_in: float):
 q_in = 0.2
 """Inlet flow rate [m^3/s]"""
 
-q_j: Final[float] = 0.015
+q_j: Final = 0.015
 """jacket condensate flow [m^3/s]"""
 
-T_in: Final[float] = zero_Celsius + 28.0
+T_in: Final = zero_Celsius + 28.0
 """inlet temperature [K]"""
 
 # --- Simulation ---
