@@ -16,6 +16,6 @@ For each case, the models are integrated over the same time interval using the s
 
 ## 📊 Results and Conclusions
 
-<img src="results/scipy.png" alt="Pendulum Comparison Plot (Scipy)"/>
+<img src="results/scipy.png" alt="Pendulum Comparison Plot (SciPy)"/>
 
 As seen in the simulation results, the linear model matches the nonlinear behavior well for **small angles**, but as the initial angle increases, the trajectories **diverge significantly**, and the linear approximation becomes invalid.

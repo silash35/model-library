@@ -52,7 +52,7 @@ where $I_e$ is the integral of the error.
 
 ## 📊 Results and Conclusions
 
-<img src="results/scipy.png" alt="Pendulum under PID control (Scipy)"/>
+<img src="results/scipy.png" alt="Pendulum under PID control (SciPy)"/>
 
 The PID control successfully stabilized the inverted pendulum around the setpoint angle.
 It is important to note that due to the **viscous damping** of the cart, even after the pendulum angle $\theta$ has reached the setpoint, a nonzero horizontal force $F(t)$ must continue to be applied to compensate for friction and maintain the system in equilibrium. This is why the force does not drop to zero once the pendulum is upright.
