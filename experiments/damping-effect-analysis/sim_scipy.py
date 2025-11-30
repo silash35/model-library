@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 from scipy.integrate import solve_ivp
 
-# --- Define Models ---
+# --- Define Model ---
 m: Final[float] = 1.0  # Mass [kg]
 
 k: Final[float] = 20.0  # Spring stiffness [N/m]
