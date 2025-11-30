@@ -34,8 +34,6 @@ t = np.linspace(0, 10, 1000)  # Simulation time [s]
 test_angles = np.deg2rad(np.array([15, 30, 60]))
 solutions = np.zeros((test_angles.size, 2, t.size))
 
-print(solutions.shape)
-
 for i in range(test_angles.size):
     y0 = [test_angles[i], 0.0, test_angles[i], 0.0]
     sol = solve_ivp(diff_equations, [t[0], t[-1]], y0, t_eval=t)
