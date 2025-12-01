@@ -14,9 +14,9 @@ The liquid level and temperature dynamics can be mathematically described by the
 $$
 \begin{cases}
    \displaystyle \frac{dV}{dt} = q_1 + q_2 - q \\
-   \frac{dC_A}{dt} = \frac{(C_{A,1} - C_A) q_1 + (C_{A,2} - C_A) q_2}{V} \\
-   \frac{dC_B}{dt} = \frac{(C_{B,1} - C_B) q_1 + (C_{B,2} - C_B) q_2}{V} \\
-   \frac{dT}{dt} = \frac{\rho \cdot q_1 \cdot c_p (T_1 - T) + \rho \cdot q_2 \cdot c_p (T_2 - T) + \rho_c \cdot q_c \cdot \lambda}{\rho \cdot V \cdot c_p}
+   \displaystyle \frac{dC_A}{dt} = \frac{(C_{A,1} - C_A) q_1 + (C_{A,2} - C_A) q_2}{V} \\
+   \displaystyle \frac{dC_B}{dt} = \frac{(C_{B,1} - C_B) q_1 + (C_{B,2} - C_B) q_2}{V} \\
+   \displaystyle \frac{dT}{dt} = \frac{\rho \cdot q_1 \cdot c_p (T_1 - T) + \rho \cdot q_2 \cdot c_p (T_2 - T) + \rho_c \cdot q_c \cdot \lambda}{\rho \cdot V \cdot c_p}
 \end{cases}
 $$
 
