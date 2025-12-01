@@ -23,7 +23,7 @@ Where:
 
 > 💡 For many physical systems, like tanks, generation, and consumption are zero unless reactions are considered.
 
-## Differential Form
+### Differential Form
 
 In differential form, the mass balance can be written as:
 
@@ -38,3 +38,30 @@ Where:
 - $\dot{M}_{out}(t)$: Mass flow rate leaving the system [kg/s]
 - $\dot{M}_{gen}(t)$: Mass generation rate inside the system [kg/s]
 - $\dot{M}_{cons}(t)$: Mass consumption rate inside the system [kg/s]
+
+## Component (Species) Mass Balance
+
+In addition to tracking the **total mass**, many engineering systems also require tracking the mass (or concentration) of **individual chemical species** inside the control volume.
+
+A component balance applies the same conservation principles, but for each species separately.
+Just like the overall mass balance, it can be expressed as:
+
+$$
+\text{Accumulation of species } i = \text{Input of } i - \text{Output of } i + \text{Generation of } i - \text{Consumption of } i
+$$
+
+### Differential Form
+
+For a species $i$, the general differential balance is:
+
+$$
+\frac{d(n_i(t))}{dt} = \dot{n}_{i,in}(t) - \dot{n}_{i,out}(t) + \dot{n}_{i,gen}(t) - \dot{n}_{i,cons}(t)
+$$
+
+Where:
+
+- $n_i(t)$: Moles or mass of species $i$ inside the system
+- $\dot{n}_{i,in}(t)$: Flow rate of species $i$ entering the system
+- $\dot{n}_{i,out}(t)$: Flow rate of species $i$ leaving the system
+- $\dot{n}_{i,gen}(t)$: Rate of formation of species $i$ by chemical reaction
+- $\dot{n}_{i,cons}(t)$: Rate of consumption of species $i$ by chemical reaction

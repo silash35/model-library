@@ -9,7 +9,7 @@ The physical system is illustrated in the figure:
 
 <img src="diagram.svg" alt="Mixer with Heating Diagram"/>
 
-The liquid level and temperature dynamics can be mathematically described by the following equations:
+The liquid volume, species concentrations, and temperature dynamics can be mathematically described by the following equations:
 
 $$
 \begin{cases}
@@ -22,19 +22,19 @@ $$
 
 Where:
 
-- $V$: tank liquid volume
-- $q_1, q_2$: inlet volumetric flow rates
-- $q$: outlet volumetric flow rate
-- $C_{A,1}, C_{A,2}$: concentrations of species A in inlet streams 1 and 2
-- $C_{B,1}, C_{B,2}$: concentrations of species B in inlet streams 1 and 2
-- $C_A, C_B$: concentrations of species A and B in the tank
-- $T_1, T_2$: temperatures of inlet streams
-- $T$: tank temperature
-- $q_c$: condensation rate of steam in the heating coil
-- $\lambda$: latent heat of condensation
-- $\rho$: liquid density
-- $c_p$: liquid heat capacity
-- $\rho_c$: condensate density
+- $V$: tank liquid volume [m³]
+- $q_1, q_2$: inlet volumetric flow rates [m³/s]
+- $q$: outlet volumetric flow rate [m³/s]
+- $C_{A,1}, C_{A,2}$: concentrations of species A in inlet streams 1 and 2 [mol/m³]
+- $C_{B,1}, C_{B,2}$: concentrations of species B in inlet streams 1 and 2 [mol/m³]
+- $C_A, C_B$: concentrations of species A and B in the tank [mol/m³]
+- $T_1, T_2$: temperatures of inlet streams [K]
+- $T$: tank temperature [K]
+- $q_c$: condensate volumetric flow rate [m³/s] [m³/s]
+- $\lambda$: latent heat of condensation [J/kg]
+- $\rho$: liquid density [kg/m³]
+- $c_p$: specific heat capacity of the tank liquid [J/(kg·K)]
+- $\rho_c$: density of the coil steam/condensate [kg/m³]
 
 The liquid volume is constrained by the physical requirement that it cannot be negative:
 
@@ -43,17 +43,16 @@ $$V(t) \ge 0$$
 ## Model Assumptions
 
 - The fluid is incompressible, with constant density.
-- Gravity-driven outlet follows Torricelli-type behavior
-- The inlet flow is assumed known and measurable.
-
-- Kinetic and potential energy are negligible.
-- The liquid is a pure substance: the jacket steam enters and leaves at its saturation temperature.
-- The specific heat capacity $c_p$ of the tank liquid is constant.
-- The tank has a constant cross-sectional area $A$.
+- All inlet volumetric flow rates and the outlet volumetric flow rate are known and measurable.
+- Shaft work is negligible (weakly viscous fluid).
+- Perfect and ideal mixing inside the tank.
+- Kinetic and potential energy contributions are negligible.
 - No chemical reactions occur in the tank.
-- There are no leaks, evaporation losses, or other unmodeled energy or mass losses.
-- The accumulation of mass inside the heating jacket is negligible.
-- The jacket steam pressure and temperature remain constant.
+- Mass accumulation inside the heating coil is negligible.
+- The specific heat capacity $c_p$ of the tank liquid is constant.
+- No leaks, evaporation, or any other unaccounted mass or energy losses occur.
+- The steam used for heating is a pure condensable substance and enters and leaves the coil at its saturation temperature.
+- The concentrations of species A and B are sufficiently low that their presence does not significantly alter the liquid density or the heat capacity.
 
 ## Model Classification
 
