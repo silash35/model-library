@@ -113,9 +113,11 @@ axs[0].set_ylabel("Applied Force $F(t)$ / N")
 axs[0].grid(True)
 
 # Pendulum angle
-axs[1].plot(sol.t, theta, color="tab:blue")
-axs[1].set_ylabel("Pendulum Angle $\\theta(t)$ / deg")
+axs[1].plot(sol.t, theta, color="tab:blue", label="$\\theta(t)$")
+axs[1].axhline(np.rad2deg(SP), color="tab:red", linestyle="--", label="Setpoint (SP)")
+axs[1].set_ylabel("Angle / deg")
 axs[1].grid(True)
+axs[1].legend()
 
 axs[-1].set_xlabel("Time / s")
 
