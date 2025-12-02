@@ -10,13 +10,7 @@ This experiment explores the **linearization of the heated tank system** and com
 
 The process of linearizing a system involves approximating it by a linear model around a **specific point**. This allows easier analysis and control design.
 
-### 1. Choosing the linearization point
-
-The linearization point $(\mathbf{x}_0, \mathbf{u}_0)$ is typically chosen as a **stationary point** (steady-state) where:
-
-$$
-\dot{\mathbf{x}}(\mathbf{x}_0, \mathbf{u}_0) = \mathbf{f}(\mathbf{x}_0, \mathbf{u}_0) = \mathbf{0}
-$$
+### 1. Defining the linearization point
 
 For our heated tank system, the state variables $\mathbf{x}$ and input variables $\mathbf{u}$ are:
 
@@ -26,9 +20,7 @@ $$
   L \\
   T
 \end{bmatrix}
-$$
-
-$$
+\qquad
 \mathbf{u} =
 \begin{bmatrix}
   q_\text{in} \\
@@ -37,7 +29,22 @@ $$
 \end{bmatrix}
 $$
 
-The linearization point $(L_0, T_0, q_\text{in,0}, q_{j,0}, T_\text{in,0})$ is selected such that the system is at equilibrium, meaning the tank level and temperature remain constant.
+We select a linearization point $(\mathbf{x}_0, \mathbf{u}_0)$ as fixed reference values:
+
+$$
+\mathbf{x}_0 =
+\begin{bmatrix}
+  L_0 \\
+  T_0
+\end{bmatrix}
+\qquad
+\mathbf{u}_0 =
+\begin{bmatrix}
+  q_\text{in,0} \\
+  q_{j,0} \\
+  T_\text{in,0}
+\end{bmatrix}
+$$
 
 ### 2. Taylor Series Approximation
 
@@ -58,14 +65,23 @@ Here:
 
 ### 3. Deviation Variables
 
-A **linear system** must satisfy the **principle of superposition**, which means:
+After applying the Taylor expansion, the system takes the form:
+
+$$
+\dot{\mathbf{x}} =
+\mathbf{f}(\mathbf{x}_0, \mathbf{u}_0) +
+\mathbf{A}(\mathbf{x} - \mathbf{x}_0) +
+\mathbf{B}(\mathbf{u} - \mathbf{u}_0)
+$$
+
+But a **linear system** must satisfy the **principle of superposition**, which means:
 
 1. **Additivity**: the response to a sum of inputs equals the sum of responses
 2. **Homogeneity**: scaling the input scales the output proportionally
 
-For most nonlinear systems, even after applying the first-order Taylor series, these properties are not satisfied.
+Our Taylor approximation still contains constant terms, so it does not yet satisfy these properties.
 
-To handle this, we define **deviation variables** that measure deviations from the linearization point:
+To obtain a linear model, we introduce **deviation variables** that measure departures from the linearization point:
 
 $$\bar{\mathbf{x}} = \mathbf{x} - \mathbf{x}_0$$
 
@@ -75,13 +91,28 @@ $$
 \dot{\bar{\mathbf{x}}} = \dot{\mathbf{x}} - \dot{\mathbf{x}}_0
 $$
 
-As a result, the constant term in the Taylor expansion disappears:
+These variables allow us to rewrite the dynamics in terms of changes relative to the chosen linearization point:
 
 $$
-\mathbf{f}(\mathbf{x}_0, \mathbf{u}_0) = \mathbf{0},
+\dot{\mathbf{x}} =
+\mathbf{f}(\mathbf{x}_0, \mathbf{u}_0) +
+\mathbf{A}\bar{\mathbf{x}} +
+\mathbf{B}\bar{\mathbf{u}}
 $$
 
-and the first-order approximation simplifies to a linear system:
+$$
+\dot{\mathbf{x}} - \mathbf{f}(\mathbf{x}_0, \mathbf{u}_0)=
+\mathbf{A}\bar{\mathbf{x}} +
+\mathbf{B}\bar{\mathbf{u}}
+$$
+
+As $\mathbf{f}(\mathbf{x}_0, \mathbf{u}_0) = \dot{\mathbf{x}}_0$, we have can finaly have the linear system:
+
+$$
+\dot{\mathbf{x}} - \dot{\mathbf{x}}_0=
+\mathbf{A}\bar{\mathbf{x}} +
+\mathbf{B}\bar{\mathbf{u}}
+$$
 
 $$
 \dot{\bar{\mathbf{x}}} =
