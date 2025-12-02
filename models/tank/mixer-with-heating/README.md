@@ -34,7 +34,7 @@ Where:
 - $\lambda$: latent heat of condensation [J/kg]
 - $\rho$: liquid density [kg/m³]
 - $c_p$: specific heat capacity of the tank liquid [J/(kg·K)]
-- $\rho_c$: density of the coil steam/condensate [kg/m³]
+- $\rho_c$: density of the condensed liquid leaving the heating coil [kg/m³]
 
 The liquid volume is constrained by the physical requirement that it cannot be negative:
 

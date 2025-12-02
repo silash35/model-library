@@ -92,7 +92,7 @@ T2 = zero_Celsius + 35.0
 """Temperature of inlet 2 [K]"""
 
 q_c = 0.015
-"""Steam condensate flow rate [m^3/s]"""
+"""Flow rate of the condensate leaving the heating coil [m^3/s]"""
 
 u = np.array([q1, q2, q, C_A1, C_A2, C_B1, C_B2, T1, T2, q_c])
 """Inputs vector"""
