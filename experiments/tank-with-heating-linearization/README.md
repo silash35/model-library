@@ -10,13 +10,7 @@ This experiment explores the **linearization of the heated tank system** and com
 
 The process of linearizing a system involves approximating it by a linear model around a **specific point**. This allows easier analysis and control design.
 
-### 1. Choosing the linearization point
-
-The linearization point $(\mathbf{x}_0, \mathbf{u}_0)$ is typically chosen as a **stationary point** (steady-state) where:
-
-$$
-\dot{\mathbf{x}}(\mathbf{x}_0, \mathbf{u}_0) = \mathbf{f}(\mathbf{x}_0, \mathbf{u}_0) = \mathbf{0}
-$$
+### 1. Defining the linearization point
 
 For our heated tank system, the state variables $\mathbf{x}$ and input variables $\mathbf{u}$ are:
 
@@ -37,7 +31,15 @@ $$
 \end{bmatrix}
 $$
 
-The linearization point $(L_0, T_0, q_\text{in,0}, q_{j,0}, T_\text{in,0})$ is selected such that the system is at equilibrium, meaning the tank level and temperature remain constant.
+Thus, linearization point $(\mathbf{x}_0, \mathbf{u}_0)$
+
+The linearization point $(\mathbf{x}_0, \mathbf{u}_0)$ is typically chosen as a **stationary point** (steady-state) where:
+
+$$
+\dot{\mathbf{x}}(\mathbf{x}_0, \mathbf{u}_0) = \mathbf{f}(\mathbf{x}_0, \mathbf{u}_0)
+$$
+
+$(L_0, T_0, q_\text{in,0}, q_{j,0}, T_\text{in,0})$ is selected such that the system is at equilibrium, meaning the tank level and temperature remain constant.
 
 ### 2. Taylor Series Approximation
 
