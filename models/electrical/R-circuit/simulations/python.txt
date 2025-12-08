@@ -1,0 +1,2 @@
+Voltage [V] | Current [A]
+5.00        | 0.50
