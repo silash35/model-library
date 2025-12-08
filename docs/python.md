@@ -61,13 +61,17 @@ Using UV guarantees that your code runs exactly as intended, without worrying ab
 
 Most Python scripts in this repository generate plots and save the results in the `simulations/` folder, rather than printing output to the terminal. If nothing appeared, check that folder, the graphs were likely updated there (if you delete the contents of the folder, the plots will be regenerated when you rerun the script).
 
-## _NumPy_? _SciPy_? _CasADi_?
+## Which Python libraries does this project use?
 
-This project relies on several popular Python libraries for numerical computing. You can check the official website of these libraries to learn more:
+This project relies on several popular Python libraries that help with **mathematical modeling, symbolic computation, numerical analysis, and optimization**. Here’s a brief overview of each:
 
-- [NumPy](https://numpy.org/)
-- [SciPy](https://scipy.org/)
-- [CasADi](https://web.casadi.org/)
+- [NumPy](https://numpy.org/): The fundamental package for **numerical arrays and matrix operations**. If you need to work with vectors, matrices, or perform element-wise computations, NumPy is your go-to library.
+
+- [SymPy](https://www.sympy.org/): A library for **symbolic mathematics**. Use it when you need exact formulas, algebraic simplifications, or symbolic derivatives.
+
+- [SciPy](https://scipy.org/): Built on NumPy, SciPy provides **advanced numerical algorithms**, such as integration, optimization, and solving differential equations.
+
+You can check the official website of these libraries to learn more.
 
 ## Why physical constraints are usually not enforced in code?
 
