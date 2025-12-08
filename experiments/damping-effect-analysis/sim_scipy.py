@@ -24,11 +24,11 @@ def diff_equations(t: float, y: np.ndarray, F_ext: float, c: float):
 F_ext = 10.0  # External applied force [N]
 
 # Define damping ratios and corresponding damping coefficients
-zeta_values = np.array([0, 0.2, 1, 1.8])
+zeta_values = np.array([-1.8, -1, -0.2, 0, 0.2, 1, 1.8])
 damping_coeffs = zeta_values * 2 * np.sqrt(k * m)
 
 # Simulation time [s]
-t = np.linspace(0, 10, 1000)
+t = np.linspace(0, 6, 1000)
 
 # Pre-allocate displacement array
 displacements = np.zeros((zeta_values.size, t.size))
@@ -44,14 +44,24 @@ for i in range(zeta_values.size):
 
 
 # --- Plot results ---
-for i in range(zeta_values.size):
-    plt.plot(t, displacements[i], label=f"$\\zeta$ = {zeta_values[i]}")
+fig, axs = plt.subplots(2, 1, figsize=(8, 5), constrained_layout=True, sharex=True)
 
-plt.xlabel("Time / s")
-plt.ylabel("Displacement / m")
-plt.title("Mass–Spring–Damper System Responses")
-plt.grid(True)
-plt.legend()
+fig.suptitle("Mass–Spring–Damper System Responses")
+
+# Plot first three cases separately for clarity
+for i in range(0, 3):
+    axs[1].plot(t, displacements[i], label=f"$\\xi$ = {zeta_values[i]}")
+axs[1].set_ylim(-15, 15)
+
+for i in range(3, zeta_values.size):
+    axs[0].plot(t, displacements[i], label=f"$\\xi$ = {zeta_values[i]}")
+
+axs[-1].set_xlabel("Time / s")
+
+for ax in axs:
+    ax.set_ylabel("Displacement / m")
+    ax.grid()
+    ax.legend(loc="upper right")
 
 # Save plot to file
 script_dir = os.path.dirname(os.path.abspath(__file__))
