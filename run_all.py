@@ -1,11 +1,17 @@
 import subprocess
 from pathlib import Path
 
-# Path to models folder
-models_dir = Path("models")
+print("--- Running all simulations ---")
+sim_scripts = Path("models").rglob("sim*.py")
+for script in sim_scripts:
+    print(f"Running {script}...")
+    subprocess.run(["python", str(script)], check=True)
+    print(f"Finished {script}.\n")
 
-# Loop through all sim_*.py files
-for script in models_dir.rglob("sim*.py"):
+
+print("--- Running all experiments ---")
+exp_scripts = sorted(Path("experiments").rglob("exp*.py"))
+for script in exp_scripts:
     print(f"Running {script}...")
     subprocess.run(["python", str(script)], check=True)
     print(f"Finished {script}.\n")
