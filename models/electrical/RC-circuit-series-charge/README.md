@@ -12,7 +12,7 @@ The physical system is illustrated in the figure below:
 The dynamics of the circuit are described in terms of the charge $q(t)$ of the capacitor:
 
 $$
-\frac{dq(t)}{dt}= \frac{1}{CR} q(t) - \frac{\varepsilon(t)}{R}
+\frac{dq(t)}{dt} = -\frac{q(t)}{CR} + \frac{\varepsilon(t)}{R}
 $$
 
 Where:
@@ -55,4 +55,4 @@ Where:
 
 4. Solving for the derivative of the charge:
 
-   $`\boxed{\frac{dq(t)}{dt}= \frac{1}{CR} q(t) - \frac{\varepsilon(t)}{R}}`$
+   $`\boxed{\frac{dq(t)}{dt}= -\frac{q(t)}{CR} + \frac{\varepsilon(t)}{R}}`$
