@@ -1,7 +1,7 @@
 # Heated Tank System: Transfer Function Analysis
 
 This experiment extends the previous study on the [linearization of the heated tank](/experiments/tank-with-heating-linearization/README.md).
-Now that we have the linearized state-space model, we derive the transfer functions and analyze the dynamical behavior of the tank as a linear system.
+Now that we have the linearized state-space model, we derive the transfer functions and analyze the stability of the tank as a linear system.
 
 ## 📎 Related Model
 
@@ -49,7 +49,7 @@ $$
 $$
 
 Here, $\mathbf{I}$ is the **identity matrix**.
-Then we solve for $\mathbf{X}(s)$ by multiply both sides by the inverse of $(s\mathbf{I} - \mathbf{A})$:
+Then we solve for $\mathbf{X}(s)$ by multiplying both sides by the inverse of $(s\mathbf{I} - \mathbf{A})$:
 
 $$
 \mathbf{X}(s) = (s\mathbf{I} - \mathbf{A})^{-1}\mathbf{B}\,\mathbf{U}(s)
@@ -100,3 +100,8 @@ The real part $\beta_i$ and imaginary part $\omega_i$ of each pole determine the
 ## 📊 Results and Conclusions
 
 By computing the poles of each transfer function using SymPy, we obtain real and negative values for all poles, and since they satisfy the stability condition ($\beta_i < 0,\; \forall i$), the linearized system is asymptotically stable according to the standard pole-based classification.
+
+Because the heated tank model is nonlinear, the stability result obtained here is local and valid only in a neighborhood of the linearization point.
+The system may exhibit different dynamics outside this operating region.
+
+In addition, it is worth noting that all transfer functions have the **same characteristic polynomial**. This is expected, since the denominator of each transfer function depends only on the system matrix $\mathbf{A}$, meaning that stability is a property of the linearized system as a whole rather than of individual input–output channels.
