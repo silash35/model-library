@@ -12,18 +12,10 @@ The dynamic behavior of the reactor and the cooling jacket is described by the f
 
 $$
 \begin{cases}
-\displaystyle \frac{dV}{dt} = q_1 - q \\
-
-\displaystyle V \frac{dC_A}{dt} = (C_{A,1} - C_A) q_1 - \Gamma V \\
-
-\displaystyle \rho V c_p \frac{dT}{dt}
-= \rho q_1 c_p (T_1 - T)
-+ (-\Delta H_r)\Gamma V
-+ UA (T_c - T) \\
-
-\displaystyle \rho_c V_c c_{p,c} \frac{dT_c}{dt}
-= \rho_c q_c c_{p,c} (T_{c0} - T_c)
-- UA (T_c - T)
+  \displaystyle \frac{dV}{dt} = q_1 - q \\
+  \displaystyle V \frac{dC_A}{dt} = (C_{A,1} - C_A) q_1 - \Gamma V \\
+  \displaystyle \rho V c_p \frac{dT}{dt} = \rho q_1 c_p (T_1 - T) + (-\Delta H_r)\Gamma V + U A (T_c - T) \\
+  \displaystyle \rho_c V_c c_{p,c} \frac{dT_c}{dt} = \rho_c q_c c_{p,c} (T_{c0} - T_c) - U A (T_c - T)
 \end{cases}
 $$
 
