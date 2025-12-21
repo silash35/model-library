@@ -121,7 +121,7 @@ T = sol.y[3]
 t_min = sol.t / 60  # convert seconds to minutes
 
 fig, axs = plt.subplots(3, 1, figsize=(8, 8), sharex=True, constrained_layout=True)
-fig.suptitle("Heated Tank")
+fig.suptitle("Mixer with Heating")
 
 # Plot level
 axs[0].plot(t_min, V, label="$V(t)$")
