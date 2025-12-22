@@ -69,8 +69,8 @@ Where:
 - Kinetic and potential energy effects are negligible.
 - Constant heat transfer area and overall heat transfer coefficient.
 - The liquid phase is considered incompressible and is predominantly composed of solvent. The presence of solutes does not significantly affect the fluid density ($\rho$ is assumed to be constant).
-- The catalyst inlet flow rate $q_2$ is sufficiently small that it does not affect the overall mass balance.
-- The thermal contribution of the catalyst stream is negligible, and the inlet temperature $T_2$ does not affect the energy balance.
+- The catalyst inlet flow rate $q_2$ is sufficiently small that it does not influence the overall mass balance.
+- The thermal contribution of the catalyst stream is negligible, and the inlet temperature $T_2$ does not modify the energy balance.
 
 ## Model Classification
 

@@ -8,15 +8,15 @@ This experiment explores how the **mass–spring–damper system** behaves under
 
 ## 🧪 Methodology
 
-We simulate the mass–spring–damper system **six times**, varying the **damping coefficient** $c$ while keeping the other parameters constant.
+We simulate the mass–spring–damper system **seven times**, varying the **damping coefficient** $c$ while keeping the other parameters constant.
 
 The **damping ratio** $\xi$ is a dimensionless parameter that characterizes how the system dissipates energy:
 
 $$\xi = \frac{c}{2 \sqrt{k m}}$$
 
-The six chosen damping coefficients correspond to different behaviors:
+The chosen damping coefficients result in damping ratios that demonstrate different behaviors:
 
-1. **Monotonic unstable:** $\xi \le -1$
+1. **Monotonically unstable:** $\xi \le -1$
 2. **Oscillatory unstable:** $-1 < \xi < 0$
 3. **Undamped:** $\xi = 0$
 4. **Underdamped:** $0 < \xi < 1$
@@ -31,8 +31,8 @@ Each case is simulated over the same time interval using a numerical solver, all
 
 The simulation shows the system response for different damping ratios under a constant external force:
 
-- **$\xi$ = -1.8**: Monotonic unstable, the response diverges without oscillations.
-- **$\xi$ = -1**: Monotonic unstable, the response diverges without oscillations, but more slowly than for $\xi = -1.8$.
+- **$\xi$ = -1.8**: Monotonically unstable, the response diverges without oscillations.
+- **$\xi$ = -1**: Monotonically unstable, the response diverges without oscillations, but more slowly than for $\xi = -1.8$.
 - **$\xi$ = -0.2**: Oscillatory unstable, the system oscillates, but the amplitude grows over time.
 - **$\xi$ = 0**: Undamped, oscillates indefinitely around equilibrium.
 - **$\xi$ = 0.2**: Underdamped, oscillates but gradually settles.
