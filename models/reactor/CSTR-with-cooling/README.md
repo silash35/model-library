@@ -84,3 +84,7 @@ Where:
 | Lumped-parameters × Distributed-elements | **Lumped**          |
 | Deterministic × Stochastic               | **Deterministic**   |
 | Forced × Homogeneous                     | **Forced**          |
+
+## Model Derivation
+
+> **TODO:** Add model derivation.
