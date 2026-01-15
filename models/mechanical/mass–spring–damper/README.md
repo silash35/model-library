@@ -23,7 +23,8 @@ Where:
 - $k$: spring stiffness [N/m]
 - $F_{ext}(t)$: external force applied to the mass [N]
 
-> Note: This model contains one or more **second-order ODEs**.
+> [!NOTE]
+> This model contains one or more **second-order ODEs**.
 > Most numerical solvers require the system to be expressed as first-order equations.
 > For details on how to do this, see [Reducing Higher-Order ODEs](/docs/ode-reduction.md).
 

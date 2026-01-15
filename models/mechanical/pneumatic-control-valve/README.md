@@ -37,7 +37,8 @@ where
 - $x_{\min}$ corresponds to the fully open valve position
 - $x_{\max}$ corresponds to the fully closed valve position.
 
-> Note: This model contains one or more **second-order ODEs**.
+> [!NOTE]
+> This model contains one or more **second-order ODEs**.
 > Most numerical solvers require the system to be expressed as first-order equations.
 > For details on how to do this, see [Reducing Higher-Order ODEs](/docs/ode-reduction.md).
 

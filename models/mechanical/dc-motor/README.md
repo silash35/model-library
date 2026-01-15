@@ -22,7 +22,8 @@ Where:
 - $K_1$: torque constant [N·m/A]
 - $K_2$: back-emf constant [V·s/rad]
 
-> Note: This model contains one or more **second-order ODEs**.
+> [!NOTE]
+> This model contains one or more **second-order ODEs**.
 > Most numerical solvers require the system to be expressed as first-order equations.
 > For details on how to do this, see [Reducing Higher-Order ODEs](/docs/ode-reduction.md).
 

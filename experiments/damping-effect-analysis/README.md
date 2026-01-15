@@ -39,7 +39,7 @@ The simulation shows the system response for different damping ratios under a co
 - **$\xi$ = 1**: Critically damped, returns to equilibrium fastest without oscillations.
 - **$\xi$ = 1.8**: Overdamped, returns to equilibrium slowly without oscillations.
 
-> Note: $\xi = 0$ represents an ideal undamped system, which oscillates indefinitely without losing energy.
+> [!NOTE] > $\xi = 0$ represents an ideal undamped system, which oscillates indefinitely without losing energy.
 > Negative damping ratios ($\xi < 0$), however, are non-physical in real mass–spring–damper systems, as they would imply the system gains energy over time.
 
 These results illustrate not only how damping changes the transient response of the system, but also how the system's behavior can change **dramatically** depending on its parameters.

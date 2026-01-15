@@ -26,11 +26,13 @@ Where:
 - $g$: gravitational acceleration [m/s²]
 - $F(t)$: external force applied to the cart [N]
 
-> Note: This model contains one or more **second-order ODEs**.
+> [!NOTE]
+> This model contains one or more **second-order ODEs**.
 > Most numerical solvers require the system to be expressed as first-order equations.
 > For details on how to do this, see [Reducing Higher-Order ODEs](/docs/ode-reduction.md).
 
-> Note: In this system, some or all derivatives are not easily separable as explicit functions of the state variables.
+> [!NOTE]
+> In this system, some or all derivatives are not easily separable as explicit functions of the state variables.
 > This can be a challenge for numerical solvers that require derivatives to be explicitly defined.
 > For a detailed discussion and recommended solution approaches, see [Solving Systems with Implicit Derivatives](/docs/implicit-derivatives.md).
 
@@ -74,7 +76,7 @@ For an introduction to this method, see [Lagrangian Mechanics](/docs/lagrangian-
    - $\theta(t)$: pendulum angle, with the convention that $\theta = 0$ corresponds to the **upright** (unstable) equilibrium.
 
    The pendulum mass $m_p$ is concentrated at a distance $L$ from the pivot.
-   The pivot itself moves horizontally with the cart, so its instantaneous position is: $(x,  0)$.
+   The pivot itself moves horizontally with the cart, so its instantaneous position is: $(x, 0)$.
 
    From the pivot, the position of the pendulum’s center of mass in the inertial frame is given by:
 
@@ -167,17 +169,13 @@ For an introduction to this method, see [Lagrangian Mechanics](/docs/lagrangian-
 
    Now, if we want the linearized model about the upright equilibrium $`\theta\approx 0`$, apply:
 
-   $`
-   \sin\theta \approx \theta, \qquad \cos\theta \approx 1, \qquad \dot{\theta}^2\sin\theta \approx 0.
-   `$
+   $`\sin\theta \approx \theta, \qquad \cos\theta \approx 1, \qquad \dot{\theta}^2\sin\theta \approx 0.`$
 
    Substituting these into the equations yields the linearized equations:
 
-   $`
-   \boxed{
+   $`\boxed{
    \begin{cases}
    m_p L^2 \ddot{\theta} + m_p L \ddot{x} - m_p g L \theta = 0, \\[6pt]
    (m_c + m_p)\ddot{x} + m_p L \ddot{\theta} = F.
    \end{cases}
-   }
-   `$
+   }`$

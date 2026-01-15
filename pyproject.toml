@@ -14,8 +14,14 @@ dependencies = [
 [dependency-groups]
 dev = [
     "ruff>=0.14.7",
+    "rumdl>=0.0.217",
 ]
 
 [tool.ruff.lint]
 extend-select = ["I", "NPY", "FLY", "UP"]
 ignore = ["E741"]
+
+[tool.rumdl]
+flavor = "gfm"
+respect_gitignore = true
+disable = ["MD013", "MD033"]

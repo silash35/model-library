@@ -15,7 +15,8 @@ Where:
 
 The state variable $x(t)$ can represent many different physical quantities depending on the context. For example, it can represent the position (in meters) of an oscillating mass, with $\frac{dx(t)}{dt}$ representing its velocity (meters per second).
 
-> Note: This model contains one or more **second-order ODEs**.
+> [!NOTE]
+> This model contains one or more **second-order ODEs**.
 > Most numerical solvers require the system to be expressed as first-order equations.
 > For details on how to do this, see [Reducing Higher-Order ODEs](/docs/ode-reduction.md).
 

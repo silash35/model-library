@@ -56,6 +56,7 @@ $$
 \underbrace{\frac{\partial \mathbf{f}}{\partial \mathbf{u}}\Big|_{\mathbf{x}_0, \mathbf{u}_0}}_{\mathbf{B}} (\mathbf{u} - \mathbf{u}_0)
 $$
 
+> [!NOTE]
 > For details on the Taylor series, see [Taylor Series](/docs/taylor.md).
 
 Here:

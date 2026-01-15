@@ -27,11 +27,13 @@ Where:
 - $J$: Moment of inertia of the pendulum rod about its center of mass [kg·m²]
 - $F(t)$: external force applied to the cart [N]
 
-> Note: This model contains one or more **second-order ODEs**.
+> [!NOTE]
+> This model contains one or more **second-order ODEs**.
 > Most numerical solvers require the system to be expressed as first-order equations.
 > For details on how to do this, see [Reducing Higher-Order ODEs](/docs/ode-reduction.md).
 
-> Note: In this system, some or all derivatives are not easily separable as explicit functions of the state variables.
+> [!NOTE]
+> In this system, some or all derivatives are not easily separable as explicit functions of the state variables.
 > This can be a challenge for numerical solvers that require derivatives to be explicitly defined.
 > For a detailed discussion and recommended solution approaches, see [Solving Systems with Implicit Derivatives](/docs/implicit-derivatives.md).
 

@@ -38,10 +38,7 @@ Finally, place your model in the appropriate folder inside the `models/` directo
 
 ### 4. Help with References
 
-> For more information about citation rules and copyright considerations, please consult the [FAQ](/docs/faq.md).
-
-### 4. Help with References
-
+> [!NOTE]
 > For more information about citation rules and copyright considerations, please consult the [FAQ](/docs/faq.md).
 
 - If you find or publish a paper, book, or article that uses a model from this repository, please add it to the **Books and Publications** section.

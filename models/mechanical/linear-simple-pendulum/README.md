@@ -18,7 +18,8 @@ Where:
 - $L$: pendulum length [m]
 - $g$: gravitational acceleration [m/s²]
 
-> Note: This model contains one or more **second-order ODEs**.
+> [!NOTE]
+> This model contains one or more **second-order ODEs**.
 > Most numerical solvers require the system to be expressed as first-order equations.
 > For details on how to do this, see [Reducing Higher-Order ODEs](/docs/ode-reduction.md).
 

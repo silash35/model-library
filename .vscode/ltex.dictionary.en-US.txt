@@ -9,3 +9,5 @@ ODEs
 frac
 dt
 setpoint
+Underdamped
+Overdamped

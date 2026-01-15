@@ -80,11 +80,9 @@ We want to model the liquid level $h(t)$ in a conic tank.
 
    Solving for the radius of the liquid surface:
 
-   $`
-   \frac{r(h)}{h(t)} = \frac{R}{H}
+   $`\frac{r(h)}{h(t)} = \frac{R}{H}
    \quad\Rightarrow\quad
-   r(h) = \frac{R}{H} \cdot h(t)
-   `$
+   r(h) = \frac{R}{H} \cdot h(t)`$
 
    Substitute this into the cone volume formula $V = \frac{1}{3}\pi r^2 h$:
 

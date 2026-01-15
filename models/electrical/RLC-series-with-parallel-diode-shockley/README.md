@@ -29,7 +29,9 @@ Where:
 
 The diode current $I_D$ is modeled using the **Shockley diode equation**. For detailed information about the Shockley diode model and its parameters, see the [Circuit Components](/docs/electronic-components.md) documentation.
 
-**Important note:** Due to the parallel connection in the circuit, the voltage across the capacitor $V_C(t)$ and the voltage across the diode $V_D(t)$ are equal at all times. Therefore, the Shockley equation uses $V_C$ directly as the diode voltage in the expression $I_D(V_C)$.
+> [!NOTE]
+> Due to the parallel connection in the circuit, the voltage across the capacitor $V_C(t)$ and the voltage across the diode $V_D(t)$ are equal at all times.
+> Therefore, the Shockley equation uses $V_C$ directly as the diode voltage in the expression $I_D(V_C)$.
 
 ## Model Classification
 

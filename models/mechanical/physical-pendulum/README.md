@@ -22,7 +22,8 @@ Where:
 - $g$: gravitational acceleration [m/s²]
 - $k$: damping coefficient [N·m·s/rad]
 
-> Note: This model contains one or more **second-order ODEs**.
+> [!NOTE]
+> This model contains one or more **second-order ODEs**.
 > Most numerical solvers require the system to be expressed as first-order equations.
 > For details on how to do this, see [Reducing Higher-Order ODEs](/docs/ode-reduction.md).
 
@@ -124,15 +125,11 @@ For an introduction to this method, see [Lagrangian Mechanics](/docs/lagrangian-
 
    Let the total rod length be $L_t = 2 L$. Then, the moment of inertia of the rod about the pivot is:
 
-   $`
-   J = \frac{1}{3} m L_t^2 = \frac{1}{3} m (2 L)^2 = \frac{4}{3} m L^2
-   `$
+   $`J = \frac{1}{3} m L_t^2 = \frac{1}{3} m (2 L)^2 = \frac{4}{3} m L^2`$
 
    Substituting $J = \frac{4}{3} m L^2$ into the equation of motion:
 
-   $`
-   \frac{4}{3} m L^2 \ddot{\theta} + k \dot{\theta} + m g L \sin(\theta) = 0
-   `$
+   $`\frac{4}{3} m L^2 \ddot{\theta} + k \dot{\theta} + m g L \sin(\theta) = 0`$
 
 7. Simplify and isolate $\ddot{\theta}$
 

@@ -51,7 +51,7 @@ Where:
 
 3. By the definition of electric current, the current in the circuit is the time derivative of charge. Substituting $I(t) = \frac{dq(t)}{dt}$ into the loop equation:
 
-   $`\varepsilon(t) - R \frac{dq(t)}{dt} - \frac{1}{C} q(t) = 0 `$
+   $`\varepsilon(t) - R \frac{dq(t)}{dt} - \frac{1}{C} q(t) = 0`$
 
 4. Solving for the derivative of the charge:
 

@@ -18,6 +18,7 @@ $$
 \mathbf{A} \bar{\mathbf{x}} + \mathbf{B} \bar{\mathbf{u}}
 $$
 
+> [!IMPORTANT]
 > To keep notation light, from now on we will drop the deviation bar and simply write $\mathbf{x}$ and $\mathbf{u}$ for the deviation variables. All expressions below refer to deviations from the operating point.
 
 We apply the Laplace transform:

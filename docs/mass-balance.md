@@ -21,6 +21,7 @@ Where:
 - **Generation**: Mass produced inside the system (e.g., by chemical reactions)
 - **Consumption**: Mass consumed inside the system (e.g., by chemical reactions)
 
+> [!NOTE]
 > 💡 For many physical systems, like tanks, generation, and consumption are zero unless reactions are considered.
 
 ### Differential Form

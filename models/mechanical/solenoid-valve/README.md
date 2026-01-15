@@ -63,7 +63,8 @@ The symbols used in the equations above are defined as follows:
   - $A$: effective area over which the pressure acts [m²]
   - $\alpha(x)$: opening factor, constrained between 0 (closed) and 1 (open).
 
-> Note: This model contains one or more **second-order ODEs**.
+> [!NOTE]
+> This model contains one or more **second-order ODEs**.
 > Most numerical solvers require the system to be expressed as first-order equations.
 > For details on how to do this, see [Reducing Higher-Order ODEs](/docs/ode-reduction.md).
 
@@ -160,11 +161,9 @@ In addition, for the **Solenoid Valve**, we assume:
 
    Thus, the electrical equation becomes:
 
-   $`
-    \boxed{
+   $`\boxed{
     u(t) = R \cdot i(t) + L(x) \cdot \frac{d i(t)}{dt} + i(t) \cdot \frac{dL(x)}{dx} \cdot \frac{dx(t)}{dt}
-    }
-    `$
+    }`$
 
    with the inductance model:
 

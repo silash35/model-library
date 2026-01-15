@@ -4,7 +4,8 @@ This file serves as a **general guide** to understand and work with the Python c
 
 ## ▶️ How to Run the Python Code?
 
-> ⚡ Running the Python code will regenerate the graphs in the corresponding `simulations` folder.
+> [!NOTE]
+> ⚡ Running the Python code will regenerate the graphs in the corresponding `simulations` and `results` folders.
 
 This project includes Python implementations of various models.
 You can run the code like any standard Python project by manually installing Python and the necessary dependencies.
@@ -20,6 +21,7 @@ Using UV guarantees that your code runs exactly as intended, without worrying ab
 
 ### Steps to Run
 
+> [!TIP]
 > 🛠️ You do not need Python installed on your computer.
 > UV will automatically download and manage the correct Python version for the project.
 

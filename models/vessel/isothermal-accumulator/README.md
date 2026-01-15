@@ -59,10 +59,8 @@ The derivation follows from the [mass balance](/docs/mass-balance.md) principle.
 
    Each mass flow is assumed proportional to the square root of the driving pressure difference:
 
-   $`
-   F_{in}(t) = k_1 \sqrt{P_1 - P(t)}, \quad
-   F_{out}(t) = k_2 \sqrt{P(t) - P_2}
-   `$
+   $`F_{in}(t) = k_1 \sqrt{P_1 - P(t)}, \quad
+   F_{out}(t) = k_2 \sqrt{P(t) - P_2}`$
 
    Substituting into the mass balance:
 
@@ -87,9 +85,7 @@ The derivation follows from the [mass balance](/docs/mass-balance.md) principle.
 
    Taking the derivative:
 
-   $`
-   \frac{dm(t)}{dt} = \frac{V \cdot MM}{R T} \frac{dP(t)}{dt}
-   `$
+   $`\frac{dm(t)}{dt} = \frac{V \cdot MM}{R T} \frac{dP(t)}{dt}`$
 
    since $V$, $MM$, $R$, and $T$ are constants (the system is isothermal).
 
@@ -97,14 +93,10 @@ The derivation follows from the [mass balance](/docs/mass-balance.md) principle.
 
    Equating the two expressions for $\tfrac{dm(t)}{dt}$:
 
-   $`
-   \frac{V \cdot MM}{R T} \frac{dP(t)}{dt} = k_1 \sqrt{P_1 - P(t)} - k_2 \sqrt{P(t) - P_2}
-   `$
+   $`\frac{V \cdot MM}{R T} \frac{dP(t)}{dt} = k_1 \sqrt{P_1 - P(t)} - k_2 \sqrt{P(t) - P_2}`$
 
    Rearranging:
 
-   $`
-   \boxed{\frac{dP}{dt} = \frac{R \cdot T \cdot (k_1 \sqrt{P_1 - P} - k_2 \sqrt{P - P_2})}{V \cdot \mathrm{MM}}}
-   `$
+   $`\boxed{\frac{dP}{dt} = \frac{R \cdot T \cdot (k_1 \sqrt{P_1 - P} - k_2 \sqrt{P - P_2})}{V \cdot \mathrm{MM}}}`$
 
    This is the governing differential equation for the vessel pressure dynamics.
