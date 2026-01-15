@@ -1,5 +1,11 @@
 # Solenoid Valve
 
+> [!WARNING]
+> Use this model with caution.
+>
+> This solenoid valve model may exhibit **non-physical or unstable behavior**.
+> It has has not been validated, and its correctness is not guaranteed.
+
 This section describes a simplified **solenoid valve model**, which converts **electrical energy** into **mechanical motion** through electromagnetic actuation.
 
 This is a normally closed valve, meaning that in its default, unpowered state, the fluid flow is blocked.
