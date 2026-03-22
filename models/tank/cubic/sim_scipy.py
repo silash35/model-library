@@ -43,7 +43,7 @@ def model(t: float, h: float, Q_in: float):
     Parameters:
     - t: time [s]
     - h: liquid level [m]
-    - Q_in: inlet flow [m^3/s]
+    - Q_in: inlet flow [m³/s]
     """
 
     dhdt = (Q_in - alpha * np.sqrt(h)) / A
@@ -53,7 +53,7 @@ def model(t: float, h: float, Q_in: float):
 
 # --- Model Input ---
 Q_in = 1.0
-"""Inlet flow rate [m^3/s]"""
+"""Inlet flow rate [m³/s]"""
 
 # --- Simulation ---
 h0 = 0.1  # Initial level [m]

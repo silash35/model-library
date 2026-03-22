@@ -8,13 +8,13 @@ from scipy.integrate import solve_ivp
 
 # --- Model Constants ---
 rho: Final = 1000.0
-"""Liquid density (water) [kg/m^3]"""
+"""Liquid density (water) [kg/m³]"""
 
 cp: Final = 4180.0
 """Specific heat capacity (water) [J/(kg·K)]"""
 
 rho_c: Final = 958.0
-"""Condensate density (liquid water at 100°C) [kg/m^3]"""
+"""Condensate density (liquid water at 100°C) [kg/m³]"""
 
 lambda_c: Final = 2.256e6
 """Latent heat of condensation of water [J/kg]"""
@@ -28,28 +28,28 @@ def model(t: float, y: np.ndarray, u: np.ndarray):
     Parameters:
     - t: time [s]
     - y: state vector
-    - u: Input vector
+    - u: input vector
     """
     # States
-    V = y[0]  # Liquid volume [m^3]
-    C_A = y[1]  # Concentration of species A [mol/m^3]
-    C_B = y[2]  # Concentration of species B [mol/m^3]
+    V = y[0]  # Liquid volume [m³]
+    C_A = y[1]  # Concentration of species A [mol/m³]
+    C_B = y[2]  # Concentration of species B [mol/m³]
     T = y[3]  # Liquid temperature [K]
 
     # Inputs
-    q1 = u[0]  # Inlet 1 flow rate [m^3/s]
-    q2 = u[1]  # Inlet 2 flow rate [m^3/s]
-    q = u[2]  # Outlet flow rate [m^3/s]
+    q1 = u[0]  # Inlet 1 flow rate [m³/s]
+    q2 = u[1]  # Inlet 2 flow rate [m³/s]
+    q = u[2]  # Outlet flow rate [m³/s]
 
-    C_A1 = u[3]  # Species A concentration in inlet 1 [mol/m^3]
-    C_A2 = u[4]  # Species A concentration in inlet 2 [mol/m^3]
-    C_B1 = u[5]  # Species B concentration in inlet 1 [mol/m^3]
-    C_B2 = u[6]  # Species B concentration in inlet 2 [mol/m^3]
+    C_A1 = u[3]  # Species A concentration in inlet 1 [mol/m³]
+    C_A2 = u[4]  # Species A concentration in inlet 2 [mol/m³]
+    C_B1 = u[5]  # Species B concentration in inlet 1 [mol/m³]
+    C_B2 = u[6]  # Species B concentration in inlet 2 [mol/m³]
 
     T1 = u[7]  # Temperature of inlet 1 [K]
     T2 = u[8]  # Temperature of inlet 2 [K]
 
-    q_c = u[9]  # Condensate volumetric flow rate [m^3/s]
+    q_c = u[9]  # Condensate volumetric flow rate [m³/s]
 
     dVdt = q1 + q2 - q
     dCAdt = ((C_A1 - C_A) * q1 + (C_A2 - C_A) * q2) / V
@@ -65,25 +65,25 @@ def model(t: float, y: np.ndarray, u: np.ndarray):
 
 # --- Model Inputs ---
 q1 = 0.10
-"""Inlet 1 volumetric flow rate [m^3/s]"""
+"""Inlet 1 volumetric flow rate [m³/s]"""
 
 q2 = 0.08
-"""Inlet 2 volumetric flow rate [m^3/s]"""
+"""Inlet 2 volumetric flow rate [m³/s]"""
 
 q = q1 + q2
-"""Outlet volumetric flow rate [m^3/s]"""
+"""Outlet volumetric flow rate [m³/s]"""
 
 C_A1 = 2.0
-"""Species A concentration in inlet 1 [mol/m^3]"""
+"""Species A concentration in inlet 1 [mol/m³]"""
 
 C_A2 = 1.5
-"""Species A concentration in inlet 2 [mol/m^3]"""
+"""Species A concentration in inlet 2 [mol/m³]"""
 
 C_B1 = 3.0
-"""Species B concentration in inlet 1 [mol/m^3]"""
+"""Species B concentration in inlet 1 [mol/m³]"""
 
 C_B2 = 2.5
-"""Species B concentration in inlet 2 [mol/m^3]"""
+"""Species B concentration in inlet 2 [mol/m³]"""
 
 T1 = zero_Celsius + 25.0
 """Temperature of inlet 1 [K]"""
@@ -92,15 +92,15 @@ T2 = zero_Celsius + 35.0
 """Temperature of inlet 2 [K]"""
 
 q_c = 0.015
-"""Flow rate of the condensate leaving the heating coil [m^3/s]"""
+"""Flow rate of the condensate leaving the heating coil [m³/s]"""
 
 u = np.array([q1, q2, q, C_A1, C_A2, C_B1, C_B2, T1, T2, q_c])
 """Inputs vector"""
 
 # --- Simulation ---
-V0 = 2.0  # Initial Liquid volume [m^3]
-C_A0 = 1.0  # Initial Concentration of species A [mol/m^3]
-C_B0 = 1.0  # Initial Concentration of species B [mol/m^3]
+V0 = 2.0  # Initial Liquid volume [m³]
+C_A0 = 1.0  # Initial Concentration of species A [mol/m³]
+C_B0 = 1.0  # Initial Concentration of species B [mol/m³]
 T0 = zero_Celsius + 28.0  # Initial Liquid temperature [K]
 y0 = [V0, C_A0, C_B0, T0]
 
@@ -109,11 +109,11 @@ sol = solve_ivp(model, [t[0], t[-1]], y0, t_eval=t, args=(u,))
 
 # --- Model Output ---
 V = sol.y[0]
-"""Liquid volume [m^3]"""
+"""Liquid volume [m³]"""
 C_A = sol.y[1]
-"""Concentration of species A [mol/m^3]"""
+"""Concentration of species A [mol/m³]"""
 C_B = sol.y[2]
-"""Concentration of species B [mol/m^3]"""
+"""Concentration of species B [mol/m³]"""
 T = sol.y[3]
 """Liquid temperature [K]"""
 

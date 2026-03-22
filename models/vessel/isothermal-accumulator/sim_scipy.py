@@ -8,7 +8,7 @@ from scipy.integrate import solve_ivp
 
 # --- Model Constants ---
 V: Final = 1
-"""Vessel volume [m^3]"""
+"""Vessel volume [m³]"""
 
 R: Final = C.R
 """Universal gas constant [J/(mol*K)]"""

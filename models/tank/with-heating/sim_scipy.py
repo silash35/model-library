@@ -8,19 +8,19 @@ from scipy.integrate import solve_ivp
 
 # --- Model Constants ---
 rho: Final = 1000.0
-"""Liquid density (water) [kg/m^3]"""
+"""Liquid density (water) [kg/m³]"""
 
 cp: Final = 4180.0
 """Specific heat capacity (water) [J/(kg·K)]"""
 
 rho_j: Final = 958.0
-"""Condensate density (liquid water at 100°C) [kg/m^3]"""
+"""Condensate density (liquid water at 100°C) [kg/m³]"""
 
 lambda_j: Final = 2.256e6
 """Latent heat of condensation of water [J/kg]"""
 
 A: Final = np.pi * (1.5**2)
-"""Tank cross-sectional area [m^2]"""
+"""Tank cross-sectional area [m²]"""
 
 k: Final = 0.12
 """Outlet discharge parameter [m^2.5/s]"""
@@ -34,8 +34,8 @@ def model(t: float, y: np.ndarray, q_in: float, q_j: float, T_in: float):
     Parameters:
     - t: time [s]
     - y: state vector
-    - q_in: inlet flow [m^3/s]
-    - q_j: jacket condensate flow [m^3/s]
+    - q_in: inlet flow [m³/s]
+    - q_j: jacket condensate flow [m³/s]
     - T_in: inlet temperature [K]
     """
     L = y[0]  # Liquid level [m]
@@ -52,10 +52,10 @@ def model(t: float, y: np.ndarray, q_in: float, q_j: float, T_in: float):
 
 # --- Model Inputs ---
 q_in = 0.2
-"""Inlet flow rate [m^3/s]"""
+"""Inlet flow rate [m³/s]"""
 
 q_j: Final = 0.015
-"""jacket condensate flow [m^3/s]"""
+"""jacket condensate flow [m³/s]"""
 
 T_in: Final = zero_Celsius + 28.0
 """inlet temperature [K]"""

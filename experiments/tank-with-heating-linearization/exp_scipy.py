@@ -9,11 +9,11 @@ from scipy.constants import zero_Celsius
 from scipy.integrate import solve_ivp
 
 # --- Model Constants ---
-rho: Final = 1000.0  # Liquid density (water) [kg/m^3]
+rho: Final = 1000.0  # Liquid density (water) [kg/m³]
 cp: Final = 4180.0  # Specific heat capacity (water) [J/(kg·K)]
-rho_j: Final = 958.0  # Condensate density (liquid water at 100°C) [kg/m^3]
+rho_j: Final = 958.0  # Condensate density (liquid water at 100°C) [kg/m³]
 lambda_j: Final = 2.256e6  # Latent heat of condensation of water [J/kg]
-A_c: Final = np.pi * (1.5**2)  # Tank cross-sectional area [m^2]
+A_c: Final = np.pi * (1.5**2)  # Tank cross-sectional area [m²]
 k: Final = 0.12  # Outlet discharge parameter [m^2.5/s]
 
 # --- Symbolic Model ---
@@ -25,7 +25,7 @@ T_sym = sp.symbols("T")  # liquid temperature [K]
 states = sp.Matrix([L_sym, T_sym])  # x
 
 # System inputs
-q_in_sym = sp.symbols("q_in")  # Inlet volumetric flow rate [m^3/s]
+q_in_sym = sp.symbols("q_in")  # Inlet volumetric flow rate [m³/s]
 q_j_sym = sp.symbols("q_j")  # Jacket flow rate [kg/s]
 T_in_sym = sp.symbols("T_in")  # Temperature of the inlet liquid [K]
 inputs = sp.Matrix([q_in_sym, q_j_sym, T_in_sym])  # u
@@ -44,8 +44,8 @@ f_func = sp.lambdify((L_sym, T_sym, q_in_sym, q_j_sym, T_in_sym), f, "numpy")
 
 
 # --- Model Inputs ---
-def q_in(t):
-    """Inlet flow rate [m^3/s]"""
+def q_in(t: float) -> float:
+    """Inlet flow rate [m³/s]"""
     if t > 2000:
         return 0.6
     elif t > 1000:
@@ -56,8 +56,8 @@ def q_in(t):
         return 0.4
 
 
-def q_j(t):
-    """jacket condensate flow [m^3/s]"""
+def q_j(t: float) -> float:
+    """jacket condensate flow [m³/s]"""
     if t > 1500:
         return 0.035
     elif t > 1000:
@@ -66,14 +66,14 @@ def q_j(t):
         return 0.015
 
 
-def T_in(t):
+def T_in(t: float) -> float:
     """inlet temperature [K]"""
     if t > 2500:
-        Tin = 40
+        Tin = 40.0
     elif t > 2000:
-        Tin = 20
+        Tin = 20.0
     else:
-        Tin = 30
+        Tin = 30.0
 
     return Tin + zero_Celsius
 

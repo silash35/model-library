@@ -48,7 +48,7 @@ prbs_signal = rng.choice([Q_low, Q_high], size=len(t_prbs))
 
 
 def Q_in(t: float) -> float:
-    """Inlet flow rate [m^3/s]"""
+    """Inlet flow rate [m³/s]"""
     idx = int(np.floor(t / T_switch))
     idx = min(idx, len(prbs_signal) - 1)
     return prbs_signal[idx]

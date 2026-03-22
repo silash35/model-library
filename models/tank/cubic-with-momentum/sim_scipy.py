@@ -46,7 +46,7 @@ def model(t: float, y: np.ndarray, Q_in: float):
     Parameters:
     - t: time [s]
     - y: state vector
-    - Q_in: inlet flow [m^3/s]
+    - Q_in: inlet flow [m³/s]
     """
 
     h = y[0]  # Liquid level [m]
@@ -60,7 +60,7 @@ def model(t: float, y: np.ndarray, Q_in: float):
 
 # --- Model Input ---
 Q_in = 1.0
-"""Inlet flow rate [m^3/s]"""
+"""Inlet flow rate [m³/s]"""
 
 # --- Initial Conditions ---
 h0 = 0.1  # Initial level [m]

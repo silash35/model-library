@@ -41,7 +41,6 @@ $$L(t) \ge 0$$
 - The fluid is incompressible, with constant density.
 - Gravity-driven outlet follows Torricelli-type behavior
 - The inlet flow is assumed known and measurable.
-
 - Kinetic and potential energy are negligible.
 - The liquid is a pure substance: the jacket steam enters and leaves at its saturation temperature.
 - The specific heat capacity $c_p$ of the tank liquid is constant.
@@ -78,7 +77,6 @@ Because the tank has a constant cross-sectional area, the standard mass-balance 
    $`\frac{dU}{dt} = \rho \cdot q_{in} \cdot h_{in} - \rho \cdot q \cdot h + \dot{Q}`$
 
    Where:
-
    - $U$ is the internal energy of the system
    - $h_i$ is the inlet enthalpy
    - $h$ is the outlet enthalpy

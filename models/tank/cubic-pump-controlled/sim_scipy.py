@@ -10,7 +10,7 @@ L: Final = 4
 """Tank side length [m]"""
 
 A: Final = L**2
-"""Cross-sectional area [m^2]"""
+"""Cross-sectional area [m²]"""
 
 
 # --- System Dynamics ---
@@ -21,8 +21,8 @@ def model(t: float, h: float, Q_in: float, Q_out: float):
     Parameters:
     - t: time [s]
     - h: liquid level [m]
-    - Q_in: inlet flow [m^3/s]
-    - Q_out: outlet flow [m^3/s]
+    - Q_in: inlet flow [m³/s]
+    - Q_out: outlet flow [m³/s]
     """
     dhdt = (Q_in - Q_out) / A
     return dhdt
@@ -30,10 +30,10 @@ def model(t: float, h: float, Q_in: float, Q_out: float):
 
 # --- Model Inputs ---
 Q_in = 0.3
-"""Inlet flow rate [m^3/s]"""
+"""Inlet flow rate [m³/s]"""
 
 Q_out = 0.5
-"""Outlet flow rate [m^3/s]"""
+"""Outlet flow rate [m³/s]"""
 
 # --- Simulation ---
 h0 = 2  # Initial level [m]

@@ -25,11 +25,9 @@ Where:
 - $q_1$: inlet volumetric flow rate to the reactor [m³/s]
 - $q$: outlet volumetric flow rate from the reactor [m³/s]
 - $\rho$: density of the reacting mixture [kg/m³]
-
 - $C_{A,1}$: inlet concentration of species A [mol/m³]
 - $C_A$: concentration of species A in the reactor [mol/m³]
 - $\Gamma$: reaction rate per unit volume [mol/(m³·s)]
-
 - $T$: reactor temperature [K]
 - $T_1$: inlet stream temperature [K]
 - $c_p$: specific heat capacity of the reacting mixture [J/(kg·K)]
@@ -37,7 +35,6 @@ Where:
 - $U$: overall heat transfer coefficient between reactor and jacket [W/(m²·K)]
 - $A$: heat transfer area [m²]
 - $T_c$: cooling jacket temperature [K]
-
 - $V_c$: cooling jacket volume [m³]
 - $q_c$: coolant volumetric flow rate [m³/s]
 - $\rho_c$: coolant density [kg/m³]

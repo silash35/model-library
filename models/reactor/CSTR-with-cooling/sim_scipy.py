@@ -8,13 +8,13 @@ from scipy.integrate import solve_ivp
 
 # --- Model Constants ---
 rho: Final = 1000.0
-"""Reactor fluid density [kg/m^3]"""
+"""Reactor fluid density [kg/m³]"""
 
 cp: Final = 239.0
 """Reactor fluid heat capacity [J/(kg·K)]"""
 
 rho_c: Final = 1000.0
-"""Coolant density [kg/m^3]"""
+"""Coolant density [kg/m³]"""
 
 cp_c: Final = 4180.0
 """Coolant heat capacity [J/(kg·K)]"""
@@ -32,13 +32,13 @@ delta_Hr: Final = -5.0e7
 """Reaction enthalpy [J/mol] (negative for exothermic)"""
 
 U: Final = 915.6
-"""Overall heat transfer coefficient [W/(m^2·K)]"""
+"""Overall heat transfer coefficient [W/(m²·K)]"""
 
 A: Final = 2.7520
-"""Heat transfer area [m^2]"""
+"""Heat transfer area [m²]"""
 
 V_c: Final = 0.55
-"""Cooling jacket volume [m^3]"""
+"""Cooling jacket volume [m³]"""
 
 
 # --- System Dynamics ---
@@ -49,25 +49,25 @@ def model(t: float, y: np.ndarray, u: np.ndarray):
     Parameters:
     - t: time [s]
     - y: state vector
-    - u: Input vector
+    - u: input vector
     """
     # States
-    V = y[0]  # Reactor volume [m^3]
-    C_A = y[1]  # Concentration of A [mol/m^3]
+    V = y[0]  # Reactor volume [m³]
+    C_A = y[1]  # Concentration of A [mol/m³]
     T = y[2]  # Reactor temperature [K]
     T_c = y[3]  # Coolant temperature [K]
 
     # Inputs
-    q1 = u[0]  # Inlet flow rate [m^3/s]
-    q = u[1]  # Outlet flow rate [m^3/s]
-    C_A1 = u[2]  # Inlet concentration of A [mol/m^3]
+    q1 = u[0]  # Inlet flow rate [m³/s]
+    q = u[1]  # Outlet flow rate [m³/s]
+    C_A1 = u[2]  # Inlet concentration of A [mol/m³]
     T1 = u[3]  # Inlet temperature [K]
 
-    q_c = u[4]  # Coolant flow rate [m^3/s]
+    q_c = u[4]  # Coolant flow rate [m³/s]
     T_c0 = u[5]  # Coolant inlet temperature [K]
 
     # Reaction rate (Arrhenius)
-    Gamma = k0 * np.exp(-E / (R * T)) * C_A  # [mol/(m^3·s)]
+    Gamma = k0 * np.exp(-E / (R * T)) * C_A  # [mol/(m³·s)]
 
     # --- Balances ---
     dVdt = q1 - q
@@ -87,19 +87,19 @@ def model(t: float, y: np.ndarray, u: np.ndarray):
 
 # --- Model Inputs ---
 q1 = 0.1
-"""Inlet 1 volumetric flow rate [m^3/s]"""
+"""Inlet 1 volumetric flow rate [m³/s]"""
 
 q = q1
-"""Outlet volumetric flow rate [m^3/s]"""
+"""Outlet volumetric flow rate [m³/s]"""
 
 C_A1 = 1.0
-"""Species A concentration in inlet 1 [mol/m^3]"""
+"""Species A concentration in inlet 1 [mol/m³]"""
 
 T1 = zero_Celsius + 50.0
 """Temperature of inlet 1 [K]"""
 
 q_c = 0.005
-"""Coolant volumetric flow rate [m^3/s]"""
+"""Coolant volumetric flow rate [m³/s]"""
 
 T_c0 = zero_Celsius + 20.0
 """Coolant inlet temperature [K]"""
@@ -108,8 +108,8 @@ u = np.array([q1, q, C_A1, T1, q_c, T_c0])
 """Inputs vector"""
 
 # --- Initial Conditions ---
-V0 = 1.5  # Initial liquid volume [m^3]
-C_A0 = 0.9  # Initial concentration of A [mol/m^3]
+V0 = 1.5  # Initial liquid volume [m³]
+C_A0 = 0.9  # Initial concentration of A [mol/m³]
 T0 = zero_Celsius + 25.0  # Initial liquid temperature [K]
 T_c_init = zero_Celsius + 20.0  # Initial coolant temperature [K]
 y0 = [V0, C_A0, T0, T_c_init]
@@ -120,10 +120,10 @@ sol = solve_ivp(model, [t[0], t[-1]], y0, t_eval=t, args=(u,), method="LSODA")
 
 # --- Model Output ---
 V = sol.y[0]
-"""Liquid volume [m^3]"""
+"""Liquid volume [m³]"""
 
 C_A = sol.y[1]
-"""Concentration of species A [mol/m^3]"""
+"""Concentration of species A [mol/m³]"""
 
 T = sol.y[2]
 """Liquid temperature [K]"""

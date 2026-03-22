@@ -135,7 +135,7 @@ In addition, for the **Solenoid Valve**, we assume:
 
    For $F_m(t)$ and $F_f(t)$ we use the algebraic relations defined below:
 
-   $`F_m(t) = \tfrac{1}{2} \cdot  \tfrac{dL(x)}{dx} \cdot  i(t)^2`$
+   $`F_m(t) = \tfrac{1}{2} \cdot \tfrac{dL(x)}{dx} \cdot i(t)^2`$
 
    $`F_f(t) = \Delta P \cdot A \cdot \alpha(x), \quad \alpha(x)=\tfrac{x}{x_{\max}}`$
 

@@ -67,15 +67,15 @@ All other assumptions from the original model remain valid and unchanged.
 
    from which the outlet velocity follows:
 
-   $`v_p(t) = \sqrt{\frac{\gamma A_p}{k_f} \cdot  h(t)}.`$
+   $`v_p(t) = \sqrt{\frac{\gamma A_p}{k_f} \cdot h(t)}.`$
 
 2. Substituting into the Mass Balance
 
-   $`\frac{dh(t)}{dt} = \frac{Q_{in}(t) - A_p  \cdot  v_p(t)}{A},`$
+   $`\frac{dh(t)}{dt} = \frac{Q_{in}(t) - A_p \cdot v_p(t)}{A},`$
 
    yields
 
-   $`\frac{dh(t)}{dt} = \frac{Q_{in}(t) - A_p \sqrt{\frac{\gamma A_p}{k_f} \cdot  h(t)}}{A}.`$
+   $`\frac{dh(t)}{dt} = \frac{Q_{in}(t) - A_p \sqrt{\frac{\gamma A_p}{k_f} \cdot h(t)}}{A}.`$
 
    Defining the effective discharge coefficient
 
