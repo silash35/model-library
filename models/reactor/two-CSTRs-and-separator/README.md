@@ -11,22 +11,35 @@ The physical system is illustrated in the figure:
 
 The dynamic behavior of the reactors and separator is described by the following set of equations:
 
-$$
-\begin{cases}
-  \displaystyle \frac{dV_1}{dt} = F_{f1} + F_R - F_1 \\[6pt]
-  \displaystyle \frac{dV_2}{dt} = F_{f2} + F_1 - F_2 \\[6pt]
-  \displaystyle \frac{dV_3}{dt} = F_2 - F_P - F_R - F_3 \\[6pt]
-  \displaystyle \frac{dT_1}{dt} = \frac{F_{f1}}{V_1}(T_0 - T_1) + \frac{F_R}{V_1}(T_3 - T_1) + \frac{Q_1}{\rho C_p V_1} - \frac{m}{C_p}(k_{11} x_{A1} \Delta H_{r1} + k_{21} x_{B1} \Delta H_{r2}) \\[6pt]
-  \displaystyle \frac{dT_2}{dt} = \frac{F_{f2}}{V_2}(T_0 - T_2) + \frac{F_1}{V_2}(T_1 - T_2) + \frac{Q_2}{\rho C_p V_2} - \frac{m}{C_p}(k_{12} x_{A2} \Delta H_{r1} + k_{22} x_{B2} \Delta H_{r2}) \\[6pt]
-  \displaystyle \frac{dT_3}{dt} = \frac{F_2}{V_3}(T_2 - T_3) + \frac{Q_3}{\rho C_p V_3} \\[6pt]
-  \displaystyle \frac{dx_{A1}}{dt} = \frac{F_{f1}}{V_1}(x_{A0} - x_{A1}) + \frac{F_R}{V_1}(x_{AR} - x_{A1}) - k_{11} x_{A1} \\[6pt]
-  \displaystyle \frac{dx_{B1}}{dt} = \frac{F_R}{V_1}(x_{BR} - x_{B1}) - \frac{F_{f1}}{V_1} x_{B1} + k_{11} x_{A1} - k_{21} x_{B1} \\[6pt]
-  \displaystyle \frac{dx_{A2}}{dt} = \frac{F_{f2}}{V_2}(x_{A0} - x_{A2}) + \frac{F_1}{V_2}(x_{A1} - x_{A2}) - k_{12} x_{A2} \\[6pt]
-  \displaystyle \frac{dx_{B2}}{dt} = \frac{F_1}{V_2}(x_{B1} - x_{B2}) - \frac{F_{f2}}{V_2} x_{B2} + k_{12} x_{A2} - k_{22} x_{B2} \\[6pt]
-  \displaystyle \frac{dx_{A3}}{dt} = \frac{F_2}{V_3}(x_{A2} - x_{A3}) - \frac{F_P + F_R}{V_3}(x_{AR} - x_{A3}) \\[6pt]
-  \displaystyle \frac{dx_{B3}}{dt} = \frac{F_2}{V_3}(x_{B2} - x_{B3}) - \frac{F_P + F_R}{V_3}(x_{BR} - x_{B3})
-\end{cases}
-$$
+- 📦 Volumes
+
+$`\displaystyle \frac{dV_1}{dt} = F_{f1} + F_R - F_1`$
+
+$`\displaystyle \frac{dV_2}{dt} = F_{f2} + F_1 - F_2`$
+
+$`\displaystyle \frac{dV_3}{dt} = F_2 - F_P - F_R - F_3`$
+
+- 🌡️ Temperatures
+
+$`\displaystyle \frac{dT_1}{dt} = \frac{F_{f1}}{V_1}(T_0 - T_1) + \frac{F_R}{V_1}(T_3 - T_1) + \frac{Q_1}{\rho C_p V_1} - \frac{m}{C_p}(k_{11} x_{A1} \Delta H_{r1} + k_{21} x_{B1} \Delta H_{r2})`$
+
+$`\displaystyle \frac{dT_2}{dt} = \frac{F_{f2}}{V_2}(T_0 - T_2) + \frac{F_1}{V_2}(T_1 - T_2) + \frac{Q_2}{\rho C_p V_2} - \frac{m}{C_p}(k_{12} x_{A2} \Delta H_{r1} + k_{22} x_{B2} \Delta H_{r2})`$
+
+$`\displaystyle \frac{dT_3}{dt} = \frac{F_2}{V_3}(T_2 - T_3) + \frac{Q_3}{\rho C_p V_3}`$
+
+- 🧪 Concentrations
+
+$`\displaystyle \frac{dx_{A1}}{dt} = \frac{F_{f1}}{V_1}(x_{A0} - x_{A1}) + \frac{F_R}{V_1}(x_{AR} - x_{A1}) - k_{11} x_{A1}`$
+
+$`\displaystyle \frac{dx_{B1}}{dt} = \frac{F_R}{V_1}(x_{BR} - x_{B1}) - \frac{F_{f1}}{V_1} x_{B1} + k_{11} x_{A1} - k_{21} x_{B1}`$
+
+$`\displaystyle \frac{dx_{A2}}{dt} = \frac{F_{f2}}{V_2}(x_{A0} - x_{A2}) + \frac{F_1}{V_2}(x_{A1} - x_{A2}) - k_{12} x_{A2}`$
+
+$`\displaystyle \frac{dx_{B2}}{dt} = \frac{F_1}{V_2}(x_{B1} - x_{B2}) - \frac{F_{f2}}{V_2} x_{B2} + k_{12} x_{A2} - k_{22} x_{B2}`$
+
+$`\displaystyle \frac{dx_{A3}}{dt} = \frac{F_2}{V_3}(x_{A2} - x_{A3}) - \frac{F_P + F_R}{V_3}(x_{AR} - x_{A3})`$
+
+$`\displaystyle \frac{dx_{B3}}{dt} = \frac{F_2}{V_3}(x_{B2} - x_{B3}) - \frac{F_P + F_R}{V_3}(x_{BR} - x_{B3})`$
 
 Where:
 
